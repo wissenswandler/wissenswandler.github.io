@@ -150,9 +150,9 @@
 <g id="edge3" class="edge">
 <title>CEP&#45;6&#45;&gt;CEP&#45;5</title>
 <g id="a_edge3"><a xlink:href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-6,CEP-5)" xlink:title="Blueprint → ist Vorlage für &#160;→ Implementation → realisiert &#160;⮌" target="details">
-<path fill="none" stroke="#a020f0" stroke-dasharray="5,2" d="M339.5,-74.7185C339.5,-69.6011 339.5,-64.3292 339.5,-59.2132"/>
-<polygon fill="#a020f0" stroke="#a020f0" points="336.0001,-74.9144 339.5,-84.9145 343.0001,-74.9145 336.0001,-74.9144"/>
-<polygon fill="none" stroke="#a020f0" points="343.0001,-59.0302 339.5,-49.0303 336.0001,-59.0303 343.0001,-59.0302"/>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M339.5,-74.7185C339.5,-69.6011 339.5,-64.3292 339.5,-59.2132"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="336.0001,-74.9144 339.5,-84.9145 343.0001,-74.9145 336.0001,-74.9144"/>
+<polygon fill="none" stroke="#0000ff" points="343.0001,-59.0302 339.5,-49.0303 336.0001,-59.0303 343.0001,-59.0302"/>
 </a>
 </g>
 </g>

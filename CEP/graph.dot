@@ -157,7 +157,7 @@ CEP-6
 </TABLE>>,
 		style="rounded,filled"];
 	<CEP-6> -> <CEP-5>	 [arrowhead=empty,
-		color=purple,
+		color=blue,
 		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-6,CEP-5)",
 		labeltooltip="Blueprint → ist Vorlage für  → Implementation → realisiert  ⮌",
 		penwidth=1,
