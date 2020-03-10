@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" 
+ viewBox="0.00 0.00 36.44 46.44" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Logo</title>
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(.72 82.72)">
+<title>%3</title>
+<g id="a_graph0"><a xlink:title=" ">
+<polygon fill="#ffffff" stroke="transparent" points="-.72,.72 -.72,-82.72 35.72,-82.72 35.72,.72 -.72,.72"/>
+</a>
+</g>
+<!-- value -->
+<g id="value" class="node">
+<title>value</title>
+<g id="a_value"><a xlink:href="javascript:travel('value')" xlink:title=" ">
+<path fill="#ffffff" stroke="#000000" d="M25,-82C25,-82 10,-82 10,-82 5,-82 0,-77 0,-72 0,-72 0,-62 0,-62 0,-57 5,-52 10,-52 10,-52 25,-52 25,-52 30,-52 35,-57 35,-62 35,-62 35,-72 35,-72 35,-77 30,-82 25,-82"/>
+<text text-anchor="middle" x="17.5" y="-60.8" font-family="Helvetica,sans-Serif" font-size="24.00" fill="#000000">val</text>
+</a>
+</g>
+</g>
+<!-- knl&#45;&gt;value -->
+<g id="knl__value" class="edge">
+<title>knl&#45;&gt;value</title>
+<path fill="none" stroke="#228b22" stroke-width="2" d="M17.5,-23.2701C17.5,-28.57 17.5,-35.0496 17.5,-41.3805"/>
+<polygon fill="#228b22" stroke="#228b22" stroke-width="2" points="14.0001,-41.6598 17.5,-51.6599 21.0001,-41.6599 14.0001,-41.6598"/>
+</g>
+</g>
+</svg>

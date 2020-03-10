@@ -1,0 +1,247 @@
+/*  Copyright 2020 Boran Gögetap <- boran@goegetap.name
+
+    visual styles for interactive SVG graph viewer,
+    ... Teil von // part of ...
+    Knowledge Transformation System (KTS)
+
+    KTS ist Freie Software: Sie können es unter den Bedingungen
+    der GNU Affero General Public License, wie von der Free Software Foundation,
+    Version 3 der Lizenz oder (nach Ihrer Wahl) jeder neueren
+    veröffentlichten Version, weiter verteilen und/oder modifizieren.
+
+    KTS wird in der Hoffnung, dass es nützlich sein wird, aber
+    OHNE JEDE GEWÄHRLEISTUNG, bereitgestellt; sogar ohne die implizite
+    Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
+    Siehe die GNU Affero General Public License für weitere Details.
+
+    Sie sollten eine Kopie der GNU Affero General Public License zusammen mit diesem
+    Programm erhalten haben. Wenn nicht, siehe <https://www.gnu.org/licenses/>.
+
+    //
+
+    KTS is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    KTS is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with KTS.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
+
+/*
+ * hover effect ...
+ * also works on Android with pointing device (not with pen / touch) 
+ */
+
+g.node:hover, /* applies to node or edge geometry - not to clusters */
+g.edge:hover { animation: blinker 1s linear infinite alternate } @keyframes blinker { to { opacity: 0 } }
+
+g.node:hover path, /* applies to edge outline (arrowheads ) _not filled_ geometry (not tested with arrow tail yet) */
+g.edge:hover path,
+g.edge:hover polygon	{ stroke: #0000ff; stroke-width: 3 }
+
+
+/* ... end hover */
+
+/*
+ * general rules for tagged or dimmed paths
+ */
+
+.dim { animation: dim 1s forwards } @keyframes dim { to { opacity: 0.1 } }
+
+/* tagged elements are drawn with thicker lines... */
+[tag1] { animation: asw2 .4s forwards; animation-delay: 0.2s } @keyframes asw2 { to { stroke-width: 2 } }
+
+/* dotted outlines in light colors (when tagged) are so hard to read that we want the outline to be solid */
+[tag1]      path[stroke-dasharray="1,5"] { stroke-dasharray:none }
+
+.node path[stroke-dasharray] ,
+.edge polygon[fill=none]           { fill:white !important }
+
+/* BUG: following style is ignored by Chrome (on Linux + Android)
+ * and causes uggly curved edges when colored 'fill' style is applied */
+ .edge path { fill:none !important}
+/*
+ * this commented style cannot fix above bug
+ .edge path { animation: fillnone 1s forwards } @keyframes fillnone { to { fill:none } } */
+
+
+/*
+ * coloring paths
+ *
+ * regex for conversion to animation:  :s/\.\(..-.\) polygon {  \(.*$\)/\.\1 polygon { animation-name: \1 } @keyframes \1 { to {\2 }/
+ */
+
+* { animation-duration: .4s; animation-fill-mode: forwards }
+
+[distance="8"] * { animation-delay:.8s }
+[distance="7"] * { animation-delay:.7s }
+[distance="6"] * { animation-delay:.6s }
+[distance="5"] * { animation-delay:.5s }
+[distance="4"] * { animation-delay:.4s }
+[distance="3"] * { animation-delay:.3s }
+[distance="2"] * { animation-delay:.2s }
+[distance="1"] * { animation-delay:.1s }
+
+/* travelling North, using the Yellow-Orange-Brown colorscheme by Brewer */
+
+[tag1$="1"].q0-2 path, [tag1$="1"].q0-2 polygon { animation-name: aq0-2 } @keyframes aq0-2 { to { fill:rgb(255,247,188) ; stroke:rgb(255,247,188) } }
+[tag1$="1"].q1-2 path, [tag1$="1"].q1-2 polygon { animation-name: aq1-2 } @keyframes aq1-2 { to { fill:rgb(217, 95, 14) ; stroke:rgb(217, 95, 14) } }
+
+[tag1$="1"].q0-3 path, [tag1$="1"].q0-3 polygon { animation-name: aq0-3 } @keyframes aq0-3 { to { fill:rgb(255,247,188) ; stroke:rgb(255,247,188) } }
+[tag1$="1"].q1-3 path, [tag1$="1"].q1-3 polygon { animation-name: aq1-3 } @keyframes aq1-3 { to { fill:rgb(254,196, 79) ; stroke:rgb(254,196, 79) } }
+[tag1$="1"].q2-3 path, [tag1$="1"].q2-3 polygon { animation-name: aq2-3 } @keyframes aq2-3 { to { fill:rgb(217, 95, 14) ; stroke:rgb(217, 95, 14) } }
+
+[tag1$="1"].q0-4 path, [tag1$="1"].q0-4 polygon { animation-name: aq0-4 } @keyframes aq0-4 { to { fill:rgb(255,255,212) ; stroke:rgb(255,255,212) } }
+[tag1$="1"].q1-4 path, [tag1$="1"].q1-4 polygon { animation-name: aq1-4 } @keyframes aq1-4 { to { fill:rgb(254,217,142) ; stroke:rgb(254,217,142) } }
+[tag1$="1"].q2-4 path, [tag1$="1"].q2-4 polygon { animation-name: aq2-4 } @keyframes aq2-4 { to { fill:rgb(254,153,41) ; stroke:rgb(254,153,41) } }
+[tag1$="1"].q3-4 path, [tag1$="1"].q3-4 polygon { animation-name: aq3-4 } @keyframes aq3-4 { to { fill:rgb(204,76,2) ; stroke:rgb(204,76,2) } }
+
+[tag1$="1"].q0-5 path, [tag1$="1"].q0-5 polygon { animation-name: aq0-5 } @keyframes aq0-5 { to { fill:rgb(255,255,212) ; stroke:rgb(255,255,212) } }
+[tag1$="1"].q1-5 path, [tag1$="1"].q1-5 polygon { animation-name: aq1-5 } @keyframes aq1-5 { to { fill:rgb(254,217,142) ; stroke:rgb(254,217,142) } }
+[tag1$="1"].q2-5 path, [tag1$="1"].q2-5 polygon { animation-name: aq2-5 } @keyframes aq2-5 { to { fill:rgb(254,153,41) ; stroke:rgb(254,153,41) } }
+[tag1$="1"].q3-5 path, [tag1$="1"].q3-5 polygon { animation-name: aq3-5 } @keyframes aq3-5 { to { fill:rgb(217,95,14) ; stroke:rgb(217,95,14) } }
+[tag1$="1"].q4-5 path, [tag1$="1"].q4-5 polygon { animation-name: aq4-5 } @keyframes aq4-5 { to { fill:rgb(153,52,4) ; stroke:rgb(153,52,4) } }
+
+[tag1$="1"].q0-6 path, [tag1$="1"].q0-6 polygon { animation-name: aq0-6 } @keyframes aq0-6 { to { fill:rgb(255,255,212) ; stroke:rgb(255,255,212) } }
+[tag1$="1"].q1-6 path, [tag1$="1"].q1-6 polygon { animation-name: aq1-6 } @keyframes aq1-6 { to { fill:rgb(254,227,145) ; stroke:rgb(254,227,145) } }
+[tag1$="1"].q2-6 path, [tag1$="1"].q2-6 polygon { animation-name: aq2-6 } @keyframes aq2-6 { to { fill:rgb(254,196,79) ; stroke:rgb(254,196,79) } }
+[tag1$="1"].q3-6 path, [tag1$="1"].q3-6 polygon { animation-name: aq3-6 } @keyframes aq3-6 { to { fill:rgb(254,153,41) ; stroke:rgb(254,153,41) } }
+[tag1$="1"].q4-6 path, [tag1$="1"].q4-6 polygon { animation-name: aq4-6 } @keyframes aq4-6 { to { fill:rgb(217,95,14) ; stroke:rgb(217,95,14) } }
+[tag1$="1"].q5-6 path, [tag1$="1"].q5-6 polygon { animation-name: aq5-6 } @keyframes aq5-6 { to { fill:rgb(153,52,4) ; stroke:rgb(153,52,4) } }
+
+[tag1$="1"].q0-7 path, [tag1$="1"].q0-7 polygon { animation-name: aq0-7 } @keyframes aq0-7 { to { fill:rgb(255,255,212) ; stroke:rgb(255,255,212) } }
+[tag1$="1"].q1-7 path, [tag1$="1"].q1-7 polygon { animation-name: aq1-7 } @keyframes aq1-7 { to { fill:rgb(254,227,145) ; stroke:rgb(254,227,145) } }
+[tag1$="1"].q2-7 path, [tag1$="1"].q2-7 polygon { animation-name: aq2-7 } @keyframes aq2-7 { to { fill:rgb(254,196,79) ; stroke:rgb(254,196,79) } }
+[tag1$="1"].q3-7 path, [tag1$="1"].q3-7 polygon { animation-name: aq3-7 } @keyframes aq3-7 { to { fill:rgb(254,153,41) ; stroke:rgb(254,153,41) } }
+[tag1$="1"].q4-7 path, [tag1$="1"].q4-7 polygon { animation-name: aq4-7 } @keyframes aq4-7 { to { fill:rgb(236,112,20) ; stroke:rgb(236,112,20) } }
+[tag1$="1"].q5-7 path, [tag1$="1"].q5-7 polygon { animation-name: aq5-7 } @keyframes aq5-7 { to { fill:rgb(204,76,2) ; stroke:rgb(204,76,2) } }
+[tag1$="1"].q6-7 path, [tag1$="1"].q6-7 polygon { animation-name: aq6-7 } @keyframes aq6-7 { to { fill:rgb(140,45,4) ; stroke:rgb(140,45,4) } }
+
+/* travelling South, using the Yellow-Orange-Red colorscheme by Brewer */
+
+[tag1$="0"].q0-2 path, [tag1$="0"].q0-2 polygon { animation-name: bq0-2 } @keyframes bq0-2 { to { fill:rgb(255,237,160) ; stroke:rgb(255,237,160) } }
+[tag1$="0"].q1-2 path, [tag1$="0"].q1-2 polygon { animation-name: bq1-2 } @keyframes bq1-2 { to { fill:rgb(240,59,32) ; stroke:rgb(240,59,32) } }
+
+[tag1$="0"].q0-3 path, [tag1$="0"].q0-3 polygon { animation-name: bq0-3 } @keyframes bq0-3 { to { fill:rgb(255,237,160) ; stroke:rgb(255,237,160) } }
+[tag1$="0"].q1-3 path, [tag1$="0"].q1-3 polygon { animation-name: bq1-3 } @keyframes bq1-3 { to { fill:rgb(254,178,76) ; stroke:rgb(254,178,76) } }
+[tag1$="0"].q2-3 path, [tag1$="0"].q2-3 polygon { animation-name: bq2-3 } @keyframes bq2-3 { to { fill:rgb(240,59,32) ; stroke:rgb(240,59,32) } }
+
+[tag1$="0"].q0-4 path, [tag1$="0"].q0-4 polygon { animation-name: bq0-4 } @keyframes bq0-4 { to { fill:rgb(255,255,178) ; stroke:rgb(255,255,178) } }
+[tag1$="0"].q1-4 path, [tag1$="0"].q1-4 polygon { animation-name: bq1-4 } @keyframes bq1-4 { to { fill:rgb(254,204,92) ; stroke:rgb(254,204,92) } }
+[tag1$="0"].q2-4 path, [tag1$="0"].q2-4 polygon { animation-name: bq2-4 } @keyframes bq2-4 { to { fill:rgb(253,141,60) ; stroke:rgb(253,141,60) } }
+[tag1$="0"].q3-4 path, [tag1$="0"].q3-4 polygon { animation-name: bq3-4 } @keyframes bq3-4 { to { fill:rgb(227,26,28) ; stroke:rgb(227,26,28) } }
+
+[tag1$="0"].q0-5 path, [tag1$="0"].q0-5 polygon { animation-name: bq0-5 } @keyframes bq0-5 { to { fill:rgb(255,255,178) ; stroke:rgb(255,255,178) } }
+[tag1$="0"].q1-5 path, [tag1$="0"].q1-5 polygon { animation-name: bq1-5 } @keyframes bq1-5 { to { fill:rgb(254,204,92) ; stroke:rgb(254,204,92) } }
+[tag1$="0"].q2-5 path, [tag1$="0"].q2-5 polygon { animation-name: bq2-5 } @keyframes bq2-5 { to { fill:rgb(253,141,60) ; stroke:rgb(253,141,60) } }
+[tag1$="0"].q3-5 path, [tag1$="0"].q3-5 polygon { animation-name: bq3-5 } @keyframes bq3-5 { to { fill:rgb(240,59,32) ; stroke:rgb(240,59,32) } }
+[tag1$="0"].q4-5 path, [tag1$="0"].q4-5 polygon { animation-name: bq4-5 } @keyframes bq4-5 { to { fill:rgb(189,0,38) ; stroke:rgb(189,0,38) } }
+
+[tag1$="0"].q0-6 path, [tag1$="0"].q0-6 polygon { animation-name: bq0-6 } @keyframes bq0-6 { to { fill:rgb(255,255,178) ; stroke:rgb(255,255,178) } }
+[tag1$="0"].q1-6 path, [tag1$="0"].q1-6 polygon { animation-name: bq1-6 } @keyframes bq1-6 { to { fill:rgb(254,217,118) ; stroke:rgb(254,217,118) } }
+[tag1$="0"].q2-6 path, [tag1$="0"].q2-6 polygon { animation-name: bq2-6 } @keyframes bq2-6 { to { fill:rgb(254,178,76) ; stroke:rgb(254,178,76) } }
+[tag1$="0"].q3-6 path, [tag1$="0"].q3-6 polygon { animation-name: bq3-6 } @keyframes bq3-6 { to { fill:rgb(253,141,60) ; stroke:rgb(253,141,60) } }
+[tag1$="0"].q4-6 path, [tag1$="0"].q4-6 polygon { animation-name: bq4-6 } @keyframes bq4-6 { to { fill:rgb(240,59,32) ; stroke:rgb(240,59,32) } }
+[tag1$="0"].q5-6 path, [tag1$="0"].q5-6 polygon { animation-name: bq5-6 } @keyframes bq5-6 { to { fill:rgb(189,0,38) ; stroke:rgb(189,0,38) } }
+
+[tag1$="0"].q0-7 path, [tag1$="0"].q0-7 polygon { animation-name: bq0-7 } @keyframes bq0-7 { to { fill:rgb(255,255,178) ; stroke:rgb(255,255,178) } }
+[tag1$="0"].q1-7 path, [tag1$="0"].q1-7 polygon { animation-name: bq1-7 } @keyframes bq1-7 { to { fill:rgb(254,217,118) ; stroke:rgb(254,217,118) } }
+[tag1$="0"].q2-7 path, [tag1$="0"].q2-7 polygon { animation-name: bq2-7 } @keyframes bq2-7 { to { fill:rgb(254,178,76) ; stroke:rgb(254,178,76) } }
+[tag1$="0"].q3-7 path, [tag1$="0"].q3-7 polygon { animation-name: bq3-7 } @keyframes bq3-7 { to { fill:rgb(253,141,60) ; stroke:rgb(253,141,60) } }
+[tag1$="0"].q4-7 path, [tag1$="0"].q4-7 polygon { animation-name: bq4-7 } @keyframes bq4-7 { to { fill:rgb(252,78,42) ; stroke:rgb(252,78,42) } }
+[tag1$="0"].q5-7 path, [tag1$="0"].q5-7 polygon { animation-name: bq5-7 } @keyframes bq5-7 { to { fill:rgb(227,26,28) ; stroke:rgb(227,26,28) } }
+[tag1$="0"].q6-7 path, [tag1$="0"].q6-7 polygon { animation-name: bq6-7 } @keyframes bq6-7 { to { fill:rgb(177,0,38) ; stroke:rgb(177,0,38) } }
+
+/* intersections, using the Blue-Purple colorscheme by Brewer */
+
+[tag1][tag2].q0-2 path, [tag1][tag2].q0-2 polygon { animation-name: cq0-2 } @keyframes cq0-2 { to { fill:rgb(224,236,244) ; stroke:rgb(224,236,244) } }
+[tag1][tag2].q1-2 path, [tag1][tag2].q1-2 polygon { animation-name: cq1-2 } @keyframes cq1-2 { to { fill:rgb(136,86,167) ; stroke:rgb(136,86,167) } }
+
+[tag1][tag2].q0-3 path, [tag1][tag2].q0-3 polygon { animation-name: cq0-3 } @keyframes cq0-3 { to { fill:rgb(224,236,244) ; stroke:rgb(224,236,244) } }
+[tag1][tag2].q1-3 path, [tag1][tag2].q1-3 polygon { animation-name: cq1-3 } @keyframes cq1-3 { to { fill:rgb(158,188,218) ; stroke:rgb(158,188,218) } }
+[tag1][tag2].q2-3 path, [tag1][tag2].q2-3 polygon { animation-name: cq2-3 } @keyframes cq2-3 { to { fill:rgb(136,86,167) ; stroke:rgb(136,86,167) } }
+
+[tag1][tag2].q0-4 path, [tag1][tag2].q0-4 polygon { animation-name: cq0-4 } @keyframes cq0-4 { to { fill:rgb(237,248,251) ; stroke:rgb(237,248,251) } }
+[tag1][tag2].q1-4 path, [tag1][tag2].q1-4 polygon { animation-name: cq1-4 } @keyframes cq1-4 { to { fill:rgb(179,205,227) ; stroke:rgb(179,205,227) } }
+[tag1][tag2].q2-4 path, [tag1][tag2].q2-4 polygon { animation-name: cq2-4 } @keyframes cq2-4 { to { fill:rgb(140,150,198) ; stroke:rgb(140,150,198) } }
+[tag1][tag2].q3-4 path, [tag1][tag2].q3-4 polygon { animation-name: cq3-4 } @keyframes cq3-4 { to { fill:rgb(136,65,157) ; stroke:rgb(136,65,157) } }
+
+[tag1][tag2].q0-5 path, [tag1][tag2].q0-5 polygon { animation-name: cq0-5 } @keyframes cq0-5 { to { fill:rgb(237,248,251) ; stroke:rgb(237,248,251) } }
+[tag1][tag2].q1-5 path, [tag1][tag2].q1-5 polygon { animation-name: cq1-5 } @keyframes cq1-5 { to { fill:rgb(179,205,227) ; stroke:rgb(179,205,227) } }
+[tag1][tag2].q2-5 path, [tag1][tag2].q2-5 polygon { animation-name: cq2-5 } @keyframes cq2-5 { to { fill:rgb(140,150,198) ; stroke:rgb(140,150,198) } }
+[tag1][tag2].q3-5 path, [tag1][tag2].q3-5 polygon { animation-name: cq3-5 } @keyframes cq3-5 { to { fill:rgb(136,86,167) ; stroke:rgb(136,86,167) } }
+[tag1][tag2].q4-5 path, [tag1][tag2].q4-5 polygon { animation-name: cq4-5 } @keyframes cq4-5 { to { fill:rgb(129,15,124) ; stroke:rgb(129,15,124) } }
+
+[tag1][tag2].q0-6 path, [tag1][tag2].q0-6 polygon { animation-name: cq0-6 } @keyframes cq0-6 { to { fill:rgb(237,248,251) ; stroke:rgb(237,248,251) } }
+[tag1][tag2].q1-6 path, [tag1][tag2].q1-6 polygon { animation-name: cq1-6 } @keyframes cq1-6 { to { fill:rgb(191,211,230) ; stroke:rgb(191,211,230) } }
+[tag1][tag2].q2-6 path, [tag1][tag2].q2-6 polygon { animation-name: cq2-6 } @keyframes cq2-6 { to { fill:rgb(158,188,218) ; stroke:rgb(158,188,218) } }
+[tag1][tag2].q3-6 path, [tag1][tag2].q3-6 polygon { animation-name: cq3-6 } @keyframes cq3-6 { to { fill:rgb(140,150,198) ; stroke:rgb(140,150,198) } }
+[tag1][tag2].q4-6 path, [tag1][tag2].q4-6 polygon { animation-name: cq4-6 } @keyframes cq4-6 { to { fill:rgb(136,86,167) ; stroke:rgb(136,86,167) } }
+[tag1][tag2].q5-6 path, [tag1][tag2].q5-6 polygon { animation-name: cq5-6 } @keyframes cq5-6 { to { fill:rgb(129,15,124) ; stroke:rgb(129,15,124) } }
+
+[tag1][tag2].q0-7 path, [tag1][tag2].q0-7 polygon { animation-name: cq0-7 } @keyframes cq0-7 { to { fill:rgb(237,248,251) ; stroke:rgb(237,248,251) } }
+[tag1][tag2].q1-7 path, [tag1][tag2].q1-7 polygon { animation-name: cq1-7 } @keyframes cq1-7 { to { fill:rgb(191,211,230) ; stroke:rgb(191,211,230) } }
+[tag1][tag2].q2-7 path, [tag1][tag2].q2-7 polygon { animation-name: cq2-7 } @keyframes cq2-7 { to { fill:rgb(158,188,218) ; stroke:rgb(158,188,218) } }
+[tag1][tag2].q3-7 path, [tag1][tag2].q3-7 polygon { animation-name: cq3-7 } @keyframes cq3-7 { to { fill:rgb(140,150,198) ; stroke:rgb(140,150,198) } }
+[tag1][tag2].q4-7 path, [tag1][tag2].q4-7 polygon { animation-name: cq4-7 } @keyframes cq4-7 { to { fill:rgb(140,107,177) ; stroke:rgb(140,107,177) } }
+[tag1][tag2].q5-7 path, [tag1][tag2].q5-7 polygon { animation-name: cq5-7 } @keyframes cq5-7 { to { fill:rgb(136,65,157) ; stroke:rgb(136,65,157) } }
+[tag1][tag2].q6-7 path, [tag1][tag2].q6-7 polygon { animation-name: cq6-7 } @keyframes cq6-7 { to { fill:rgb(110,1,107) ; stroke:rgb(110,1,107) } }
+
+/*
+ * ... end coloring
+ */
+
+
+
+/*
+ *
+ * (unsuccessful) experiments
+ *
+ */
+
+
+/* highlighting an 'active' link causes too much flashing during a click
+ * (it is noticable only during the mous button is pressed)
+   g g a:active path { stroke: #ee0000 !important } */
+
+
+/* width and height styles force the browser to fit the svg into the active window IF browsed directly;
+ * it fails to fit when embedded as abject into HTML
+ * solution: code width and heigt directly in SVG as postprocessing during build
+svg {width: 100%; height: 100% }
+ */
+
+
+/* text[font-size="15.00"] {font-size: 15px } /* does not help to fix the font size for Firefox on Ubuntu */
+
+
+/*
+ * prepare map by removing color
+ */ 
+/*
+g.edge polygon:not([fill=none]) { fill: #000000 } /* filled arrow heads only - we don't want to color unfilled ones black */
+/*
+path,
+g.edge polygon:not([stroke=transparent])
+{ stroke: #000000; stroke-width: 1 }
+
+g[id^=qa] path { fill: none } /* Q/A shapes
+*/
+
+/* bring the invisble legend for SVG back to visibility
+#svg_legend_metamodel polygon { stroke:black }
+#svg_legend_metamodel text { fill:blue }
+*/
+
+/* it is possible to handle individual answers 
+ * and disclose them only for clicking the right question-related node
+ * but I don't put in this effort for preparation right now
+ 
+g[id=qaa1]:not([tag1="this_server1"]) path { fill: none !important } */

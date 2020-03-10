@@ -1,0 +1,344 @@
+strict digraph {
+
+fontsize=15
+label="Example Configuration Map to answer \"Interesting Questions in Service Management\"   by Boran Gögetap, Wissenswandler\n "
+
+# # # # # # # # # 
+#
+# standard style in WOC
+# (Wissenswandler Ontology for Causality)
+#
+
+labelloc=t	# the diagram's title on top
+rankdir =BT	# most 'valuable' things go on top, supporting things (infrastructure) go to the bottom
+style=filled	# to be inherited by nodes, so they remain in their fillcolor if part of colored cluster
+tooltip=" "	# to avoid the default echo of a graph's id as the tooltip
+ newrank=true	# to enable multiple ranking constraints which are evaluated globally (not per cluster)
+ 
+nodesep="0.2"	# condense
+ranksep="0.4" 	# condense
+
+graph [
+ fontname=Helvetica
+ color=whitesmoke
+ remincross=true
+ splines=true
+ shape=none
+]
+
+node [
+ fontname=Helvetica
+ shape=box	# a matter of taste, slightly influenced by UML
+ style="filled,rounded" # instances shall appear more soft and friendly (classes with sharp corners)
+ fillcolor=white
+ URL="javascript:travel('\N')"
+ id="\N"
+ tooltip=" "	# to avoid the default echo of a node's id as the tooltip
+
+ margin=0.1 	# condense
+ width=0  	# condense
+ height=0 	# condense
+ ]
+	
+edge [
+ color=forestgreen	# represents positive effects (adding value)
+ penwidth=2	# width 2 is easier to click on
+ fontsize=10	# smaller than the default of 12 in nodes
+ id="\T__\H"
+#tooltip="\T -(supports)-> \H" # \T and \H are not substituted in the tooltip attribute !!
+] 
+
+
+# # # # # # # # # 
+#
+# legend
+#
+subgraph cluster_legend_svg
+{
+label=""
+style="" # prevent inherited filling
+color=white
+
+node [ fontsize=10 shape=note color=white fontcolor=white ]
+svg_legend_metamodel [label="MM..." tooltip="click for Metamodel and more legend..." URL="../metamodel/"]
+
+}
+
+subgraph cluster_legend_times_and_sequences
+{
+label=""
+fillcolor=ghostwhite
+
+node [ fontsize=10 ]
+
+future [ style="filled,rounded,dotted" color="" fontcolor="" ]	# style = redundant with future nodes!!
+present
+past [ style="filled,rounded,dashed" color=grey fontcolor=grey ]# style = redundant with historical nodes!!
+
+} # end cluster_legend
+
+subgraph cluster_spacer
+{
+label=""
+style=invis ## invisible spacer layout hack
+
+node [ fontsize=10 style=invis ]
+spacer
+}
+
+# # # # # # # # # 
+#
+# standard nodes
+#
+# regex to produce labels with newline from underscores	:%s/\(.*\)_\(.*\)/\1_\2 [label="\1\\n\2"]
+
+this_symptom [label="this\nsymptom"]
+other_symptom [label="other\nsymptom"]
+third_application [label="third\napplication"]
+some_information [label="some\ninformation"]
+other_information [label="other\ninformation"]
+third_server [label="third\nserver"]
+third_software_product [label="third software\nproduct"]
+free_license [label="free\nlicense"]
+other_software [label="other\nsoftware"]
+b_user [label="b\nuser" tooltip="business user role"]
+import [tooltip="happens every morning"]
+other_server [label="other\nserver"]
+other_server_model [label="server\nmodel"]
+other_software_product [label="other software\nproduct"]
+new_software_test [label="new\nsoftware"]
+other_software_test [label="other\nsoftware"]
+commercial_license [label="commercial\nlicense" tooltip="this license does require a fee for test installations" ]
+other_subnet [label="other\nsubnet"]
+one_route [label="one\nroute"]
+this_software [label="this\nsoftware"]
+a_user [label="a\nuser"]
+this_service [label="this\nservice"]
+the_router [label="the\nrouter"]
+this_subnet [label="this\nsubnet"]
+lab_server [label="lab\nserver"]
+internal_qa [label="internal\ntesting"]
+this_server [label="this\nserver"]
+other_vendor [label="other\nvendor "]
+new_software_product [label="new software\nproduct"]
+other_manufacturer [label="manufacturer"]
+
+# # # # # # # # # 
+#
+# historical nodes
+#
+{
+node [ style="filled,rounded,dashed" color=grey fontcolor=grey ]
+
+old_software [label="old\nsoftware"]
+}
+
+
+# # # # # # # # # 
+#
+# future nodes
+#
+{
+node [ style="filled,rounded,dotted" color="" fontcolor="" ]
+
+privacy_requirement	[label="privacy\nrequirement"]
+other_software_planned	[label="planned new\nsoftware"]
+c_user			[label="c\nuser"]
+new_customer		[label="new\ncustomer"] 
+}
+
+# # # # # # # # # 
+#
+# legend
+#
+subgraph cluster_legend_realization
+{
+label=""
+fillcolor=ghostwhite
+#rank=min
+
+node [ fontsize=10 ]
+node [ shape=none ]
+
+instance
+blueprint
+
+} # end cluster_legend
+
+#
+# generic provider->consumer-legend outside clusters for global ranking
+#
+{
+node [ fontsize=10 shape=none ]
+
+provider [label=<<i>provider</i>>]
+consumer [label=<<i>consumer</i>>]
+provider -> consumer [ label=<<i>&nbsp; supports<br/>&nbsp; / impacts</i>> ]
+}
+
+
+# # # # # # # # # 
+#
+# standard edges
+#
+
+some_information -> privacy_requirement
+other_vendor -> other_software_product
+
+ this_server ->  this_software
+other_server -> other_software -> { b_user, this_symptom, import }
+
+the_router -> one_route -> import -> this_software -> a_user
+
+ this_subnet ->  {  this_server, one_route }
+other_subnet ->  { other_server, one_route, third_server }
+
+third_application -> { some_information, other_information, other_symptom }
+third_server -> old_software
+
+{some_information, other_information} -> this_service
+
+commercial_license -> other_software_product
+      free_license -> third_software_product
+
+lab_server -> { other_software_test, new_software_test } -> internal_qa
+
+other_software_planned -> c_user -> new_customer
+
+other_manufacturer -> other_server_model
+
+#
+# map of questions
+#
+{
+node [ shape=none ]
+edge [ penwidth=2 ]
+edge [ colorscheme=ylorbr7 ]
+node [ colorscheme=ylorbr7 ]
+
+  node [ style=invis ]; edge [ style=invis ] ## question visibility <-- dont change this marker ##
+
+#
+# forward reasoning, effect side
+#
+node [ fillcolor=1 ]
+edge [     color=2 ]
+
+qaa1 [label="A 1"]
+qaa2 [label="A 2"]
+qaa6 [label="A 6"]
+qaa7 [label="A 7"]
+
+a_user				-> qaa1
+this_software			-> qaa2
+internal_qa			-> qaa6
+{ other_software, b_user }	-> qaa7
+
+#
+# cause side
+#
+node [ fillcolor=6 ]
+edge [     color=6 ]
+
+qaq1 [label="Q 1"]
+qaq2 [label="Q 2"]
+qaq6 [label="Q 6"]
+qaq7 [label="Q 7"]
+
+qaq1 -> this_server
+qaq2 -> the_router
+qaq6 -> new_software_product
+qaq7 -> commercial_license
+
+
+#
+# backward reasoning, effect side
+#
+edge [ dir=back arrowtail=normal style=dashed ]
+edge [ colorscheme=ylorrd7     color=2 ]
+node [ colorscheme=ylorrd7 fillcolor=1 ]
+
+  edge [ style=invis ] ## question visibility <-- dont change this marker ##
+
+qaq3 [label="Q 3"]
+qaq4 [label="Q 4"]
+qaq5 [label="Q 5"]
+qaq8 [label="Q 8"]
+qaq91 [label="Q 9.1"]
+qaq92 [label="Q 9.2"]
+
+this_symptom		-> qaq3
+privacy_requirement	-> qaq4
+this_service		-> qaq5
+new_customer		-> qaq8
+this_symptom		-> qaq91
+other_symptom		-> qaq92
+
+#
+# backw. r. cause side
+#
+edge [ color=6 ]
+node [ fillcolor=6 ]
+
+qaa4 [label="A 4"]
+qaa8 [label="A 8"]
+qaa9 [label="A 9"]
+
+qaa4 -> third_application
+qaa8 -> { other_server, other_subnet }
+qaa9 -> other_subnet
+
+} # end question map
+
+#
+# blueprint edges
+#
+{
+edge [ arrowhead=onormal color=blue penwidth=1 /*style=dashed*/ ]
+
+blueprint -> instance [ label=<<I><br/>realized as</I>> constraint=false ] ## legend
+
+other_software_product -> { other_software, other_software_test }
+third_software_product -> third_application
+new_software_product -> { new_software_test, other_software_planned }
+
+ other_server_model -> other_server
+#other_server_model -> this_server
+}
+
+#
+# sequential edges 
+#
+{
+edge [ arrowhead=onormalonormal penwidth=1 color="" ]
+
+
+#past -> present           [ constraint=none                                 ] ## legend
+#        present -> future [ constraint=none label=<<I><br/>followed by</I>> ] ## legend
+past -> present -> future [ constraint=none label=<<I><br/>followed by</I>> ] ## legend
+
+other_software -> other_software_planned
+
+other_software_product -> new_software_product
+
+old_software -> third_application
+}
+
+#
+# hidden edges / layout hacks
+#
+{
+edge [ style=invis ]
+
+ instance -> provider
+}
+
+
+ { rank=same; provider; other_vendor }
+
+ { rank=same; consumer; a_user }
+
+#{ rank=min; past; instance: blueprint }
+
+} # end graph 
+
