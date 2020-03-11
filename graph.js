@@ -36,6 +36,8 @@
 const DIRECTION_NORTH	= 1
 const DIRECTION_SOUTH	= 0
 
+const node_separator	= "___"
+
 const MISSION_ERASE	= "MISSION_ERASE" 
 
 var NEXT_CLICK_MEMORY		= false
@@ -46,11 +48,13 @@ var NEXT_CLICK_MISSION		= false
  * count max distances from node both ways (north and south),
  * then travel the longer path because that is more interesting
  */
-function travel( id )
+function travel( id, event )
 {
+ event.preventDefault()
+
  if( NEXT_CLICK_MEMORY == 'r' )
  {
-  removeVisitorTags(  document.getElementById( id )  )
+  remove_visitor_tags(  document.getElementById( id )  )
   NEXT_CLICK_MEMORY = false; return
  }
 
@@ -129,7 +133,7 @@ function travel( id )
 
 function start_travel( id , mdn , direction )
 {
- var tag = id + direction
+ var tag = id + "-going-" + direction
 
  if( direction == DIRECTION_SOUTH )
  {
@@ -156,7 +160,7 @@ function count_node( id, direction )
  */
 function    count_edge( id, direction )
 {
- return 1 + count_node( id.split( "__" )[direction], direction )
+ return 1 + count_node( id.split( node_separator )[direction], direction )
 }
 
 function next_edges_selector( id, direction )
@@ -172,7 +176,7 @@ function next_edges_selector( id, direction )
  */
 function travel_node( id , current_dist , total_ranks , direction , tag )
 {
- set_travelling_tags( id , current_dist , total_ranks , direction , tag )  
+ set_visitor_tags( id , current_dist , total_ranks , direction , tag )  
 
  // recurse and increment color rank IF travelling south (color rank increases from node to next edge)
  document.querySelectorAll(  next_edges_selector( id, direction )  ).forEach( (edge) => {
@@ -185,14 +189,14 @@ function travel_node( id , current_dist , total_ranks , direction , tag )
  */
 function travel_edge( id , current_dist , total_ranks , direction , tag )
 {
- set_travelling_tags( id , current_dist , total_ranks , direction , tag ) 
+ set_visitor_tags( id , current_dist , total_ranks , direction , tag ) 
 
  // recurse and decrement color rank IF travelling north (color rank decreases from edge to next node)
- travel_node( id.split( "__" )[ direction ] , current_dist - direction , total_ranks , direction , tag )
+ travel_node( id.split( node_separator )[ direction ] , current_dist - direction , total_ranks , direction , tag )
 }
 
 
-function set_travelling_tags( id , current_dist , total_ranks , direction , tag )
+function set_visitor_tags( id , current_dist , total_ranks , direction , tag )
 {
  var svgElm = document.getElementById( id )
 
@@ -200,17 +204,17 @@ function set_travelling_tags( id , current_dist , total_ranks , direction , tag 
 
  if( tag == MISSION_ERASE )
  {
-  removeVisitorTags( svgElm ); return false
+  remove_visitor_tags( svgElm ); return false
  }
+
+ svgElm.setAttribute( "colorank", total_ranks > 9 ? Math.round( 1.0 * current_dist / total_ranks * 9) + "-9"  : current_dist + "-" + total_ranks )
+ svgElm.setAttribute( "distance", direction == DIRECTION_NORTH ? total_ranks-1-current_dist : current_dist )
 
  var tag1   = svgElm.getAttribute( "tag1" )
  if( tag1 == tag )
  {
   return true;
  }
-
- svgElm.classList.add( "q" + current_dist + "-" + total_ranks )
- svgElm.setAttribute( "distance", direction == DIRECTION_NORTH ? total_ranks-1-current_dist : current_dist )
 
  if( tag1 == null )
  {
@@ -242,17 +246,17 @@ window.addEventListener("keydown", function (event) {
     else if( event.key == 'x' )
     {
       console.log( "clear path intersections [X]" )
-      document.querySelectorAll( "g[tag2]" ).forEach( (svgElm) => { removeVisitorTags( svgElm ) })
+      document.querySelectorAll( "g[tag2]" ).forEach( (svgElm) => { remove_visitor_tags( svgElm ) })
     }
     else if( event.key == 'c' )
     {
       console.log( "[C]lear all travel paths" )
-      document.querySelectorAll( "g[tag1]" ).forEach( (svgElm) => { removeVisitorTags( svgElm ) })
+      document.querySelectorAll( "g[tag1]" ).forEach( (svgElm) => { remove_visitor_tags( svgElm ) })
     }
     else if( event.key == 'd' )
     {
       console.log( "[D]im selected nodes" )
-      document.querySelectorAll( "g[tag1]" ).forEach( (svgElm) => { removeVisitorTags( svgElm ); svgElm.classList.add( "dim" ) })
+      document.querySelectorAll( "g[tag1]" ).forEach( (svgElm) => { remove_visitor_tags( svgElm ); svgElm.classList.add( "dim" ) })
     }
     else if( event.key == 'i' )
     {
@@ -298,9 +302,15 @@ window.addEventListener("keydown", function (event) {
   }
 }, true);
 
-function removeVisitorTags( svgElm )
+function remove_visitor_tags( svgElm )
 {
  svgElm.removeAttribute( "tag1" );
  svgElm.removeAttribute( "tag2" );
+ svgElm.removeAttribute( "colorank" );
  svgElm.classList.remove( "dim" );
+}
+
+window.onload = function()
+{
+ document.querySelectorAll( "g.node" ).forEach( (svgElm) => { svgElm.onclick = function(event){travel(svgElm.id,event)} })
 }
