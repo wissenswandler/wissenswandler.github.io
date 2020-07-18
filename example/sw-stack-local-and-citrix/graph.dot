@@ -1,0 +1,276 @@
+strict digraph {
+
+fontsize=15
+label="Example: Software Stacks on Local and Citrix Machines\n "
+
+# # # # # # # # # 
+#
+# standard style in WOC
+# (Wissenswandler Ontology for Causality)
+#
+
+labelloc=t	# the diagram's title on top
+rankdir =BT	# most 'valuable' things go on top, supporting things (infrastructure) go to the bottom
+style=filled	# to be inherited by nodes, so they remain in their fillcolor if part of colored cluster
+tooltip=" "	# to avoid the default echo of a graph's id as the tooltip
+ newrank=true	# to enable multiple ranking constraints which are evaluated globally (not per cluster)
+ 
+nodesep="0.2"	# condense
+ranksep="0.4" 	# condense
+
+graph [
+ fontname=Helvetica
+ color=whitesmoke
+ remincross=true
+ splines=true
+ shape=none
+]
+
+node [
+ fontname=Helvetica
+ shape=box	# a matter of taste, slightly influenced by UML
+ style="filled,rounded" # instances shall appear more soft and friendly (classes with sharp corners)
+ fillcolor=white
+ id="\N"	# essential for JavaScript traversing SVG
+ tooltip=" "	# to avoid the default echo of a node's id as the tooltip
+
+ margin=0.1 	# condense
+ width=0  	# condense
+ height=0 	# condense
+ ]
+	
+edge [
+ color=forestgreen	# represents positive effects (adding value)
+ penwidth=2	# width 2 is easier to click on
+ fontsize=10	# smaller than the default of 12 in nodes
+ id="\T___\H"	# essential for JavaScript traversing SVG
+#tooltip="\T -(supports)-> \H" # \T and \H are not substituted in the tooltip attribute !!
+] 
+
+
+# # # # # # # # # 
+#
+# legend
+#
+subgraph cluster_legend_svg
+{
+label=""
+style="" # prevent inherited filling
+color=white
+
+node [ fontsize=10 shape=note color=white fontcolor=white ]
+svg_legend_metamodel [label="MM..." tooltip="click for Metamodel and more legend..." URL="../metamodel/"]
+
+}
+
+#subgraph cluster_legend_times_and_sequences
+#{
+#label=""
+#fillcolor=ghostwhite
+#node [ fontsize=10 ]
+#future [ style="filled,rounded,dotted" color=""   fontcolor=""   ]# style = redundant with future nodes!!
+#present
+#past   [ style="filled,rounded,dashed" color=grey fontcolor=grey ]# style = redundant with historical nodes!!
+#} # end cluster_legend
+
+#subgraph cluster_spacer
+#{
+#label=""
+#style=invis ## invisible spacer layout hack
+#
+#node [ fontsize=10 style=invis ]
+#spacer
+#}
+
+# # # # # # # # # 
+#
+# standard nodes
+#
+# regex to produce labels with newline from underscores	:%s/\(.*\)_\(.*\)/\1_\2 [label="\1\\n\2"]
+
+subgraph cluster_vdisk_store { label="vDisk store" 
+vDisk_image	[label="vDisk\nimage"]
+OS_image	[label="OS\nimage"]
+SW_a_image	[label="SW a\nimage"]
+}
+
+subgraph cluster_citrix { label="'citrix' backend"
+vDisk_1		[label="vDisk\n1"]
+vDisk_2		[label="vDisk\n2"]
+target_device_1 [label="target\ndevice\n1"]
+target_device_2	[label="target\ndevice\n2"]
+node [ color=purple fontcolor=purple] # inferred nodes
+td1_OS		[label="OS"]
+SW_a_Inst_td1	[label="SW a Inst."]
+}
+
+subgraph cluster_NB { label="NB"
+NB_HW		[label="HW"]
+NB_OS		[label="OS"]
+SW_x_Inst_NB    [label="SW x\n(optional)\nInst."]
+Ctrx_Cl_Inst_NB	[label="Citrix Cl.\nInst."]
+node [ color=purple fontcolor=purple] # inferred nodes
+SW_a_Inst_NB    [label="SW a\nInst."]
+}
+
+subgraph cluster_Std_K { label="Std K definition"
+Std_K_Def	[label="OS"]
+SW_a_Inst	[label="SW a\nInst."]
+SW_b_Inst	[label="SW b\nInst."]
+SW_c_Inst	[label="SW c\nInst."]
+}
+
+subgraph cluster_DT { label="Desktop"
+DT_HW		[label="HW"]
+DT_OS		[label="OS"]
+SW_z_Inst_DT	[label="SW z\n(optional)\nInst."]
+node [ color=purple fontcolor=purple] # inferred nodes
+SW_a_Inst_DT	[label="SW a\nInst."]
+SW_b_Inst_DT	[label="SW b\nInst."]
+SW_c_Inst_DT	[label="SW c\nInst."]
+}
+
+SW_a_Prod	[label="SW a\nProduct"]
+NB_User		[label="User"]
+
+
+# # # # # # # # # 
+#
+# historical nodes
+#
+{
+node [ style="filled,rounded,dashed" color=grey fontcolor=grey ]
+
+}
+
+
+# # # # # # # # # 
+#
+# future nodes
+#
+{
+node [ style="filled,rounded,dotted" color="" fontcolor="" ]
+
+}
+
+# # # # # # # # # 
+#
+# legend
+#
+subgraph cluster_legend_realization
+{
+label=""
+fillcolor=ghostwhite
+
+node [ fontsize=10 ]
+node [ shape=none ]
+
+instance
+blueprint
+
+} # end cluster_legend
+
+subgraph cluster_legend_inference
+{
+label=""
+fillcolor=ghostwhite
+
+node [ fontsize=10 ]
+node [ color=purple fontcolor=purple]
+
+conclusion
+inference_base [shape=point style=invis]
+
+} # end cluster_legend
+#
+# generic provider->consumer-legend outside clusters for global ranking
+#
+{
+node [ fontsize=10 shape=none ]
+
+provider [label=<<i>provider</i>>]
+consumer [label=<<i>consumer</i>>]
+provider -> consumer [ label=<<i>&nbsp; supports<br/>&nbsp; / impacts</i>> ]
+}
+
+
+# # # # # # # # # 
+#
+# standard edges
+#
+
+NB_HW->NB_OS->{SW_x_Inst_NB, Ctrx_Cl_Inst_NB}
+DT_HW->DT_OS->{SW_z_Inst_DT}
+
+Std_K_Def->{SW_a_Inst, SW_b_Inst, SW_c_Inst}
+
+vDisk_image->OS_image->SW_a_image
+
+vDisk_1->target_device_1
+vDisk_2->target_device_2
+
+#
+# blueprint edges
+#
+{
+edge [ arrowhead=onormal color=blue penwidth=1 ]
+
+vDisk_image->{vDisk_1, vDisk_2}
+Std_K_Def -> {NB_OS, DT_OS}
+SW_a_Prod -> {SW_a_Inst, SW_a_image}
+
+blueprint -> instance [ label=<<I><br/>realized as</I>> constraint=false ] ## legend
+}
+
+#
+# inferred edges
+#
+{
+edge [ color=purple penwidth=1 ]
+
+{Ctrx_Cl_Inst_NB, SW_a_Inst_NB, SW_x_Inst_NB}->NB_User
+
+NB_OS ->   SW_a_Inst_NB
+DT_OS -> { SW_a_Inst_DT,SW_b_Inst_DT, SW_c_Inst_DT }
+target_device_1->td1_OS->SW_a_Inst_td1->Ctrx_Cl_Inst_NB
+
+inference_base->conclusion [ label=<<I><br/>infers</I>> constraint=false ] ## legend
+}
+
+#
+# inferred by realization - edges
+#
+{
+edge [ arrowhead=onormal color=purple penwidth=1 ]
+
+SW_a_Inst -> {SW_a_Inst_NB, SW_a_Inst_DT }
+SW_b_Inst ->  SW_b_Inst_DT 
+SW_a_image->SW_a_Inst_td1
+OS_image->td1_OS
+}
+
+#
+#
+# sequential edges 
+#
+{
+edge [ arrowhead=onormalonormal penwidth=1 color="" ]
+
+#past -> present -> future [ constraint=none label=<<I><br/>followed by</I>> ] ## legend
+}
+
+#
+# hidden edges / layout hacks
+#
+{
+edge [ style=invis ]
+
+}
+
+{ rank=same; consumer; NB_User }
+{ rank=same; provider; vDisk_image }
+
+#{ rank=min; past; blueprint; provider }
+#{ rank=max; consumer }
+
+} # end graph 
