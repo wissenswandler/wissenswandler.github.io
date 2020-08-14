@@ -1,0 +1,1075 @@
+digraph {
+	graph [color=whitesmoke,
+		fontname=Helvetica,
+		labelloc=b,
+		remincross=true,
+		splines=true,
+		style="filled,rounded",
+		target=details,
+		tooltip=" "
+	];
+	node [fillcolor=white,
+		fontname=Helvetica,
+		shape=box,
+		style="filled,rounded",
+		target=details,
+		tooltip=" "
+	];
+	edge [arrowhead=none,
+		color=forestgreen,
+		dir=both,
+		penwidth=2
+	];
+	<META-1>	 [URL="https://wissenswandler.atlassian.net/browse/META-1",
+		color=3,
+		colorscheme=ylorrd5,
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Ding%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10533.png"/></TD>
+  <TD COLSPAN='3'><B>Ding</B></TD></TR>
+</TABLE>>,
+		style=filled,
+		tooltip="implizite(r) Basisklasse (Basis-Typ) für alle anderen Klassen (Typen) ohne explizite(n ) Basisklasse (Basistyp)"];
+	<META-2>	 [URL="https://wissenswandler.atlassian.net/browse/META-2",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Ding%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10533.png"/></TD>
+  <TD COLSPAN='3'><B>Basis</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-1> -> <META-2>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-1,META-2)",
+		labeltooltip="Basis →  → Ding →  ⮌",
+		minlen=1,
+		tooltip="Basis →  → Ding →  ⮌"];
+	<META-23>	 [URL="https://wissenswandler.atlassian.net/browse/META-23",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Ding%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10533.png"/></TD>
+  <TD COLSPAN='3'><B>Vorgänger</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-1> -> <META-23>	 [arrowhead=crow,
+		arrowtail=halfopen,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-1,META-23)",
+		labeltooltip="Vorgänger → ist Vorgänger von  → Ding → folgt auf  ⮌",
+		minlen=2,
+		tooltip="Vorgänger → ist Vorgänger von  → Ding → folgt auf  ⮌"];
+	<META-3>	 [URL="https://wissenswandler.atlassian.net/browse/META-3",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Ding%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10533.png"/></TD>
+  <TD COLSPAN='3'><B>Bauplan</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-1> -> <META-3>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-1,META-3)",
+		labeltooltip="Bauplan → ist Vorlage für  → Ding → realisiert  ⮌",
+		minlen=3,
+		penwidth=1,
+		style=dashed,
+		tooltip="Bauplan → ist Vorlage für  → Ding → realisiert  ⮌"];
+	<META-53>	 [URL="https://wissenswandler.atlassian.net/browse/META-53",
+		color=4,
+		colorscheme=ylorrd5,
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Incident%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10308.png"/></TD>
+  <TD COLSPAN='3'><B>Incident</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-1> -> <META-53>	 [color=4,
+		colorscheme=ylorrd5,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-1,META-53)",
+		label=stört,
+		labeltooltip="Incident → stört → Ding → wird gestört durch  ⮌",
+		tooltip="Incident → stört → Ding → wird gestört durch  ⮌"];
+	<META-10>	 [URL="https://wissenswandler.atlassian.net/browse/META-10",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Organisation%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10520.png"/></TD>
+  <TD COLSPAN='3'><B>Organisation</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-11>	 [URL="https://wissenswandler.atlassian.net/browse/META-11",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Rolle%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10300.png"/></TD>
+  <TD COLSPAN='3'><B>Rolle</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-4>	 [URL="https://wissenswandler.atlassian.net/browse/META-4",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Person%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10309.png"/></TD>
+  <TD COLSPAN='3'><B>Person</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-11> -> <META-4>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-11,META-4)",
+		label="spielt ",
+		labeltooltip="Person → spielt  → Rolle → ist besetzt mit  ⮌",
+		tooltip="Person → spielt  → Rolle → ist besetzt mit  ⮌"];
+	<META-12>	 [URL="https://wissenswandler.atlassian.net/browse/META-12",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Prozess%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10321.png"/></TD>
+  <TD COLSPAN='3'><B>(Geschäfts-) Prozess</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-13>	 [URL="https://wissenswandler.atlassian.net/browse/META-13",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Task%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10316.png"/></TD>
+  <TD COLSPAN='3'><B>Aktivität</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-12> -> <META-13>	 [arrowtail=diamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-12,META-13)",
+		labeltooltip="Aktivität → ist Teil von ◆  → (Geschäfts-) Prozess → besteht aus ◆  ⮌",
+		tooltip="Aktivität → ist Teil von ◆  → (Geschäfts-) Prozess → besteht aus ◆  ⮌"];
+	<META-31>	 [URL="https://wissenswandler.atlassian.net/browse/META-31",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Dokument%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10306.png"/></TD>
+  <TD COLSPAN='3'><B>Prozessbeschreibung</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-12> -> <META-31>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-12,META-31)",
+		label="unterstützt ",
+		labeltooltip="Prozessbeschreibung → unterstützt  → (Geschäfts-) Prozess → benötigt  ⮌",
+		tooltip="Prozessbeschreibung → unterstützt  → (Geschäfts-) Prozess → benötigt  ⮌"];
+	<META-13> -> <META-11>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-13,META-11)",
+		label="unterstützt ",
+		labeltooltip="Rolle → unterstützt  → Aktivität → benötigt  ⮌",
+		tooltip="Rolle → unterstützt  → Aktivität → benötigt  ⮌"];
+	<META-13> -> <META-4>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-13,META-4)",
+		label="ist verantwortlich für",
+		labeltooltip="Person → ist verantwortlich für → Aktivität → A ⮌",
+		tooltip="Person → ist verantwortlich für → Aktivität → A ⮌"];
+	<META-13> -> <META-4>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-13,META-4)",
+		label="ist zuständig für",
+		labeltooltip="Person → ist zuständig für → Aktivität → R ⮌",
+		tooltip="Person → ist zuständig für → Aktivität → R ⮌"];
+	<META-14>	 [URL="https://wissenswandler.atlassian.net/browse/META-14",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Software-Installation%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10321.png"/></TD>
+  <TD COLSPAN='3'><B>Software-Installation</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-15>	 [URL="https://wissenswandler.atlassian.net/browse/META-15",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Software-Produkt%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10552.png"/></TD>
+  <TD COLSPAN='3'><B>Software-Produkt</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-14> -> <META-15>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-14,META-15)",
+		label="ist im Einsatz als",
+		labeltooltip="Software-Produkt → ist im Einsatz als → Software-Installation → entspricht Muster  ⮌",
+		tooltip="Software-Produkt → ist im Einsatz als → Software-Installation → entspricht Muster  ⮌"];
+	<META-47>	 [URL="https://wissenswandler.atlassian.net/browse/META-47",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Software-Installation%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10321.png"/></TD>
+  <TD COLSPAN='3'><B>Sw-Container</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-14> -> <META-47>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-14,META-47)",
+		label=hostet,
+		labeltooltip="Sw-Container → hostet → Software-Installation → läuft auf  ⮌",
+		tooltip="Sw-Container → hostet → Software-Installation → läuft auf  ⮌"];
+	<META-67>	 [URL="https://wissenswandler.atlassian.net/browse/META-67",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Information%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10526.png"/></TD>
+  <TD COLSPAN='3'><B>Werk</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-15> -> <META-67>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-15,META-67)",
+		labeltooltip="Werk → generalisiert △ → Software-Produkt → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Werk → generalisiert △ → Software-Produkt → spezialisiert ▽ ⮌"];
+	<META-16>	 [URL="https://wissenswandler.atlassian.net/browse/META-16",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22OS Instance%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10536.png"/></TD>
+  <TD COLSPAN='3'><B>Betriebssystem-Instanz</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-16> -> <META-47>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-16,META-47)",
+		labeltooltip="Sw-Container → generalisiert △ → Betriebssystem-Instanz → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Sw-Container → generalisiert △ → Betriebssystem-Instanz → spezialisiert ▽ ⮌"];
+	<META-68>	 [URL="https://wissenswandler.atlassian.net/browse/META-68",
+		label=<|>,
+		shape=circle];
+	<META-16> -> <META-68>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-16,META-68)",
+		label=hostet,
+		labeltooltip="| → hostet → Betriebssystem-Instanz → läuft auf  ⮌",
+		tooltip="| → hostet → Betriebssystem-Instanz → läuft auf  ⮌"];
+	<META-72>	 [URL="https://wissenswandler.atlassian.net/browse/META-72",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22OS Instance%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10536.png"/></TD>
+  <TD COLSPAN='3'><B>Betriebssystem-Instanz</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-16> -> <META-72>	 [arrowhead=odot,
+		arrowtail=odot,
+		color=grey,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-16,META-72)",
+		label=≡,
+		labeltooltip="Betriebssystem-Instanz → =  → Betriebssystem-Instanz → =  ⮌",
+		tooltip="Betriebssystem-Instanz → =  → Betriebssystem-Instanz → =  ⮌"];
+	<META-17>	 [URL="https://wissenswandler.atlassian.net/browse/META-17",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Gerät%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10547.png"/></TD>
+  <TD COLSPAN='3'><B>Gerät</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-18>	 [URL="https://wissenswandler.atlassian.net/browse/META-18",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Hardware-Produkt%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10300.png"/></TD>
+  <TD COLSPAN='3'><B>Hardware-Produkt</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-17> -> <META-18>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-17,META-18)",
+		label="ist im Einsatz als",
+		labeltooltip="Hardware-Produkt → ist im Einsatz als → Gerät → entspricht Muster  ⮌",
+		minlen=1,
+		tooltip="Hardware-Produkt → ist im Einsatz als → Gerät → entspricht Muster  ⮌"];
+	<META-19>	 [URL="https://wissenswandler.atlassian.net/browse/META-19",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Ding%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10533.png"/></TD>
+  <TD COLSPAN='3'><B>Physisches Objekt</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-17> -> <META-19>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-17,META-19)",
+		labeltooltip="Physisches Objekt → generalisiert △ → Gerät → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Physisches Objekt → generalisiert △ → Gerät → spezialisiert ▽ ⮌"];
+	<META-71>	 [URL="https://wissenswandler.atlassian.net/browse/META-71",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Gerät%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10547.png"/></TD>
+  <TD COLSPAN='3'><B>Bauteil</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-17> -> <META-71>	 [arrowtail=diamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-17,META-71)",
+		labeltooltip="Bauteil → ist Teil von ◆  → Gerät → besteht aus ◆  ⮌",
+		tooltip="Bauteil → ist Teil von ◆  → Gerät → besteht aus ◆  ⮌"];
+	<META-20>	 [URL="https://wissenswandler.atlassian.net/browse/META-20",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Standort %22+ORDER+BY+summary"><IMG SRC="../img/avatar--10521.png"/></TD>
+  <TD COLSPAN='3'><B>Standort</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-19> -> <META-20>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-19,META-20)",
+		label=hostet,
+		labeltooltip="Standort → hostet → Physisches Objekt → läuft auf  ⮌",
+		tooltip="Standort → hostet → Physisches Objekt → läuft auf  ⮌"];
+	<META-20> -> <META-19>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-20,META-19)",
+		labeltooltip="Physisches Objekt → generalisiert △ → Standort → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Physisches Objekt → generalisiert △ → Standort → spezialisiert ▽ ⮌"];
+	<META-21>	 [URL="https://wissenswandler.atlassian.net/browse/META-21",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Dokument%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10306.png"/></TD>
+  <TD COLSPAN='3'><B>Dokument</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-29>	 [URL="https://wissenswandler.atlassian.net/browse/META-29",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Feld%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10522.png"/></TD>
+  <TD COLSPAN='3'><B>URL</B></TD></TR>
+</TABLE>>,
+		shape=none,
+		style=filled];
+	<META-21> -> <META-29>	 [arrowtail=diamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-21,META-29)",
+		labeltooltip="URL → ist Teil von ◆  → Dokument → besteht aus ◆  ⮌",
+		tooltip="URL → ist Teil von ◆  → Dokument → besteht aus ◆  ⮌"];
+	<META-22>	 [URL="https://wissenswandler.atlassian.net/browse/META-22",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Anforderung%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10308.png"/></TD>
+  <TD COLSPAN='3'><B>Anforderung</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-24>	 [URL="https://wissenswandler.atlassian.net/browse/META-24",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Ziel (-Zustand)%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10540.png"/></TD>
+  <TD COLSPAN='3'><B>Ziel (-Zustand)</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-22> -> <META-24>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-22,META-24)",
+		labeltooltip="Ziel (-Zustand) → ist gebündelt in ◇  → Anforderung → aggregiert ◇  ⮌",
+		tooltip="Ziel (-Zustand) → ist gebündelt in ◇  → Anforderung → aggregiert ◇  ⮌"];
+	<META-24> -> <META-1>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-24,META-1)",
+		label=erfüllt,
+		labeltooltip="Ding → erfüllt → Ziel (-Zustand) → wird erfüllt durch  ⮌",
+		tooltip="Ding → erfüllt → Ziel (-Zustand) → wird erfüllt durch  ⮌"];
+	<META-8>	 [URL="https://wissenswandler.atlassian.net/browse/META-8",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Vertrag%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10306.png"/></TD>
+  <TD COLSPAN='3'><B>Vertrag</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-24> -> <META-8>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-24,META-8)",
+		label=erfüllt,
+		labeltooltip="Vertrag → erfüllt → Ziel (-Zustand) → wird erfüllt durch  ⮌",
+		tooltip="Vertrag → erfüllt → Ziel (-Zustand) → wird erfüllt durch  ⮌"];
+	<META-25>	 [URL="https://wissenswandler.atlassian.net/browse/META-25",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Ziel (-Zustand)%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10540.png"/></TD>
+  <TD COLSPAN='3'><B>Aktivitätsziel</B></TD></TR>
+</TABLE>>,
+		style="filled,dotted"];
+	<META-25> -> <META-13>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-25,META-13)",
+		label=erfüllt,
+		labeltooltip="Aktivität → erfüllt → Aktivitätsziel → wird erfüllt durch  ⮌",
+		tooltip="Aktivität → erfüllt → Aktivitätsziel → wird erfüllt durch  ⮌"];
+	<META-25> -> <META-24>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-25,META-24)",
+		labeltooltip="Ziel (-Zustand) → generalisiert △ → Aktivitätsziel → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Ziel (-Zustand) → generalisiert △ → Aktivitätsziel → spezialisiert ▽ ⮌"];
+	<META-26>	 [URL="https://wissenswandler.atlassian.net/browse/META-26",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Ziel (-Zustand)%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10540.png"/></TD>
+  <TD COLSPAN='3'><B>Prozessziel</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-26> -> <META-12>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-26,META-12)",
+		label=erfüllt,
+		labeltooltip="(Geschäfts-) Prozess → erfüllt → Prozessziel → wird erfüllt durch  ⮌",
+		tooltip="(Geschäfts-) Prozess → erfüllt → Prozessziel → wird erfüllt durch  ⮌"];
+	<META-26> -> <META-24>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-26,META-24)",
+		labeltooltip="Ziel (-Zustand) → generalisiert △ → Prozessziel → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Ziel (-Zustand) → generalisiert △ → Prozessziel → spezialisiert ▽ ⮌"];
+	<META-26> -> <META-25>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-26,META-25)",
+		label="unterstützt ",
+		labeltooltip="Aktivitätsziel → unterstützt  → Prozessziel → benötigt  ⮌",
+		tooltip="Aktivitätsziel → unterstützt  → Prozessziel → benötigt  ⮌"];
+	<META-27>	 [URL="https://wissenswandler.atlassian.net/browse/META-27",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Ziel (-Zustand)%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10540.png"/></TD>
+  <TD COLSPAN='3'><B>Unternehmensziel</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-27> -> <META-24>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-27,META-24)",
+		labeltooltip="Ziel (-Zustand) → generalisiert △ → Unternehmensziel → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Ziel (-Zustand) → generalisiert △ → Unternehmensziel → spezialisiert ▽ ⮌"];
+	<META-27> -> <META-26>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-27,META-26)",
+		label=erfüllt,
+		labeltooltip="Prozessziel → erfüllt → Unternehmensziel → wird erfüllt durch  ⮌",
+		tooltip="Prozessziel → erfüllt → Unternehmensziel → wird erfüllt durch  ⮌"];
+	<META-33>	 [URL="https://wissenswandler.atlassian.net/browse/META-33",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Ziel (-Zustand)%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10540.png"/></TD>
+  <TD COLSPAN='3'><B>Projektziel</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-27> -> <META-33>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-27,META-33)",
+		label=erfüllt,
+		labeltooltip="Projektziel → erfüllt → Unternehmensziel → wird erfüllt durch  ⮌",
+		tooltip="Projektziel → erfüllt → Unternehmensziel → wird erfüllt durch  ⮌"];
+	<META-7>	 [URL="https://wissenswandler.atlassian.net/browse/META-7",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Organisation%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10520.png"/></TD>
+  <TD COLSPAN='3'><B>Organisation</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-27> -> <META-7>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-27,META-7)",
+		label=erfüllt,
+		labeltooltip="Organisation → erfüllt → Unternehmensziel → wird erfüllt durch  ⮌",
+		tooltip="Organisation → erfüllt → Unternehmensziel → wird erfüllt durch  ⮌"];
+	<META-28>	 [URL="https://wissenswandler.atlassian.net/browse/META-28",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Netzwerk%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10523.png"/></TD>
+  <TD COLSPAN='3'><B>Physisches Netzwerk (L1)</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-66>	 [URL="https://wissenswandler.atlassian.net/browse/META-66",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Gerät%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10547.png"/></TD>
+  <TD COLSPAN='3'><B>NI-Port</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-28> -> <META-66>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-28,META-66)",
+		labeltooltip="NI-Port → ist gebündelt in ◇  → Physisches Netzwerk (L1) → aggregiert ◇  ⮌",
+		tooltip="NI-Port → ist gebündelt in ◇  → Physisches Netzwerk (L1) → aggregiert ◇  ⮌"];
+	<META-37>	 [URL="https://wissenswandler.atlassian.net/browse/META-37",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22URL%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10537.png"/></TD>
+  <TD COLSPAN='3'><B>URL</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-29> -> <META-37>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-29,META-37)",
+		label="wird referenziert von ",
+		labeltooltip="URL → wird referenziert von  → URL → referenziert  ⮌",
+		tooltip="URL → wird referenziert von  → URL → referenziert  ⮌"];
+	<META-30>	 [URL="https://wissenswandler.atlassian.net/browse/META-30",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Dokument%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10306.png"/></TD>
+  <TD COLSPAN='3'><B>Anleitung</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-30> -> <META-21>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-30,META-21)",
+		labeltooltip="Dokument → generalisiert △ → Anleitung → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Dokument → generalisiert △ → Anleitung → spezialisiert ▽ ⮌"];
+	<META-31> -> <META-30>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-31,META-30)",
+		labeltooltip="Anleitung → generalisiert △ → Prozessbeschreibung → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Anleitung → generalisiert △ → Prozessbeschreibung → spezialisiert ▽ ⮌"];
+	<META-32>	 [URL="https://wissenswandler.atlassian.net/browse/META-32",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Projekt%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10313.png"/></TD>
+  <TD COLSPAN='3'><B>Projekt</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-32> -> <META-11>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-32,META-11)",
+		label="unterstützt ",
+		labeltooltip="Rolle → unterstützt  → Projekt → benötigt  ⮌",
+		tooltip="Rolle → unterstützt  → Projekt → benötigt  ⮌"];
+	<META-32> -> <META-59>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-32,META-59)",
+		labeltooltip="Beginn → ist gebündelt in ◇  → Projekt → aggregiert ◇  ⮌",
+		minlen=1,
+		tooltip="Beginn → ist gebündelt in ◇  → Projekt → aggregiert ◇  ⮌"];
+	<META-32> -> <META-60>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-32,META-60)",
+		labeltooltip="Ende → ist gebündelt in ◇  → Projekt → aggregiert ◇  ⮌",
+		minlen=2,
+		tooltip="Ende → ist gebündelt in ◇  → Projekt → aggregiert ◇  ⮌"];
+	<META-33> -> <META-24>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-33,META-24)",
+		labeltooltip="Ziel (-Zustand) → generalisiert △ → Projektziel → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Ziel (-Zustand) → generalisiert △ → Projektziel → spezialisiert ▽ ⮌"];
+	<META-33> -> <META-32>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-33,META-32)",
+		label=erfüllt,
+		labeltooltip="Projekt → erfüllt → Projektziel → wird erfüllt durch  ⮌",
+		tooltip="Projekt → erfüllt → Projektziel → wird erfüllt durch  ⮌"];
+	<META-34>	 [URL="https://wissenswandler.atlassian.net/browse/META-34",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Benutzerkonto%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10551.png"/></TD>
+  <TD COLSPAN='3'><B>Benutzerkonto</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-34> -> <META-14>	 [arrowhead=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-34,META-14)",
+		labeltooltip="Software-Installation → aggregiert ◇  → Benutzerkonto → ist gebündelt in ◇  ⮌",
+		tooltip="Software-Installation → aggregiert ◇  → Benutzerkonto → ist gebündelt in ◇  ⮌"];
+	<META-35>	 [URL="https://wissenswandler.atlassian.net/browse/META-35",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Layer 3 Address%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10300.png"/></TD>
+  <TD COLSPAN='3'><B>IP-Adresse</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-35> -> <META-16>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-35,META-16)",
+		label="unterstützt ",
+		labeltooltip="Betriebssystem-Instanz → unterstützt  → IP-Adresse → benötigt  ⮌",
+		tooltip="Betriebssystem-Instanz → unterstützt  → IP-Adresse → benötigt  ⮌"];
+	<META-65>	 [URL="https://wissenswandler.atlassian.net/browse/META-65",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22MAC-Adresse%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10300.png"/></TD>
+  <TD COLSPAN='3'><B>MAC-Adresse</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-35> -> <META-65>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-35,META-65)",
+		label="unterstützt ",
+		labeltooltip="MAC-Adresse → unterstützt  → IP-Adresse → benötigt  ⮌",
+		tooltip="MAC-Adresse → unterstützt  → IP-Adresse → benötigt  ⮌"];
+	<META-36>	 [URL="https://wissenswandler.atlassian.net/browse/META-36",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22DNS Name%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10538.png"/></TD>
+  <TD COLSPAN='3'><B>Hostname</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-36> -> <META-35>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-36,META-35)",
+		label="unterstützt ",
+		labeltooltip="IP-Adresse → unterstützt  → Hostname → benötigt  ⮌",
+		tooltip="IP-Adresse → unterstützt  → Hostname → benötigt  ⮌"];
+	<META-37> -> <META-14>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-37,META-14)",
+		label="unterstützt ",
+		labeltooltip="Software-Installation → unterstützt  → URL → benötigt  ⮌",
+		tooltip="Software-Installation → unterstützt  → URL → benötigt  ⮌"];
+	<META-37> -> <META-36>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-37,META-36)",
+		labeltooltip="Hostname → ist gebündelt in ◇  → URL → aggregiert ◇  ⮌",
+		tooltip="Hostname → ist gebündelt in ◇  → URL → aggregiert ◇  ⮌"];
+	<META-38>	 [URL="https://wissenswandler.atlassian.net/browse/META-38",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Norm%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10514.png"/></TD>
+  <TD COLSPAN='3'><B>Norm</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-38> -> <META-22>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-38,META-22)",
+		labeltooltip="Anforderung → generalisiert △ → Norm → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Anforderung → generalisiert △ → Norm → spezialisiert ▽ ⮌"];
+	<META-4> -> <META-19>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-4,META-19)",
+		labeltooltip="Physisches Objekt → generalisiert △ → Person → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Physisches Objekt → generalisiert △ → Person → spezialisiert ▽ ⮌"];
+	<META-6>	 [URL="https://wissenswandler.atlassian.net/browse/META-6",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Akteur%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10550.png"/></TD>
+  <TD COLSPAN='3'><B>Akteur</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-4> -> <META-6>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-4,META-6)",
+		labeltooltip="Akteur → generalisiert △ → Person → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Akteur → generalisiert △ → Person → spezialisiert ▽ ⮌"];
+	<META-73>	 [URL="https://wissenswandler.atlassian.net/browse/META-73",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Gruppe%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10300.png"/></TD>
+  <TD COLSPAN='3'><B>Bundle</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-4> -> <META-73>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-4,META-73)",
+		label="unterstützt ",
+		labeltooltip="Bundle → unterstützt  → Person → benötigt  ⮌",
+		tooltip="Bundle → unterstützt  → Person → benötigt  ⮌"];
+	<META-40>	 [URL="https://wissenswandler.atlassian.net/browse/META-40",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Vertrag%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10306.png"/></TD>
+  <TD COLSPAN='3'><B>NDA</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-43>	 [URL="https://wissenswandler.atlassian.net/browse/META-43",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Information%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10526.png"/></TD>
+  <TD COLSPAN='3'><B>Information</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-40> -> <META-43>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-40,META-43)",
+		label="ist geregelt in ",
+		labeltooltip="Information → ist geregelt in  → NDA → regelt  ⮌",
+		tooltip="Information → ist geregelt in  → NDA → regelt  ⮌"];
+	<META-40> -> <META-8>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-40,META-8)",
+		labeltooltip="Vertrag → generalisiert △ → NDA → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Vertrag → generalisiert △ → NDA → spezialisiert ▽ ⮌"];
+	<META-41>	 [URL="https://wissenswandler.atlassian.net/browse/META-41",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Software-Installation%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10321.png"/></TD>
+  <TD COLSPAN='3'><B>Client-Sw-Installation</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-41> -> <META-14>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-41,META-14)",
+		labeltooltip="Software-Installation → generalisiert △ → Client-Sw-Installation → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Software-Installation → generalisiert △ → Client-Sw-Installation → spezialisiert ▽ ⮌"];
+	<META-41> -> <META-37>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-41,META-37)",
+		label="unterstützt ",
+		labeltooltip="URL → unterstützt  → Client-Sw-Installation → benötigt  ⮌",
+		tooltip="URL → unterstützt  → Client-Sw-Installation → benötigt  ⮌"];
+	<META-42>	 [URL="https://wissenswandler.atlassian.net/browse/META-42",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Gerät%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10547.png"/></TD>
+  <TD COLSPAN='3'><B>Endgerät</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-41> -> <META-42>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-41,META-42)",
+		label=hostet,
+		labeltooltip="Endgerät → hostet → Client-Sw-Installation → läuft auf  ⮌",
+		tooltip="Endgerät → hostet → Client-Sw-Installation → läuft auf  ⮌"];
+	<META-42> -> <META-19>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-42,META-19)",
+		labeltooltip="Physisches Objekt → generalisiert △ → Endgerät → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Physisches Objekt → generalisiert △ → Endgerät → spezialisiert ▽ ⮌"];
+	<META-43> -> <META-21>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-43,META-21)",
+		label=speichert,
+		labeltooltip="Dokument → speichert → Information → ist gespeichert in  ⮌",
+		tooltip="Dokument → speichert → Information → ist gespeichert in  ⮌"];
+	<META-44>	 [URL="https://wissenswandler.atlassian.net/browse/META-44",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Lizenz%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10539.png"/></TD>
+  <TD COLSPAN='3'><B>Lizenzvertrag</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-44> -> <META-67>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-44,META-67)",
+		label="ist geregelt in ",
+		labeltooltip="Werk → ist geregelt in  → Lizenzvertrag → regelt  ⮌",
+		tooltip="Werk → ist geregelt in  → Lizenzvertrag → regelt  ⮌"];
+	<META-44> -> <META-8>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-44,META-8)",
+		labeltooltip="Vertrag → generalisiert △ → Lizenzvertrag → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Vertrag → generalisiert △ → Lizenzvertrag → spezialisiert ▽ ⮌"];
+	<META-46>	 [URL="https://wissenswandler.atlassian.net/browse/META-46",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22virtuelle Maschine%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10300.png"/></TD>
+  <TD COLSPAN='3'><B>Hypervisor (1)</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-46> -> <META-17>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-46,META-17)",
+		label=hostet,
+		labeltooltip="Gerät → hostet → Hypervisor (1) → läuft auf  ⮌",
+		tooltip="Gerät → hostet → Hypervisor (1) → läuft auf  ⮌"];
+	<META-47> -> <META-14>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-47,META-14)",
+		labeltooltip="Software-Installation → generalisiert △ → Sw-Container → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Software-Installation → generalisiert △ → Sw-Container → spezialisiert ▽ ⮌"];
+	<META-48>	 [URL="https://wissenswandler.atlassian.net/browse/META-48",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22virtuelle Maschine%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10300.png"/></TD>
+  <TD COLSPAN='3'><B>Hypervisor (2)</B></TD></TR>
+</TABLE>>,
+		style=filled,
+		tooltip="Typ-2 Hypervisor (hosted)"];
+	<META-48> -> <META-72>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-48,META-72)",
+		label=hostet,
+		labeltooltip="Betriebssystem-Instanz → hostet → Hypervisor (2) → läuft auf  ⮌",
+		tooltip="Betriebssystem-Instanz → hostet → Hypervisor (2) → läuft auf  ⮌"];
+	<META-5>	 [URL="https://wissenswandler.atlassian.net/browse/META-5",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Service%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10310.png"/></TD>
+  <TD COLSPAN='3'><B>IT-Service</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-5> -> <META-37>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-5,META-37)",
+		labeltooltip="URL → ist gebündelt in ◇  → IT-Service → aggregiert ◇  ⮌",
+		tooltip="URL → ist gebündelt in ◇  → IT-Service → aggregiert ◇  ⮌"];
+	<META-5> -> <META-41>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-5,META-41)",
+		labeltooltip="Client-Sw-Installation → ist gebündelt in ◇  → IT-Service → aggregiert ◇  ⮌",
+		tooltip="Client-Sw-Installation → ist gebündelt in ◇  → IT-Service → aggregiert ◇  ⮌"];
+	<META-5> -> <META-73>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-5,META-73)",
+		labeltooltip="Bundle → ist gebündelt in ◇  → IT-Service → aggregiert ◇  ⮌",
+		tooltip="Bundle → ist gebündelt in ◇  → IT-Service → aggregiert ◇  ⮌"];
+	<META-74>	 [URL="https://wissenswandler.atlassian.net/browse/META-74",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Service%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10310.png"/></TD>
+  <TD COLSPAN='3'><B>Service-Angebot</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-5> -> <META-74>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-5,META-74)",
+		labeltooltip="Service-Angebot → ist Vorlage für  → IT-Service → realisiert  ⮌",
+		minlen=1,
+		penwidth=1,
+		style=dashed,
+		tooltip="Service-Angebot → ist Vorlage für  → IT-Service → realisiert  ⮌"];
+	<META-55>	 [URL="https://wissenswandler.atlassian.net/browse/META-55",
+		color=4,
+		colorscheme=ylorrd5,
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Ding%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10533.png"/></TD>
+  <TD COLSPAN='3'><B>Problem</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-53> -> <META-55>	 [color=4,
+		colorscheme=ylorrd5,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-53,META-55)",
+		label=verursacht,
+		labeltooltip="Problem → verursacht → Incident → ist verursacht durch  ⮌",
+		tooltip="Problem → verursacht → Incident → ist verursacht durch  ⮌"];
+	<META-54>	 [URL="https://wissenswandler.atlassian.net/browse/META-54",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Risiko%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10304.png"/></TD>
+  <TD COLSPAN='3'><B>Risiko</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-54> -> <META-1>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-54,META-1)",
+		labeltooltip="Ding → ist gebündelt in ◇  → Risiko → aggregiert ◇  ⮌",
+		tooltip="Ding → ist gebündelt in ◇  → Risiko → aggregiert ◇  ⮌"];
+	<META-54> -> <META-53>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-54,META-53)",
+		labeltooltip="Incident → ist gebündelt in ◇  → Risiko → aggregiert ◇  ⮌",
+		tooltip="Incident → ist gebündelt in ◇  → Risiko → aggregiert ◇  ⮌"];
+	<META-54> -> <META-55>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-54,META-55)",
+		labeltooltip="Problem → ist gebündelt in ◇  → Risiko → aggregiert ◇  ⮌",
+		tooltip="Problem → ist gebündelt in ◇  → Risiko → aggregiert ◇  ⮌"];
+	<META-54> -> <META-57>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-54,META-57)",
+		labeltooltip="p → ist gebündelt in ◇  → Risiko → aggregiert ◇  ⮌",
+		minlen=1,
+		tooltip="p → ist gebündelt in ◇  → Risiko → aggregiert ◇  ⮌"];
+	<META-54> -> <META-58>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-54,META-58)",
+		labeltooltip="Schadenshöhe → ist gebündelt in ◇  → Risiko → aggregiert ◇  ⮌",
+		minlen=2,
+		tooltip="Schadenshöhe → ist gebündelt in ◇  → Risiko → aggregiert ◇  ⮌"];
+	<META-56>	 [URL="https://wissenswandler.atlassian.net/browse/META-56",
+		color=5,
+		colorscheme=ylorrd5,
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Ding%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10533.png"/></TD>
+  <TD COLSPAN='3'><B>Ursache</B></TD></TR>
+</TABLE>>,
+		style="filled,dotted,bold"];
+	<META-55> -> <META-56>	 [color=4,
+		colorscheme=ylorrd5,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-55,META-56)",
+		label=verursacht,
+		labeltooltip="Ursache → verursacht → Problem → ist verursacht durch  ⮌",
+		minlen=1,
+		tooltip="Ursache → verursacht → Problem → ist verursacht durch  ⮌"];
+	<META-6> -> <META-34>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-6,META-34)",
+		label="unterstützt ",
+		labeltooltip="Benutzerkonto → unterstützt  → Akteur → benötigt  ⮌",
+		tooltip="Benutzerkonto → unterstützt  → Akteur → benötigt  ⮌"];
+	<META-6> -> <META-41>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-6,META-41)",
+		label="unterstützt ",
+		labeltooltip="Client-Sw-Installation → unterstützt  → Akteur → benötigt  ⮌",
+		tooltip="Client-Sw-Installation → unterstützt  → Akteur → benötigt  ⮌"];
+	<META-61>	 [URL="https://wissenswandler.atlassian.net/browse/META-61",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Lizenz%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10539.png"/></TD>
+  <TD COLSPAN='3'><B>by Boran Gögetap, licensed under GNU AGPLv3</B></TD></TR>
+</TABLE>>,
+		style=filled,
+		tooltip="Copyright (C) 2019 Boran Gögetap
+
+This model is free material: you can redistribute it and/or modify it under the terms of the \
+GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) \
+any later version.
+
+This material is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the \
+implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+
+\
+You can find the full text of AGPL at https://www.gnu.org/licenses/agpl-3.0.txt
+
+Please contact me in case of any questions:
+
+\
+https://goegetap.atlassian.net/servicedesk/customer/portal/1
+
+boran@goegetap.name"];
+	<META-63>	 [URL="https://wissenswandler.atlassian.net/browse/META-63",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Netzwerk%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10523.png"/></TD>
+  <TD COLSPAN='3'><B>IP-(Sub-)Netz (L3)</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-63> -> <META-35>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-63,META-35)",
+		labeltooltip="IP-Adresse → ist gebündelt in ◇  → IP-(Sub-)Netz (L3) → aggregiert ◇  ⮌",
+		tooltip="IP-Adresse → ist gebündelt in ◇  → IP-(Sub-)Netz (L3) → aggregiert ◇  ⮌"];
+	<META-64>	 [URL="https://wissenswandler.atlassian.net/browse/META-64",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Netzwerk%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10523.png"/></TD>
+  <TD COLSPAN='3'><B>Switched Netzwerk (L2)</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-63> -> <META-64>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-63,META-64)",
+		label="unterstützt ",
+		labeltooltip="Switched Netzwerk (L2) → unterstützt  → IP-(Sub-)Netz (L3) → benötigt  ⮌",
+		tooltip="Switched Netzwerk (L2) → unterstützt  → IP-(Sub-)Netz (L3) → benötigt  ⮌"];
+	<META-64> -> <META-28>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-64,META-28)",
+		label="unterstützt ",
+		labeltooltip="Physisches Netzwerk (L1) → unterstützt  → Switched Netzwerk (L2) → benötigt  ⮌",
+		tooltip="Physisches Netzwerk (L1) → unterstützt  → Switched Netzwerk (L2) → benötigt  ⮌"];
+	<META-64> -> <META-65>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-64,META-65)",
+		labeltooltip="MAC-Adresse → ist gebündelt in ◇  → Switched Netzwerk (L2) → aggregiert ◇  ⮌",
+		tooltip="MAC-Adresse → ist gebündelt in ◇  → Switched Netzwerk (L2) → aggregiert ◇  ⮌"];
+	<META-65> -> <META-66>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-65,META-66)",
+		label="unterstützt ",
+		labeltooltip="NI-Port → unterstützt  → MAC-Adresse → benötigt  ⮌",
+		tooltip="NI-Port → unterstützt  → MAC-Adresse → benötigt  ⮌"];
+	<META-66> -> <META-71>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-66,META-71)",
+		labeltooltip="Bauteil → generalisiert △ → NI-Port → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Bauteil → generalisiert △ → NI-Port → spezialisiert ▽ ⮌"];
+	<META-67> -> <META-43>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-67,META-43)",
+		labeltooltip="Information → generalisiert △ → Werk → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Information → generalisiert △ → Werk → spezialisiert ▽ ⮌"];
+	<META-77>	 [URL="https://wissenswandler.atlassian.net/browse/META-77",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Akteur%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10550.png"/></TD>
+  <TD COLSPAN='3'><B>Autor</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-67> -> <META-77>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-67,META-77)",
+		label=liefert,
+		labeltooltip="Autor → liefert → Werk → kommt von  ⮌",
+		minlen=1,
+		tooltip="Autor → liefert → Werk → kommt von  ⮌"];
+	<META-68> -> <META-17>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-68,META-17)",
+		labeltooltip="Gerät → ist gebündelt in ◇  → | → aggregiert ◇  ⮌",
+		tooltip="Gerät → ist gebündelt in ◇  → | → aggregiert ◇  ⮌"];
+	<META-69>	 [URL="https://wissenswandler.atlassian.net/browse/META-69",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22virtuelle Maschine%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10300.png"/></TD>
+  <TD COLSPAN='3'><B>VM</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-68> -> <META-69>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-68,META-69)",
+		labeltooltip="VM → ist gebündelt in ◇  → | → aggregiert ◇  ⮌",
+		tooltip="VM → ist gebündelt in ◇  → | → aggregiert ◇  ⮌"];
+	<META-70>	 [URL="https://wissenswandler.atlassian.net/browse/META-70",
+		label=<|>,
+		shape=circle];
+	<META-69> -> <META-70>	 [arrowhead=diamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-69,META-70)",
+		labeltooltip="| → besteht aus ◆  → VM → ist Teil von ◆  ⮌",
+		tooltip="| → besteht aus ◆  → VM → ist Teil von ◆  ⮌"];
+	<META-7> -> <META-10>	 [arrowhead=odot,
+		arrowtail=odot,
+		color=grey,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-7,META-10)",
+		label=≡,
+		labeltooltip="Organisation → =  → Organisation → =  ⮌",
+		tooltip="Organisation → =  → Organisation → =  ⮌"];
+	<META-7> -> <META-10>	 [arrowtail=diamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-7,META-10)",
+		labeltooltip="Organisation → ist Teil von ◆  → Organisation → besteht aus ◆  ⮌",
+		tooltip="Organisation → ist Teil von ◆  → Organisation → besteht aus ◆  ⮌"];
+	<META-7> -> <META-12>	 [arrowtail=diamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-7,META-12)",
+		labeltooltip="(Geschäfts-) Prozess → ist Teil von ◆  → Organisation → besteht aus ◆  ⮌",
+		tooltip="(Geschäfts-) Prozess → ist Teil von ◆  → Organisation → besteht aus ◆  ⮌"];
+	<META-7> -> <META-32>	 [arrowtail=diamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-7,META-32)",
+		labeltooltip="Projekt → ist Teil von ◆  → Organisation → besteht aus ◆  ⮌",
+		tooltip="Projekt → ist Teil von ◆  → Organisation → besteht aus ◆  ⮌"];
+	<META-7> -> <META-6>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-7,META-6)",
+		labeltooltip="Akteur → generalisiert △ → Organisation → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Akteur → generalisiert △ → Organisation → spezialisiert ▽ ⮌"];
+	<META-70> -> <META-46>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-70,META-46)",
+		labeltooltip="Hypervisor (1) → ist gebündelt in ◇  → | → aggregiert ◇  ⮌",
+		tooltip="Hypervisor (1) → ist gebündelt in ◇  → | → aggregiert ◇  ⮌"];
+	<META-70> -> <META-48>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-70,META-48)",
+		labeltooltip="Hypervisor (2) → ist gebündelt in ◇  → | → aggregiert ◇  ⮌",
+		tooltip="Hypervisor (2) → ist gebündelt in ◇  → | → aggregiert ◇  ⮌"];
+	<META-71> -> <META-19>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-71,META-19)",
+		labeltooltip="Physisches Objekt → generalisiert △ → Bauteil → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Physisches Objekt → generalisiert △ → Bauteil → spezialisiert ▽ ⮌"];
+	<META-73> -> <META-41>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-73,META-41)",
+		labeltooltip="Client-Sw-Installation → ist gebündelt in ◇  → Bundle → aggregiert ◇  ⮌",
+		tooltip="Client-Sw-Installation → ist gebündelt in ◇  → Bundle → aggregiert ◇  ⮌"];
+	<META-73> -> <META-42>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-73,META-42)",
+		labeltooltip="Endgerät → ist gebündelt in ◇  → Bundle → aggregiert ◇  ⮌",
+		tooltip="Endgerät → ist gebündelt in ◇  → Bundle → aggregiert ◇  ⮌"];
+	<META-76>	 [URL="https://wissenswandler.atlassian.net/browse/META-76",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Norm%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10514.png"/></TD>
+  <TD COLSPAN='3'><B>Norm</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-76> -> <META-38>	 [arrowtail=diamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-76,META-38)",
+		labeltooltip="Norm → ist Teil von ◆  → Norm → besteht aus ◆  ⮌",
+		minlen=1,
+		tooltip="Norm → ist Teil von ◆  → Norm → besteht aus ◆  ⮌"];
+	<META-8> -> <META-1>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-8,META-1)",
+		label="ist geregelt in ",
+		labeltooltip="Ding → ist geregelt in  → Vertrag → regelt  ⮌",
+		tooltip="Ding → ist geregelt in  → Vertrag → regelt  ⮌"];
+	<META-8> -> <META-21>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-8,META-21)",
+		labeltooltip="Dokument → generalisiert △ → Vertrag → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Dokument → generalisiert △ → Vertrag → spezialisiert ▽ ⮌"];
+	<META-8> -> <META-6>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-8,META-6)",
+		label="ist gebunden an",
+		labeltooltip="Akteur → ist gebunden an → Vertrag → bindet  ⮌",
+		tooltip="Akteur → ist gebunden an → Vertrag → bindet  ⮌"];
+	<META-9>	 [URL="https://wissenswandler.atlassian.net/browse/META-9",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Vertrag%22+ORDER+BY+summary"><IMG SRC="../img/avatar--10306.png"/></TD>
+  <TD COLSPAN='3'><B>SLA</B></TD></TR>
+</TABLE>>,
+		style=filled];
+	<META-9> -> <META-5>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-9,META-5)",
+		label="ist geregelt in ",
+		labeltooltip="IT-Service → ist geregelt in  → SLA → regelt  ⮌",
+		tooltip="IT-Service → ist geregelt in  → SLA → regelt  ⮌"];
+	<META-9> -> <META-8>	 [arrowhead=empty,
+		color=purple,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-9,META-8)",
+		labeltooltip="Vertrag → generalisiert △ → SLA → spezialisiert ▽ ⮌",
+		penwidth=1,
+		tooltip="Vertrag → generalisiert △ → SLA → spezialisiert ▽ ⮌"];
+	<META-9> -> <META-50>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-9,META-50)",
+		labeltooltip="Preis → ist gebündelt in ◇  → SLA → aggregiert ◇  ⮌",
+		minlen=1,
+		tooltip="Preis → ist gebündelt in ◇  → SLA → aggregiert ◇  ⮌"];
+	<META-9> -> <META-51>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-9,META-51)",
+		labeltooltip="Betriebszeiten → ist gebündelt in ◇  → SLA → aggregiert ◇  ⮌",
+		minlen=2,
+		tooltip="Betriebszeiten → ist gebündelt in ◇  → SLA → aggregiert ◇  ⮌"];
+	<META-9> -> <META-52>	 [arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(META-9,META-52)",
+		labeltooltip="Supportzeiten → ist gebündelt in ◇  → SLA → aggregiert ◇  ⮌",
+		minlen=3,
+		tooltip="Supportzeiten → ist gebündelt in ◇  → SLA → aggregiert ◇  ⮌"];
+}
