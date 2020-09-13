@@ -1,0 +1,1152 @@
+digraph {
+	graph [color=whitesmoke,
+		fontname=Helvetica,
+		labelloc=b,
+		nodesep=0.2,
+		rankdir=BT,
+		ranksep=0.2,
+		remincross=true,
+		splines=true,
+		style="filled,rounded",
+		target=details,
+		tooltip=" "
+	];
+	node [fillcolor=white,
+		fontname=Helvetica,
+		height=0,
+		id="\N",
+		margin=0.1,
+		shape=box,
+		style="filled,rounded",
+		target=details,
+		tooltip=" ",
+		width=0
+	];
+	edge [arrowtail=none,
+		color=forestgreen,
+		dir=both,
+		fontsize=10,
+		id="\T___\H",
+		penwidth=2,
+		target=details
+	];
+	<BOGOCIPV-10>	 [URL="https://wissenswandler.atlassian.net/browse/BOGOCIPV-10",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Service%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10310.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Jira Cloud</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Service%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Service
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+BOGOCIPV-10
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<BOGOCIPV-13>	 [URL="https://wissenswandler.atlassian.net/browse/BOGOCIPV-13",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22URL%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10537.png"/>
+</TD>
+  <TD COLSPAN='3'><B>https://wissenswandler.atlassian.net/</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22URL%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+URL
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+BOGOCIPV-13
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled",
+		tooltip="https://wissenswandler.atlassian.net/"];
+	<BOGOCIPV-10> -> <BOGOCIPV-13>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(BOGOCIPV-13,BOGOCIPV-10)",
+		labeltooltip="Jira Cloud → unterstützt  → https://wissenswandler.atlassian.net/ → benötigt  ⮌",
+		tooltip="Jira Cloud → unterstützt  → https://wissenswandler.atlassian.net/ → benötigt  ⮌"];
+	<BOGOCIPV-14>	 [URL="https://wissenswandler.atlassian.net/browse/BOGOCIPV-14",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Software-Produkt%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10552.png"/>
+</TD>
+  <TD COLSPAN='3'><B>KTS for Jira</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Software-Produkt%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Software-Produkt
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+BOGOCIPV-14
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<BOGOCIPV-10> -> <BOGOCIPV-14>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(BOGOCIPV-14,BOGOCIPV-10)",
+		labeltooltip="Jira Cloud → unterstützt  → KTS for Jira → benötigt  ⮌",
+		tooltip="Jira Cloud → unterstützt  → KTS for Jira → benötigt  ⮌"];
+	<WEVW-14>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-14",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Anforderung%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10308.png"/>
+</TD>
+  <TD COLSPAN='3'><B>barrierefrei</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Anforderung%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Anforderung
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-14
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<BOGOCIPV-13> -> <WEVW-14>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-14,BOGOCIPV-13)",
+		label="erfüllt ",
+		labeltooltip="https://wissenswandler.atlassian.net/ → erfüllt  → barrierefrei → wird erfüllt durch  ⮌",
+		tooltip="https://wissenswandler.atlassian.net/ → erfüllt  → barrierefrei → wird erfüllt durch  ⮌"];
+	<WEVW-12>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-12",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Anforderung%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10308.png"/>
+</TD>
+  <TD COLSPAN='3'><B>automatisch</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Anforderung%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Anforderung
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-12
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<BOGOCIPV-14> -> <WEVW-12>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-12,BOGOCIPV-14)",
+		label="erfüllt ",
+		labeltooltip="KTS for Jira → erfüllt  → automatisch → wird erfüllt durch  ⮌",
+		tooltip="KTS for Jira → erfüllt  → automatisch → wird erfüllt durch  ⮌"];
+	<BOGOCIPV-8>	 [URL="https://wissenswandler.atlassian.net/browse/BOGOCIPV-8",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Lizenz%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10539.png"/>
+</TD>
+  <TD COLSPAN='3'><B>KTS AGPL</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Lizenz%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Lizenz
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+BOGOCIPV-8
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled",
+		tooltip="Copyright (C) 1999-2020 Boran Gögetap
+
+    Knowledge Transformation System (KTS)
+
+    KTS ist Freie Software: Sie können es \
+unter den Bedingungen
+    der GNU Affero General Public License, wie von der Free Software Foundation,
+    Version 3 der Lizenz \
+oder (nach Ihrer Wahl) jeder neueren
+    veröffentlichten Version, weiter verteilen und/oder modifizieren.
+
+    KTS wird in \
+der Hoffnung, dass es nützlich sein wird, aber
+    OHNE JEDE GEWÄHRLEISTUNG, bereitgestellt; sogar ohne die implizite
+    Gewährleistung \
+der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
+    Siehe die GNU Affero General Public License für weitere Details.
+
+    \
+Sie sollten eine Kopie der GNU Affero General Public License zusammen mit diesem
+    Programm erhalten haben. Wenn nicht, siehe <\
+https://www.gnu.org/licenses/>.
+
+    //
+
+    KTS is free software: you can redistribute it and/or modify
+    it under the terms \
+of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (\
+at your option) any later version.
+
+    KTS is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; \
+without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General \
+Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with \
+KTS.  If not, see <https://www.gnu.org/licenses/>.
+
+Please contact me in case of any questions:
+
+https://goegetap.atlassian.net/\
+servicedesk/customer/portal/1
+
+boran@goegetap.name"];
+	<BOGOCIPV-8> -> <BOGOCIPV-14>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(BOGOCIPV-14,BOGOCIPV-8)",
+		label="ist Basis für ",
+		labeltooltip="KTS AGPL → ist Basis für  → KTS for Jira → basiert auf  ⮌",
+		tooltip="KTS AGPL → ist Basis für  → KTS for Jira → basiert auf  ⮌"];
+	<BOGOCIPV-9>	 [URL="https://wissenswandler.atlassian.net/browse/BOGOCIPV-9",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Person%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10309.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Boran</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Person%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Person
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+existiert
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+BOGOCIPV-9
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<BOGOCIPV-9> -> <BOGOCIPV-14>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(BOGOCIPV-14,BOGOCIPV-9)",
+		label="liefert ",
+		labeltooltip="Boran → liefert  → KTS for Jira → kommt von  ⮌",
+		tooltip="Boran → liefert  → KTS for Jira → kommt von  ⮌"];
+	<BOGOCIPV-9> -> <BOGOCIPV-8>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(BOGOCIPV-8,BOGOCIPV-9)",
+		label="liefert ",
+		labeltooltip="Boran → liefert  → KTS AGPL → kommt von  ⮌",
+		tooltip="Boran → liefert  → KTS AGPL → kommt von  ⮌"];
+	<WEVW-13>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-13",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Konzept%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10534.png"/>
+</TD>
+  <TD COLSPAN='3'><B>WOK</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Konzept%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Konzept
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-13
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled",
+		tooltip="Wissenswandler Ontologie für Kausalität
+
+beschrieben in ein paar Cause-and-Effect-Patterns (CEP):
+
+[Grundprinzip Kausalität|\
+https://wissenswandler.github.io/CEPAA/graph-local.svg]"];
+	<BOGOCIPV-9> -> <WEVW-13>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-13,BOGOCIPV-9)",
+		label="liefert ",
+		labeltooltip="Boran → liefert  → WOK → kommt von  ⮌",
+		tooltip="Boran → liefert  → WOK → kommt von  ⮌"];
+	<LINUX-7>	 [URL="https://wissenswandler.atlassian.net/browse/LINUX-7",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22SW Package%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10300.png"/>
+</TD>
+  <TD COLSPAN='3'><B>graphviz</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22SW Package%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+SW Package
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+LINUX-7
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<LINUX-7> -> <BOGOCIPV-14>	 [arrowhead=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(BOGOCIPV-14,LINUX-7)",
+		labeltooltip="graphviz → ist gebündelt in ◇  → KTS for Jira → aggregiert ◇  ⮌",
+		tooltip="graphviz → ist gebündelt in ◇  → KTS for Jira → aggregiert ◇  ⮌"];
+	<LINUX-8>	 [URL="https://wissenswandler.atlassian.net/browse/LINUX-8",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Lizenz%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10539.png"/>
+</TD>
+  <TD COLSPAN='3'><B>CPL V 1.0</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Lizenz%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Lizenz
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+LINUX-8
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<LINUX-8> -> <LINUX-7>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(LINUX-7,LINUX-8)",
+		label="ist Basis für ",
+		labeltooltip="CPL V 1.0 → ist Basis für  → graphviz → basiert auf  ⮌",
+		minlen=1,
+		tooltip="CPL V 1.0 → ist Basis für  → graphviz → basiert auf  ⮌"];
+	<WEVW-1>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-1",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22URL%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10537.png"/>
+</TD>
+  <TD COLSPAN='3'><B>https://ontologenkreis.org/ausblick.html</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22URL%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+URL
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-1
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled",
+		tooltip="https://ontologenkreis.org/ausblick.html"];
+	<WEVW-9>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-9",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Organisation%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10520.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Darmstädter Ontologenkreis</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Organisation%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Organisation
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-9
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-1> -> <WEVW-9>	 [arrowhead=open,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-9,WEVW-1)",
+		label=Input,
+		labeltooltip="https://ontologenkreis.org/ausblick.html → liefert Input an  → Darmstädter Ontologenkreis → nutzt Input von  ⮌",
+		tooltip="https://ontologenkreis.org/ausblick.html → liefert Input an  → Darmstädter Ontologenkreis → nutzt Input von  ⮌"];
+	<WEVW-10>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-10",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Dokument%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10306.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Post in XING</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Dokument%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Dokument
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-10
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-23>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-23",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Person%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10309.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Anatol</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Person%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Person
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+existiert
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-23
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-10> -> <WEVW-23>	 [arrowhead=open,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-23,WEVW-10)",
+		label=Input,
+		labeltooltip="Post in XING → liefert Input an  → Anatol → nutzt Input von  ⮌",
+		tooltip="Post in XING → liefert Input an  → Anatol → nutzt Input von  ⮌"];
+	<WEVW-11>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-11",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Anforderung%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10308.png"/>
+</TD>
+  <TD COLSPAN='3'><B>diagrammatisch</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Anforderung%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Anforderung
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-11
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-4>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-4",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Fragestellung%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10320.png"/>
+</TD>
+  <TD COLSPAN='3'><B>2. einfach nutzbar?</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Fragestellung%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Fragestellung
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-4
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-11> -> <WEVW-4>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-4,WEVW-11)",
+		labeltooltip="diagrammatisch → unterstützt  → 2. einfach nutzbar? → benötigt  ⮌",
+		tooltip="diagrammatisch → unterstützt  → 2. einfach nutzbar? → benötigt  ⮌"];
+	<WEVW-12> -> <WEVW-11>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-11,WEVW-12)",
+		labeltooltip="automatisch → unterstützt  → diagrammatisch → benötigt  ⮌",
+		tooltip="automatisch → unterstützt  → diagrammatisch → benötigt  ⮌"];
+	<WEVW-19>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-19",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Anforderung%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10308.png"/>
+</TD>
+  <TD COLSPAN='3'><B>iterativ</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Anforderung%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Anforderung
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-19
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-12> -> <WEVW-19>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-19,WEVW-12)",
+		labeltooltip="automatisch → unterstützt  → iterativ → benötigt  ⮌",
+		tooltip="automatisch → unterstützt  → iterativ → benötigt  ⮌"];
+	<WEVW-21>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-21",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Anforderung%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10308.png"/>
+</TD>
+  <TD COLSPAN='3'><B>kausal gerichtet</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Anforderung%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Anforderung
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-21
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-13> -> <WEVW-21>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-21,WEVW-13)",
+		label="erfüllt ",
+		labeltooltip="WOK → erfüllt  → kausal gerichtet → wird erfüllt durch  ⮌",
+		tooltip="WOK → erfüllt  → kausal gerichtet → wird erfüllt durch  ⮌"];
+	<WEVW-22>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-22",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Anforderung%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10308.png"/>
+</TD>
+  <TD COLSPAN='3'><B>wert-orientiert</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Anforderung%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Anforderung
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-22
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-13> -> <WEVW-22>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-22,WEVW-13)",
+		label="erfüllt ",
+		labeltooltip="WOK → erfüllt  → wert-orientiert → wird erfüllt durch  ⮌",
+		tooltip="WOK → erfüllt  → wert-orientiert → wird erfüllt durch  ⮌"];
+	<WEVW-26>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-26",
+		color=3,
+		colorscheme=ylorrd5,
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Dokument%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10306.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Configuration Map</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Dokument%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Dokument
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-26
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-13> -> <WEVW-26>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-26,WEVW-13)",
+		label="ist Basis für ",
+		labeltooltip="WOK → ist Basis für  → Configuration Map → basiert auf  ⮌",
+		tooltip="WOK → ist Basis für  → Configuration Map → basiert auf  ⮌"];
+	<WEVW-30>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-30",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Anforderung%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10308.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Data Literacy</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Anforderung%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Anforderung
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-30
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-13> -> <WEVW-30>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-30,WEVW-13)",
+		label="erfüllt ",
+		labeltooltip="WOK → erfüllt  → Data Literacy → wird erfüllt durch  ⮌",
+		minlen=1,
+		tooltip="WOK → erfüllt  → Data Literacy → wird erfüllt durch  ⮌"];
+	<WEVW-14> -> <WEVW-4>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-4,WEVW-14)",
+		labeltooltip="barrierefrei → unterstützt  → 2. einfach nutzbar? → benötigt  ⮌",
+		tooltip="barrierefrei → unterstützt  → 2. einfach nutzbar? → benötigt  ⮌"];
+	<WEVW-15>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-15",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Service%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10310.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Zoom</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Service%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Service
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-15
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-15> -> <WEVW-9>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-9,WEVW-15)",
+		label="wird verwendet von ",
+		labeltooltip="Zoom → wird verwendet von  → Darmstädter Ontologenkreis → verwendet  ⮌",
+		tooltip="Zoom → wird verwendet von  → Darmstädter Ontologenkreis → verwendet  ⮌"];
+	<WEVW-16>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-16",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Dokument%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10306.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Post in LinkedIn</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Dokument%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Dokument
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-16
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-17>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-17",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Dokument%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10306.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Post auf FB</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Dokument%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Dokument
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-17
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-18>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-18",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22URL%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10537.png"/>
+</TD>
+  <TD COLSPAN='3'><B>U-Bahn Tokyo</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22URL%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+URL
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-18
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-8>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-8",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22URL%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10537.png"/>
+</TD>
+  <TD COLSPAN='3'><B>https://wissenswandler.github.io/configuration-map/</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22URL%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+URL
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-8
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled",
+		tooltip="https://wissenswandler.github.io/configuration-map/"];
+	<WEVW-18> -> <WEVW-8>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-8,WEVW-18)",
+		label="?",
+		labeltooltip="U-Bahn Tokyo → unterstützt vermutlich  → https://wissenswandler.github.io/configuration-map/ → benötigt vermutlich  ⮌",
+		style=dotted,
+		tooltip="U-Bahn Tokyo → unterstützt vermutlich  → https://wissenswandler.github.io/configuration-map/ → benötigt vermutlich  ⮌"];
+	<WEVW-5>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-5",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Fragestellung%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10320.png"/>
+</TD>
+  <TD COLSPAN='3'><B>3. schnelle Ergebnisse erlangen?</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Fragestellung%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Fragestellung
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-5
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-19> -> <WEVW-5>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-5,WEVW-19)",
+		labeltooltip="iterativ → unterstützt  → 3. schnelle Ergebnisse erlangen? → benötigt  ⮌",
+		tooltip="iterativ → unterstützt  → 3. schnelle Ergebnisse erlangen? → benötigt  ⮌"];
+	<WEVW-2>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-2",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Ding%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10533.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Vortrag: Wertströme entlang von Wirkungsketten</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Ding%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Ding
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-2
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-2> -> <WEVW-1>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-1,WEVW-2)",
+		labeltooltip="Vortrag: Wertströme entlang von Wirkungsketten → unterstützt  → https://ontologenkreis.org/ausblick.html → benötigt  ⮌",
+		tooltip="Vortrag: Wertströme entlang von Wirkungsketten → unterstützt  → https://ontologenkreis.org/ausblick.html → benötigt  ⮌"];
+	<WEVW-2> -> <WEVW-15>	 [arrowhead=open,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-15,WEVW-2)",
+		label=Input,
+		labeltooltip="Vortrag: Wertströme entlang von Wirkungsketten → liefert Input an  → Zoom → nutzt Input von  ⮌",
+		tooltip="Vortrag: Wertströme entlang von Wirkungsketten → liefert Input an  → Zoom → nutzt Input von  ⮌"];
+	<WEVW-3>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-3",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Fragestellung%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10320.png"/>
+</TD>
+  <TD COLSPAN='3'><B>1. Ontologie für Abläufe</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Fragestellung%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Fragestellung
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-3
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-21> -> <WEVW-3>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-3,WEVW-21)",
+		label="erfüllt ",
+		labeltooltip="kausal gerichtet → erfüllt  → 1. Ontologie für Abläufe → wird erfüllt durch  ⮌",
+		tooltip="kausal gerichtet → erfüllt  → 1. Ontologie für Abläufe → wird erfüllt durch  ⮌"];
+	<WEVW-22> -> <WEVW-3>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-3,WEVW-22)",
+		label="erfüllt ",
+		labeltooltip="wert-orientiert → erfüllt  → 1. Ontologie für Abläufe → wird erfüllt durch  ⮌",
+		tooltip="wert-orientiert → erfüllt  → 1. Ontologie für Abläufe → wird erfüllt durch  ⮌"];
+	<WEVW-6>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-6",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Ding%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10533.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Didaktik zu Kausalität und Knowledge Engineering</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Ding%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Ding
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+außer Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-6
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled,dashed"];
+	<WEVW-23> -> <WEVW-6>	 [arrowhead=open,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-6,WEVW-23)",
+		label=Input,
+		labeltooltip="Anatol → liefert Input an  → Didaktik zu Kausalität und Knowledge Engineering → nutzt Input von  ⮌",
+		tooltip="Anatol → liefert Input an  → Didaktik zu Kausalität und Knowledge Engineering → nutzt Input von  ⮌"];
+	<WEVW-24>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-24",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Dokument%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10306.png"/>
+</TD>
+  <TD COLSPAN='3'><B>The Book of Why</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Dokument%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Dokument
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-24
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-24> -> <WEVW-13>	 [arrowhead=open,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-13,WEVW-24)",
+		label=Input,
+		labeltooltip="The Book of Why → liefert Input an  → WOK → nutzt Input von  ⮌",
+		tooltip="The Book of Why → liefert Input an  → WOK → nutzt Input von  ⮌"];
+	<WEVW-25>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-25",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Person%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10309.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Judea Pearl</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Person%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Person
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+existiert
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-25
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-25> -> <WEVW-24>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-24,WEVW-25)",
+		label="liefert ",
+		labeltooltip="Judea Pearl → liefert  → The Book of Why → kommt von  ⮌",
+		minlen=1,
+		tooltip="Judea Pearl → liefert  → The Book of Why → kommt von  ⮌"];
+	<WEVW-26> -> <WEVW-8>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-8,WEVW-26)",
+		labeltooltip="Configuration Map → unterstützt  → https://wissenswandler.github.io/configuration-map/ → benötigt  ⮌",
+		tooltip="Configuration Map → unterstützt  → https://wissenswandler.github.io/configuration-map/ → benötigt  ⮌"];
+	<WEVW-27>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-27",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22URL%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10537.png"/>
+</TD>
+  <TD COLSPAN='3'><B>https://colorbrewer2.org/</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22URL%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+URL
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-27
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-27> -> <WEVW-13>	 [arrowhead=open,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-13,WEVW-27)",
+		label=Input,
+		labeltooltip="https://colorbrewer2.org/ → liefert Input an  → WOK → nutzt Input von  ⮌",
+		tooltip="https://colorbrewer2.org/ → liefert Input an  → WOK → nutzt Input von  ⮌"];
+	<WEVW-28>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-28",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Person%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10309.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Cynthia Brewer et al.</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Person%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Person
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+existiert
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-28
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-28> -> <WEVW-27>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-27,WEVW-28)",
+		label="liefert ",
+		labeltooltip="Cynthia Brewer et al. → liefert  → https://colorbrewer2.org/ → kommt von  ⮌",
+		minlen=1,
+		tooltip="Cynthia Brewer et al. → liefert  → https://colorbrewer2.org/ → kommt von  ⮌"];
+	<WEVW-29>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-29",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Konzept%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10534.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Kartografie</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Konzept%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Konzept
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-29
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-29> -> <WEVW-13>	 [arrowhead=open,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-13,WEVW-29)",
+		label=Input,
+		labeltooltip="Kartografie → liefert Input an  → WOK → nutzt Input von  ⮌",
+		tooltip="Kartografie → liefert Input an  → WOK → nutzt Input von  ⮌"];
+	<WEVW-29> -> <WEVW-18>	 [arrowhead=onormal,
+		color=blue,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-18,WEVW-29)",
+		labeltooltip="Kartografie → ist Vorlage für △ → U-Bahn Tokyo → realisiert Vorlage ▼ (UML △) ⮌",
+		penwidth=1,
+		tooltip="Kartografie → ist Vorlage für △ → U-Bahn Tokyo → realisiert Vorlage ▼ (UML △) ⮌"];
+	<WEVW-3> -> <WEVW-2>	 [arrowhead=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-2,WEVW-3)",
+		labeltooltip="1. Ontologie für Abläufe → ist gebündelt in ◇  → Vortrag: Wertströme entlang von Wirkungsketten → aggregiert ◇  ⮌",
+		tooltip="1. Ontologie für Abläufe → ist gebündelt in ◇  → Vortrag: Wertströme entlang von Wirkungsketten → aggregiert ◇  ⮌"];
+	<WEVW-3> -> <WEVW-4>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-4,WEVW-3)",
+		label="ist Basis für ",
+		labeltooltip="1. Ontologie für Abläufe → ist Basis für  → 2. einfach nutzbar? → basiert auf  ⮌",
+		tooltip="1. Ontologie für Abläufe → ist Basis für  → 2. einfach nutzbar? → basiert auf  ⮌"];
+	<WEVW-31>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-31",
+		color=5,
+		colorscheme=ylorrd5,
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Problem%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10303.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Beispiele suggerieren falschen Kontext</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Problem%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Problem
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+in Betrieb
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-31
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-31> -> <WEVW-26>	 [color=4,
+		colorscheme=ylorrd5,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-26,WEVW-31)",
+		label="stört ",
+		labeltooltip="Beispiele suggerieren falschen Kontext → stört  → Configuration Map → wird gestört durch  ⮌",
+		minlen=1,
+		tooltip="Beispiele suggerieren falschen Kontext → stört  → Configuration Map → wird gestört durch  ⮌"];
+	<WEVW-4> -> <WEVW-2>	 [arrowhead=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-2,WEVW-4)",
+		labeltooltip="2. einfach nutzbar? → ist gebündelt in ◇  → Vortrag: Wertströme entlang von Wirkungsketten → aggregiert ◇  ⮌",
+		tooltip="2. einfach nutzbar? → ist gebündelt in ◇  → Vortrag: Wertströme entlang von Wirkungsketten → aggregiert ◇  ⮌"];
+	<WEVW-4> -> <WEVW-5>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-5,WEVW-4)",
+		label="ist Basis für ",
+		labeltooltip="2. einfach nutzbar? → ist Basis für  → 3. schnelle Ergebnisse erlangen? → basiert auf  ⮌",
+		tooltip="2. einfach nutzbar? → ist Basis für  → 3. schnelle Ergebnisse erlangen? → basiert auf  ⮌"];
+	<WEVW-5> -> <WEVW-2>	 [arrowhead=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-2,WEVW-5)",
+		labeltooltip="3. schnelle Ergebnisse erlangen? → ist gebündelt in ◇  → Vortrag: Wertströme entlang von Wirkungsketten → aggregiert ◇  \
+⮌",
+		tooltip="3. schnelle Ergebnisse erlangen? → ist gebündelt in ◇  → Vortrag: Wertströme entlang von Wirkungsketten → aggregiert ◇  \
+⮌"];
+	<WEVW-6> -> <WEVW-2>	 [arrowhead=onormalonormal,
+		color="",
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-2,WEVW-6)",
+		labeltooltip="Didaktik zu Kausalität und Knowledge Engineering → ist Vorgänger von  → Vortrag: Wertströme entlang von Wirkungsketten → \
+folgt auf  ⮌",
+		penwidth=1,
+		tooltip="Didaktik zu Kausalität und Knowledge Engineering → ist Vorgänger von  → Vortrag: Wertströme entlang von Wirkungsketten → \
+folgt auf  ⮌"];
+	<WEVW-7>	 [URL="https://wissenswandler.atlassian.net/browse/WEVW-7",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Person%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10309.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Matthias R</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Person%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Person
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+existiert
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+WEVW-7
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<WEVW-6> -> <WEVW-7>	 [arrowhead=open,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-7,WEVW-6)",
+		label=Input,
+		labeltooltip="Didaktik zu Kausalität und Knowledge Engineering → liefert Input an  → Matthias R → nutzt Input von  ⮌",
+		tooltip="Didaktik zu Kausalität und Knowledge Engineering → liefert Input an  → Matthias R → nutzt Input von  ⮌"];
+	<WEVW-7> -> <WEVW-2>	 [arrowhead=open,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-2,WEVW-7)",
+		label=Input,
+		labeltooltip="Matthias R → liefert Input an  → Vortrag: Wertströme entlang von Wirkungsketten → nutzt Input von  ⮌",
+		tooltip="Matthias R → liefert Input an  → Vortrag: Wertströme entlang von Wirkungsketten → nutzt Input von  ⮌"];
+	<WEVW-8> -> <WEVW-10>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-10,WEVW-8)",
+		label="ist Basis für ",
+		labeltooltip="https://wissenswandler.github.io/configuration-map/ → ist Basis für  → Post in XING → basiert auf  ⮌",
+		tooltip="https://wissenswandler.github.io/configuration-map/ → ist Basis für  → Post in XING → basiert auf  ⮌"];
+	<WEVW-8> -> <WEVW-16>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-16,WEVW-8)",
+		label="ist Basis für ",
+		labeltooltip="https://wissenswandler.github.io/configuration-map/ → ist Basis für  → Post in LinkedIn → basiert auf  ⮌",
+		minlen=1,
+		tooltip="https://wissenswandler.github.io/configuration-map/ → ist Basis für  → Post in LinkedIn → basiert auf  ⮌"];
+	<WEVW-8> -> <WEVW-17>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(WEVW-17,WEVW-8)",
+		label="ist Basis für ",
+		labeltooltip="https://wissenswandler.github.io/configuration-map/ → ist Basis für  → Post auf FB → basiert auf  ⮌",
+		minlen=2,
+		tooltip="https://wissenswandler.github.io/configuration-map/ → ist Basis für  → Post auf FB → basiert auf  ⮌"];
+}

@@ -1,0 +1,121 @@
+digraph {
+	graph [color=whitesmoke,
+		fontname=Helvetica,
+		labelloc=b,
+		nodesep=0.2,
+		rankdir=BT,
+		ranksep=0.2,
+		remincross=true,
+		splines=true,
+		style="filled,rounded",
+		target=details,
+		tooltip=" "
+	];
+	node [fillcolor=white,
+		fontname=Helvetica,
+		height=0,
+		id="\N",
+		margin=0.1,
+		shape=box,
+		style="filled,rounded",
+		target=details,
+		tooltip=" ",
+		width=0
+	];
+	edge [arrowtail=none,
+		color=forestgreen,
+		dir=both,
+		fontsize=10,
+		id="\T___\H",
+		penwidth=2,
+		target=details
+	];
+	<CEP-1>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-1",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10533.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Cause</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Thing
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+operational
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-1
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<CEP-2>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-2",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10533.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Effect</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Thing
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+operational
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-2
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<CEP-1> -> <CEP-2>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-2,CEP-1)",
+		labeltooltip="Cause →  → Effect →  ⮌",
+		tooltip="Cause →  → Effect →  ⮌"];
+	<CEPAA-1>	 [URL="https://wissenswandler.atlassian.net/browse/CEPAA-1",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22diagram%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10322.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Legend</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22diagram%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+diagram
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+planned
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEPAA-1
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled,dotted",
+		tooltip="_Any-thing_ can be the *cause* of _some-thing_, the *effect*.
+
+This combination of cause and its effect is sometimes called *_\
+causation_*. Causation is represented as a thicker green line.
+
+For cases where the effect (and therefore the causation) is desired \
+we perceive it as generation / flow / stream of value.
+
+To reflect the metaphor of growth or higher purpose, the effect (higher \
+purpose) is drawn on top of its cause (root cause, underlying cause).
+
+For intended causation and to reflect the metaphor of growth \
+or life, the line is drawn in green.
+
+See the related pattern for failure (incidents), where causation of negative value, or inhibition \
+of value, is shown in reddish colours."];
+}

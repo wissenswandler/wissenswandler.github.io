@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<!-- saved from url=(0123)https://wissenswandler.atlassian.net/sr/jira.issueviews:searchrequest-printable/10047/SearchRequest-10047.html?tempMax=1000 -->
+<html class="webkit chrome"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Wertströme entlang von Wirkungsketten (Wissenswandler)</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    
+    <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\"\"";
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-rest:curl.cross-origin-resources"]="false";
+WRM._unparsedData["jira.webresources:feature-flags.feature-flag-data"]="{\"enabled-feature-keys\":[\"labs.navigation.user.opt-in.simplified.ux.enabled\",\"com.atlassian.jira.projects.issuenavigator\",\"connect.no-applinks\",\"nps.survey.inline.dialog\",\"atlassian.aui.raphael.disabled\",\"com.atlassian.jira.projects.ProjectCentricNavigation.Switch\"],\"feature-flag-states\":{\"jira.feature.flag.board.issue.modal.labs\":true,\"com.atlassian.jira.plugins.mail.internal\":false,\"com.atlassian.jira.feature.flag.for.TestFeatureFlagResource\":false,\"jira.instrumentation.laas\":false,\"jira.feature.rest.single.step.avatar.upload\":true,\"jira.ondemand.maintain.trusted.apps\":true}}";
+WRM._unparsedData["com.atlassian.jira.jira-client-analytics-plugin:analytics-context-provider.client-analytic-descriptors"]="{\"analyticsResource\":{\"jira-core\":{\"events\":{\"issue.comment.added\":{\"trigger\":\"click #issue-comment-add-submit\",\"properties\":{\"comment-length\":\"value.length #issue-comment-add #comment\"}}}}},\"tenantId\":\"03f3ce7b-7d4b-4363-9370-9e6917312a51\",\"aid\":\"557058:8e85bec3-9a06-4e6a-9a85-8fe17c5f25c7\",\"env\":\"prod\"}";
+WRM._unparsedData["jira.webresources:default-comment-security-level.DefaultCommentSecurityLevelHelpLink"]="{\"extraClasses\":\"default-comment-level-help\",\"title\":\"Commenting on an Issue\",\"url\":\"https://confluence.atlassian.com/display/JIRASOFTWARECLOUD/Editing+and+collaborating+on+issues#Editingandcollaboratingonissues-addcommentsCommentingonissues\",\"isLocal\":false}";
+WRM._unparsedData["jira.webresources:key-commands.shortcuts"]="[{\"moduleKey\":\"go-to-dashboard-kb-shortcut\",\"keys\":[[\"g\",\"d\"]],\"context\":\"global\",\"op\":\"goTo\",\"param\":\"/secure/Dashboard.jspa\"},{\"moduleKey\":\"greenhopper-gh-shortcut\",\"keys\":[[\"g\",\"h\"]],\"context\":\"global\",\"op\":\"execute\",\"param\":\"gh.app.globalkeyboardshortcuts.goToAgile();\"},{\"moduleKey\":\"browse-project-kb-shortcut\",\"keys\":[[\"g\",\"p\"]],\"context\":\"global\",\"op\":\"execute\",\"param\":\"var elem = jQuery(\\\"#browse_link\\\");\\n                if (elem.length \u003e 0) {\\n                    window.location.href = elem.attr(\\\"href\\\");\\n                }\"},{\"moduleKey\":\"greenhopper-agile-shortcut\",\"keys\":[[\"g\",\"a\"]],\"context\":\"global\",\"op\":\"execute\",\"param\":\"gh.app.globalkeyboardshortcuts.goToAgile();\"},{\"moduleKey\":\"issue-navigator-kb-shortcut\",\"keys\":[[\"g\",\"i\"]],\"context\":\"global\",\"op\":\"execute\",\"param\":\"var elem = jQuery(\\\"#find_link\\\");\\n                if (elem.length \u003e 0) {\\n                    window.location.href = elem.attr(\\\"href\\\");\\n                }\"},{\"moduleKey\":\"admin.quicksearch.dialog.shortcut\",\"keys\":[[\"g\",\"g\"]],\"context\":\"global\",\"op\":\"execute\",\"param\":\"JIRA.Shifter.show();\"},{\"moduleKey\":\"quicksearch\",\"keys\":[[\"/\"]],\"context\":\"global\",\"op\":\"moveToAndFocus\",\"param\":\"#quickSearchInput, #admin-quick-nav-field\"},{\"moduleKey\":\"create.issue\",\"keys\":[[\"c\"]],\"context\":\"global\",\"op\":\"moveToAndClick\",\"param\":\"#header .create-issue\"},{\"moduleKey\":\"shifter\",\"keys\":[[\".\"]],\"context\":\"global\",\"op\":\"execute\",\"param\":\"JIRA.Shifter.show();\"},{\"moduleKey\":\"help\",\"keys\":[[\"?\"]],\"context\":\"global\",\"op\":\"click\",\"param\":\"#keyshortscuthelp\"}]";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link type="text/css" rel="stylesheet" href="./liste_files/batch.css" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="./liste_files/com.atlassian.auiplugin_aui-labels.css" data-wrm-key="com.atlassian.auiplugin:aui-labels" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="./liste_files/jira.webresources_theme-adg3.css" data-wrm-key="jira.webresources:theme-adg3" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="./liste_files/jira.webresources_global-static.css" data-wrm-key="jira.webresources:global-static" data-wrm-batch-type="resource" media="all">
+<script type="text/javascript" src="./liste_files/batch.js" data-wrm-key="_super" data-wrm-batch-type="context" data-initially-rendered=""></script><style type="text/css"></style><style type="text/css"></style>
+
+<script type="text/javascript" charset="utf-8" src="./liste_files/batch(1).js"></script></head>
+<body id="jira" class="aui-layout aui-theme-default page-type-printable" data-aui-version="6.0.5">
+<header id="previous-view">
+    <nav class="aui-toolbar">
+        <div class="toolbar-split toolbar-split-right">
+            <ul class="toolbar-group">
+                <li class="toolbar-item">
+                    <a href="https://wissenswandler.atlassian.net/issues/?filter=10047" class="toolbar-trigger">Back to previous view</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div id="printable-content">
+<div class="result-header">
+    <h3><a href="https://wissenswandler.atlassian.net/issues/?filter=10047">Wertströme entlang von Wirkungsketten (Wissenswandler)</a></h3>
+                        
+                    
+                    
+                    
+                    
+                                        <div class="searcherValue">
+    
+            <label class="fieldLabel" for="fieldpid">Project:</label><span id="fieldpid" class="fieldValue">
+    
+                <a href="https://wissenswandler.atlassian.net/browse/WEVW" title="Browse Wertströme entlang von Wirkungsketten project">Wertströme entlang von Wirkungsketten</a>                    </span></div>
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        <div class="searcherValue">
+            <label class="fieldLabel">Sorted by:</label>
+                            Rank ascending
+                    </div>
+                    <div class="results-count">
+            <b>1</b>–<b>30</b> of <b>30</b>
+            as at: <b>2020-09-13 03:40</b>
+        </div>
+    </div>  
+
+
+
+                                                    <table id="issuetable" class="aui ">
+                                <thead>
+        <tr class="rowHeader">
+            
+                                                            <th class="colHeaderLink headerrow-summary" data-id="summary">
+                            Summary
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-description" data-id="description">
+                            Description
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                    
+
+                <tr id="issuerow15038" rel="15038" data-issuekey="WEVW-9" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-9" href="https://wissenswandler.atlassian.net/browse/WEVW-9">Darmstädter Ontologenkreis</a>
+    </p>
+</td>
+                                            <td class="description">      <p>Ontologie Interdisziplinär</p>
+
+<blockquote>
+<p>Wir sind eine Gruppe von Wissenschaftlern und wissenschaftlich Interessierten aus ganz unterschiedlichen Fachbereichen und mit unterschiedlichen Hintergründen.</p>
+
+<p>Aus unseren jeweiligen Perspektiven versuchen wir, uns dem Thema Ontologie anzunähern. Es gibt dabei keinen festen organisatorischen Rahmen und keine Mitgliedschaft. Was uns zusammenbringt, ist die Neugier, voneinander zu lernen, Dinge aus anderen Perspektiven zu begreifen und uns davon zu neuen Ideen inspirieren zu lassen.</p>
+
+<p>Vertreten sind Bereiche wie: Philosophie, Informatik, Mathematik, Psychologie, Knowledge-Engineering, Biologie (Hirnforschung), Ingenieur- und Sprachwissenschaften.</p></blockquote>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15044" rel="15044" data-issuekey="WEVW-15" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-15" href="https://wissenswandler.atlassian.net/browse/WEVW-15">Zoom</a>
+    </p>
+</td>
+                                            <td class="description">      <p><a href="https://zoom.us/" class="external-link" rel="nofollow noreferrer">https://zoom.us/</a></p>
+
+<p>Info: Meeting-ID XXX XXX XXXX</p>
+
+<p>Password: xxx</p>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15031" rel="15031" data-issuekey="WEVW-2" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-2" href="https://wissenswandler.atlassian.net/browse/WEVW-2">Vortrag: Wertströme entlang von Wirkungsketten</a>
+    </p>
+</td>
+                                            <td class="description">      <p>Eigentlich lassen sich mit Ontologien sowohl statische Strukturen und Abhängigkeiten modellieren, als auch dynamische Prozesse. Der zweite Fall hat bislang allerdings wenig Aufmerksamkeit erfahren.</p>
+
+<p>Produktions-Prozesse, Abläufe zur Erbringung eines Service und die jeweils dazugehörigen kausalen Abhängigkeiten...</p>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15030" rel="15030" data-issuekey="WEVW-1" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-1" href="https://wissenswandler.atlassian.net/browse/WEVW-1">https://ontologenkreis.org/ausblick.html</a>
+    </p>
+</td>
+                                            <td class="description">      <p><a href="https://ontologenkreis.org/ausblick.html" class="external-link" rel="nofollow noreferrer">https://ontologenkreis.org/ausblick.html</a></p>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15032" rel="15032" data-issuekey="WEVW-3" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-3" href="https://wissenswandler.atlassian.net/browse/WEVW-3">1. Ontologie für Abläufe</a>
+    </p>
+</td>
+                                            <td class="description">      <p>Wie lassen sich solche Abläufe in einer Ontologie beschreiben?</p>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15033" rel="15033" data-issuekey="WEVW-4" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-4" href="https://wissenswandler.atlassian.net/browse/WEVW-4">2. einfach nutzbar?</a>
+    </p>
+</td>
+                                            <td class="description">      <p>Wie kann der Nutzer eines solchen Modells dabei unterstützt werden, das Modell auch erfolgreich zu nutzen?</p>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15034" rel="15034" data-issuekey="WEVW-5" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-5" href="https://wissenswandler.atlassian.net/browse/WEVW-5">3. schnelle Ergebnisse erlangen?</a>
+    </p>
+</td>
+                                            <td class="description">      <p>Wie kann ein ontologisches Modell seine Nutzer dabei unterstützen, schneller und einfacher zu Ergebnissen zu gelangen?</p>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15036" rel="15036" data-issuekey="WEVW-7" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-7" href="https://wissenswandler.atlassian.net/browse/WEVW-7">Matthias R</a>
+    </p>
+</td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow15035" rel="15035" data-issuekey="WEVW-6" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-6" href="https://wissenswandler.atlassian.net/browse/WEVW-6">Didaktik zu Kausalität und Knowledge Engineering</a>
+    </p>
+</td>
+                                            <td class="description">      <p>Am Fr., 10. Juli 2020 um 16:21&nbsp;Uhr schrieb Boran Gögetap &lt;boran@goegetap.name&gt;:</p>
+<blockquote>
+<p>Den Vortrag werde ich anhand meiner kleinen Studie&nbsp;<a href="https://wissenswandler.github.io/configuration-map/" class="external-link" rel="nofollow noreferrer">https://wissenswandler.github.io/configuration-map/</a> halten.</p>
+
+<p>Die Wahl dieses Beispiels hatte ich für die Zielgruppe meiner Beratungskunden im Service Management gewählt, speziell für Aufgaben im Configuration Management.</p>
+
+<p>Im Vortrag möchte ich die Studie stellvertretend für beliebige andere Domänen erläutern. Für jede Domäne ist das Erkennen von Wertströmen entlang von Ursache-Wirkungs-Ketten relevant.</p>
+
+<p>Daher das Schlagwort Kausalität</p>
+
+<p>Auslöser war die wiederkehrende Erfahrung dass meine Kunden mit statischen Arbeitsergebnissen (Ontologien, Diagramme, Pläne) oft nicht so viel anfangen konnten wie ich erwartet hätte. Einen Plan haben und einen Plan lesen sind offenbar zwei verschiedene Dinge.</p>
+
+<p>Daher bin ich in der vorliegenden Studie einen Schritt weiter gegangen. Betrachter des Plans können die Inhalte jetzt interaktiv auswerten. Die 10 stellvertretenden Fragen sowie deren Lösungswege lassen sich nach kurzer Textanalyse per Mausklick beantworten.</p>
+
+<p>Diese Form der Präsentation soll den Nutzen des zugrunde liegenden strukturellen Wissens erlebbar machen. Dieser Plan (im Beispiel: Configuration Map) soll als erstrebenswertes, weil nützliches Zielbild dienen.</p>
+
+<p>Daher das Schlagwort Didaktik</p>
+
+<p>Dieser Nutzen soll den Aufwand des Knowledge Engineerings motivieren und rechtfertigen.<br>
+Die vorgestellte Technik ist nicht nur für Konsumenten des jeweiligen Wissens nützlich sondern auch für den Knowledge Engineer während der Bearbeitung einer Fragestellung. Beim iterativen Aufbau eines Modells (oder einer Ontologie) dient die interaktive Auswertung zur blitzschnellen Überprüfung des jeweiligen Arbeitsstandes.<br>
+Insgesamt kommt das Knowledge Engineering also schneller zu präsentationsreifen Arbeitsergebnissen.</p>
+
+<p>Daher das Schlagwort Knowledge Engineering</p>
+<hr>
+<p>Ich hoffe dass ich mit dem obigen Text etwas brauchbares für euch liefern konnte. Ich habe mich länger gefasst und laut gedacht. Gerne könnt ihr das kürzen und sowieso Verbesserungsvorschläge oder Rückfragen an mich schicken.</p>
+
+<p>Andere mögliche Titel wären:</p>
+
+<p> "Wertströme entlang von Wirkungsketten"<br>
+ "Kausale Wertströme"<br>
+ "Wirkungsorientierte Architektur"<br>
+ "ein Knowledge Graph als Informationssystem"</p>
+
+<p>... und wenn es hier noch länger regnet dann fallen mir viele weitere ein. Aber hiermit belasse ich es für heute und gebe den Ball an euch ab <img class="emoticon" src="./liste_files/smile.png" height="16" width="16" align="absmiddle" alt="" border="0"></p></blockquote>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15039" rel="15039" data-issuekey="WEVW-10" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-10" href="https://wissenswandler.atlassian.net/browse/WEVW-10">Post in XING</a>
+    </p>
+</td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow15037" rel="15037" data-issuekey="WEVW-8" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-8" href="https://wissenswandler.atlassian.net/browse/WEVW-8">https://wissenswandler.github.io/configuration-map/</a>
+    </p>
+</td>
+                                            <td class="description">      <p><a href="https://wissenswandler.github.io/configuration-map/" class="external-link" rel="nofollow noreferrer">https://wissenswandler.github.io/configuration-map/</a></p>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15045" rel="15045" data-issuekey="WEVW-16" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-16" href="https://wissenswandler.atlassian.net/browse/WEVW-16">Post in LinkedIn</a>
+    </p>
+</td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow15046" rel="15046" data-issuekey="WEVW-17" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-17" href="https://wissenswandler.atlassian.net/browse/WEVW-17">Post auf FB</a>
+    </p>
+</td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow15040" rel="15040" data-issuekey="WEVW-11" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-11" href="https://wissenswandler.atlassian.net/browse/WEVW-11">diagrammatisch</a>
+    </p>
+</td>
+                                            <td class="description">      <p>Benutzer sollen möglichst alle Inhalte (Fakten) und Ergebnisse (Auswertungen) visuell aufnehmen können</p>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15041" rel="15041" data-issuekey="WEVW-12" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-12" href="https://wissenswandler.atlassian.net/browse/WEVW-12">automatisch</a>
+    </p>
+</td>
+                                            <td class="description">      <p>automatisches Layout der Ansichten (Diagramme)</p>
+
+<p>Ein Berg an Fakten, der schnell wächst oder sich schnell verändert, würde viel Zeit für manuelles Layout  benötigen. Folgen sind meist die Resignation in Bezug auf aktuelle Diagramme und manchmal Resignation bei der Datenpflege.</p>
+
+<p>Automatisches Layout ermöglicht es allen Stakeholdern, jederzeit alle Fakten (über definierte Sichten) im Zusammenhang zu betrachten. Nur so ist visuelles Management für dynamische oder volatile Daten möglich. </p>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15043" rel="15043" data-issuekey="WEVW-14" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-14" href="https://wissenswandler.atlassian.net/browse/WEVW-14">barrierefrei</a>
+    </p>
+</td>
+                                            <td class="description">      <p>Wissensmanagement lebt von der Beteiligung der Wissensträger, die manchmal sporadisch, manchmal intensiv als Benutzer mit dem Wissensmanagement-System umgehen. Wissensträger sollen alle Inhalte (Fakten) so effizient wie möglich editieren (anlegen, verknüpfen, ändern) können.</p>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15042" rel="15042" data-issuekey="WEVW-13" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-13" href="https://wissenswandler.atlassian.net/browse/WEVW-13">WOK</a>
+    </p>
+</td>
+                                            <td class="description">      <p>Wissenswandler Ontologie für Kausalität</p>
+
+<p>beschrieben in ein paar Cause-and-Effect-Patterns (CEP):</p>
+
+<p><a href="https://wissenswandler.github.io/CEPAA/graph-local.svg" class="external-link" rel="nofollow noreferrer">Grundprinzip Kausalität</a></p>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15047" rel="15047" data-issuekey="WEVW-18" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-18" href="https://wissenswandler.atlassian.net/browse/WEVW-18">U-Bahn Tokyo</a>
+    </p>
+</td>
+                                            <td class="description">      <p><a href="http://www.urbanrail.net/as/jp/tokyo/tokyo.htm" class="external-link" rel="nofollow noreferrer">http://www.urbanrail.net/as/jp/tokyo/tokyo.htm</a></p>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15048" rel="15048" data-issuekey="WEVW-19" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-19" href="https://wissenswandler.atlassian.net/browse/WEVW-19">iterativ</a>
+    </p>
+</td>
+                                            <td class="description">      <p>iteratives Vorgehen beim Planen (Ontologie), Testen (Modelle) und Feedback...</p>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15050" rel="15050" data-issuekey="WEVW-21" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-21" href="https://wissenswandler.atlassian.net/browse/WEVW-21">kausal gerichtet</a>
+    </p>
+</td>
+                                            <td class="description">      <p>Viele Fragestellungen in einem Gebiet mit verknüpften Fakten beziehen sich auf Wirkungszusammenhänge.</p>
+
+<p>Die beiden grundsätzlichen Fragen sind:</p>
+
+<ol>
+	<li>welche Dinge <b>x</b> werden von Ding <b>y</b> unterstützt?</li>
+	<li>welche Dinge <b>y</b> benötigt das Ding <b>x</b> (um seinen Zweck zu erfüllen)?</li>
+</ol>
+
+
+<p>Die Treffermengen der Antworten ergeben sich dabei aus dem Traversieren des Wissensgraphen, und zwar...</p>
+
+<ol>
+	<li>entlang der Wirkungsrichtung (kausal positive Richtung, <em>nach oben</em>)</li>
+	<li>entlang der Ursachenrichtung (kausal negative Richtung, <em>nach unten</em>)</li>
+</ol>
+
+
+<p>Die Antwortmengen sind also gleich der transitiven Hülle der <b><em>Wertschöpfungs</em></b>-Relation auf der Faktenmenge.</p>
+
+<p>Grundlage für eine erfolgreiche automatische Antwort ist die konsequente Ausrichtung aller Kanten im Wissensgraphen an der Kausalität, also der Wirkungsrichtung.</p>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15051" rel="15051" data-issuekey="WEVW-22" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-22" href="https://wissenswandler.atlassian.net/browse/WEVW-22">wert-orientiert</a>
+    </p>
+</td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow15052" rel="15052" data-issuekey="WEVW-23" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-23" href="https://wissenswandler.atlassian.net/browse/WEVW-23">Anatol</a>
+    </p>
+</td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow15053" rel="15053" data-issuekey="WEVW-24" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-24" href="https://wissenswandler.atlassian.net/browse/WEVW-24">The Book of Why</a>
+    </p>
+</td>
+                                            <td class="description">      <p>The book of why : the new science of cause and effect / Judea Pearl and Dana Mackenzie. First edition. New York : Basic Books, 2018. <a href="https://lccn.loc.gov/2017056458" class="external-link" rel="nofollow noreferrer">https://lccn.loc.gov/2017056458</a></p>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15054" rel="15054" data-issuekey="WEVW-25" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-25" href="https://wissenswandler.atlassian.net/browse/WEVW-25">Judea Pearl</a>
+    </p>
+</td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow15055" rel="15055" data-issuekey="WEVW-26" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-26" href="https://wissenswandler.atlassian.net/browse/WEVW-26">Configuration Map</a>
+    </p>
+</td>
+                                            <td class="description">      <p>Example Configuration Map to answer <em>Interesting Questions in Service Management</em></p>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15056" rel="15056" data-issuekey="WEVW-27" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-27" href="https://wissenswandler.atlassian.net/browse/WEVW-27">https://colorbrewer2.org/</a>
+    </p>
+</td>
+                                            <td class="description">      <p>color advice for cartography <a href="https://colorbrewer2.org/" class="external-link" rel="nofollow noreferrer">https://colorbrewer2.org/</a></p>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15057" rel="15057" data-issuekey="WEVW-28" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-28" href="https://wissenswandler.atlassian.net/browse/WEVW-28">Cynthia Brewer et al.</a>
+    </p>
+</td>
+                                            <td class="description">      <p>Cynthia Brewer, Mark Harrower and The Pennsylvania State University</p>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15115" rel="15115" data-issuekey="WEVW-29" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-29" href="https://wissenswandler.atlassian.net/browse/WEVW-29">Kartografie</a>
+    </p>
+</td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow15116" rel="15116" data-issuekey="WEVW-30" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-30" href="https://wissenswandler.atlassian.net/browse/WEVW-30">Data Literacy</a>
+    </p>
+</td>
+                                            <td class="description">      <p>WOK unterstützt die Kompetenz der "Data Literacy", weil die Methode einen diagrammatischen und iterativ-inkrementellen Zugang zu eigenen oder fremden Fachgebieten ermöglicht.</p>
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow15117" rel="15117" data-issuekey="WEVW-31" class="issuerow">
+                                            <td class="summary"><p>
+                <a class="issue-link" data-issue-key="WEVW-31" href="https://wissenswandler.atlassian.net/browse/WEVW-31">Beispiele suggerieren falschen Kontext</a>
+    </p>
+</td>
+                                            <td class="description">      <p>Berechtigte Kritik: Die Namen der Beispielobjekte beziehen sich teilweise aufeinander (z.B. <b><em>this_server</em></b> und <b><em>other_server</em></b>).<br>
+Diese impliziten Bezüge über die Namen haben nichts mit den expliziten Bezügen der Graphenstruktur (Kanten) zu tun. Die namentlichen Bezüge dienen dem Beispiel nicht und sind offenbar verwirrend. Daher sollte ich (BG) diese Namen ändern. </p>
+  </td>
+                    </tr>
+                </tbody>
+    </table>
+    <div class="end-of-stable-message"></div>
+            </div>
+<script>
+require(["jquery"], function ($) {
+    // Prevent click events from doing stuff in this view
+    $(function(){
+        $('#printable-content *').unbind('click').click(function(e){ e.preventDefault() }).removeAttr('onclick');
+    });
+});
+</script>
+
+
+</body></html>

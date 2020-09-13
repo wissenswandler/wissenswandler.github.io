@@ -1,1 +1,1 @@
-Cause-and-Effect-Patterns // Ursache-Wirkungs-Muster
+Cause and Effect Patterns // Muster für Ursache und Wirkung

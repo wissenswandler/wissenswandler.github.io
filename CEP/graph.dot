@@ -2,6 +2,9 @@ digraph {
 	graph [color=whitesmoke,
 		fontname=Helvetica,
 		labelloc=b,
+		nodesep=0.2,
+		rankdir=BT,
+		ranksep=0.2,
 		remincross=true,
 		splines=true,
 		style="filled,rounded",
@@ -10,43 +13,407 @@ digraph {
 	];
 	node [fillcolor=white,
 		fontname=Helvetica,
+		height=0,
+		id="\N",
+		margin=0.1,
 		shape=box,
 		style="filled,rounded",
 		target=details,
-		tooltip=" "
+		tooltip=" ",
+		width=0
 	];
-	edge [arrowhead=none,
+	edge [arrowtail=none,
 		color=forestgreen,
 		dir=both,
+		fontsize=10,
+		id="\T___\H",
 		penwidth=2,
 		target=details
 	];
 	<CEP-1>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-1",
-		label=<Cause>];
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10533.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Cause</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Thing
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+operational
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-1
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
 	<CEP-2>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-2",
-		label=<Effect>];
-	<CEP-2> -> <CEP-1>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-2,CEP-1)",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10533.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Effect</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Thing
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+operational
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-2
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<CEP-1> -> <CEP-2>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-2,CEP-1)",
 		labeltooltip="Cause →  → Effect →  ⮌",
 		tooltip="Cause →  → Effect →  ⮌"];
+	<CEP-10>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-10",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10533.png"/>
+</TD>
+  <TD COLSPAN='3'><B>1</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Thing
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+retired
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-10
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled,dashed"];
+	<CEP-11>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-11",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10533.png"/>
+</TD>
+  <TD COLSPAN='3'><B>2</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Thing
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+retired
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-11
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled,dashed"];
+	<CEP-10> -> <CEP-11>	 [arrowhead=onormalonormal,
+		color="",
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-11,CEP-10)",
+		labeltooltip="1 → ist Vorgänger von  → 2 → folgt auf  ⮌",
+		minlen=1,
+		penwidth=1,
+		tooltip="1 → ist Vorgänger von  → 2 → folgt auf  ⮌"];
+	<CEP-12>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-12",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10533.png"/>
+</TD>
+  <TD COLSPAN='3'><B>3</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Thing
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+retired
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-12
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled,dashed"];
+	<CEP-11> -> <CEP-12>	 [arrowhead=onormalonormal,
+		color="",
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-12,CEP-11)",
+		labeltooltip="2 → ist Vorgänger von  → 3 → folgt auf  ⮌",
+		penwidth=1,
+		tooltip="2 → ist Vorgänger von  → 3 → folgt auf  ⮌"];
+	<CEP-13>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-13",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10533.png"/>
+</TD>
+  <TD COLSPAN='3'><B>4</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Thing
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+operational
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-13
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<CEP-12> -> <CEP-13>	 [arrowhead=onormalonormal,
+		color="",
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-13,CEP-12)",
+		labeltooltip="3 → ist Vorgänger von  → 4 → folgt auf  ⮌",
+		penwidth=1,
+		tooltip="3 → ist Vorgänger von  → 4 → folgt auf  ⮌"];
+	<CEP-14>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-14",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10533.png"/>
+</TD>
+  <TD COLSPAN='3'><B>5</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Thing
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+planned
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-14
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled,dotted"];
+	<CEP-13> -> <CEP-14>	 [arrowhead=onormalonormal,
+		color="",
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-14,CEP-13)",
+		labeltooltip="4 → ist Vorgänger von  → 5 → folgt auf  ⮌",
+		minlen=1,
+		penwidth=1,
+		tooltip="4 → ist Vorgänger von  → 5 → folgt auf  ⮌"];
 	<CEP-3>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-3",
-		label=<Precursor>,
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10533.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Precursor</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Thing
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+operational
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-3
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled",
 		tooltip="predecessor // Vorgänger"];
 	<CEP-4>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-4",
-		label=<Successor>];
-	<CEP-4> -> <CEP-3>	 [arrowhead=crow,
-		arrowtail=halfopen,
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10533.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Successor</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Thing
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+operational
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-4
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<CEP-3> -> <CEP-4>	 [arrowhead=onormalonormal,
+		color="",
 		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-4,CEP-3)",
 		labeltooltip="Precursor → ist Vorgänger von  → Successor → folgt auf  ⮌",
+		penwidth=1,
 		tooltip="Precursor → ist Vorgänger von  → Successor → folgt auf  ⮌"];
 	<CEP-5>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-5",
-		label=<Blueprint>];
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10533.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Blueprint</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Thing
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+operational
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-5
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
 	<CEP-6>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-6",
-		label=<Implementation>];
-	<CEP-6> -> <CEP-5>	 [arrowhead=empty,
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10533.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Implementation</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Thing
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+operational
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-6
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<CEP-5> -> <CEP-6>	 [arrowhead=onormal,
 		color=blue,
 		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-6,CEP-5)",
-		labeltooltip="Blueprint → ist Vorlage für  → Implementation → realisiert  ⮌",
+		labeltooltip="Blueprint → ist Vorlage für △ → Implementation → realisiert Vorlage ▼ (UML △) ⮌",
 		penwidth=1,
-		style=dashed,
-		tooltip="Blueprint → ist Vorlage für  → Implementation → realisiert  ⮌"];
+		tooltip="Blueprint → ist Vorlage für △ → Implementation → realisiert Vorlage ▼ (UML △) ⮌"];
+	<CEP-7>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-7",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10533.png"/>
+</TD>
+  <TD COLSPAN='3'><B>history</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Thing
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+retired
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-7
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled,dashed",
+		tooltip="Something that is now, when we look at it, 'history' or 'past'.
+
+It does not exist any more for the purpose of our reasoning. \
+It may well exist in other domains, outside the scope of our reasoning (i.e. a sold item which now is used by the new owner but \
+outside our domain).
+
+We may keep records of historical things in order to understand a historical configuration or to use it \
+as a blueprint for future configurations or to re-activate it, if necessary and possible. "];
+	<CEP-8>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-8",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10533.png"/>
+</TD>
+  <TD COLSPAN='3'><B>now</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Thing
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+operational
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-8
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled"];
+	<CEP-7> -> <CEP-8>	 [arrowhead=onormalonormal,
+		color="",
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-8,CEP-7)",
+		labeltooltip="history → ist Vorgänger von  → now → folgt auf  ⮌",
+		minlen=1,
+		penwidth=1,
+		tooltip="history → ist Vorgänger von  → now → folgt auf  ⮌"];
+	<CEP-9>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-9",
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10533.png"/>
+</TD>
+  <TD COLSPAN='3'><B>future</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Thing%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Thing
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+planned
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-9
+</FONT></TD>
+</TR>
+</TABLE>>,
+		style="rounded,filled,dotted"];
+	<CEP-8> -> <CEP-9>	 [arrowhead=onormalonormal,
+		color="",
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-9,CEP-8)",
+		labeltooltip="now → ist Vorgänger von  → future → folgt auf  ⮌",
+		minlen=1,
+		penwidth=1,
+		tooltip="now → ist Vorgänger von  → future → folgt auf  ⮌"];
 }
