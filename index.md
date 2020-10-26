@@ -2,7 +2,7 @@
 title: K - I - D - A - K
 layout: kts-paper
 ogimage: CEPDI/graph-overview.png
-abstract: Three alternative (yet complementary) learning paths: via Data, Documents or Doing. All three paths share the same layers of Knowledge Management, which I summarize as KIDAK, an extension of the DIK models.
+abstract: "Three alternative (yet complementary) learning paths: via Data, Documents or Doing. All three paths share the same layers of Knowledge Management, which I summarize as KIDAK, an extension of the DIK models."
 ---
 <script src="lib/graph.js" type="text/ecmascript" ></script>
 <script>
