@@ -1,0 +1,67 @@
+strict digraph {
+
+rankdir =BT
+node [ shape	=none	]
+edge [	penwidth	=6
+#	arrowhead=vee
+     ]
+
+nodesep="0.7"
+ranksep="0.7"
+
+# # # # # # # # # 
+#
+# standard style in WOC
+# (Wissenswandler Ontology for Causality)
+#
+
+labelloc=t	# the diagram's title on top
+style=filled	# to be inherited by nodes, so they remain in their fillcolor if part of colored cluster
+tooltip=" "	# to avoid the default echo of a graph's id as the tooltip
+ newrank=true	# to enable multiple ranking constraints which are evaluated globally (not per cluster)
+ 
+
+graph [
+ fontname=Helvetica
+ color=whitesmoke
+ remincross=true
+ splines=true
+ shape=none
+]
+
+node [
+ fontname=Helvetica
+ style="filled,rounded" # instances shall appear more soft and friendly (classes with sharp corners)
+ fillcolor=white
+ id="\N"	# essential for JavaScript traversing SVG
+ tooltip=" "	# to avoid the default echo of a node's id as the tooltip
+
+ margin=0.1 	# condense
+ width=0  	# condense
+ height=0 	# condense
+ ]
+	
+edge [
+ color=forestgreen	# represents positive effects (adding value)
+ fontsize=10	# smaller than the default of 12 in nodes
+ id="\T___\H"	# essential for JavaScript traversing SVG
+#tooltip="\T -(supports)-> \H" # \T and \H are not substituted in the tooltip attribute !!
+] 
+
+"3b" [shape=point]
+1 [label="K"]
+2 [label="D"]
+3 [label="I"]
+4 [label="D"]
+5 [label="K"]
+
+2 -> 1
+2 -> 3
+4 -> 3
+4 -> 5
+
+3 -> "3b" [style=invis]
+{rank=same 1;"3b";5 }
+
+
+} # end graph 

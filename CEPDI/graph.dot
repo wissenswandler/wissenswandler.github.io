@@ -1,0 +1,434 @@
+digraph {
+	graph [color=whitesmoke,
+		fontname=Helvetica,
+		labelloc=b,
+		nodesep=0.2,
+		rankdir=BT,
+		ranksep=0.2,
+		remincross=true,
+		splines=true,
+		style="filled,rounded",
+		target=details,
+		tooltip=" "
+	];
+	node [fillcolor=white,
+		fontname=Helvetica,
+		height=1,
+		id="\N",
+		margin=0.1,
+		shape=none,
+		style="filled,rounded",
+		target=details,
+		tooltip=" ",
+		width=0
+	];
+	edge [arrowtail=none,
+		color=forestgreen,
+		dir=both,
+		fontsize=10,
+		id="\T___\H",
+		penwidth=2,
+		target=details
+	];
+	<CEP-15>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-15",
+		height=0,
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Wissen%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10322.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Knowledge</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Wissen%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Wissen
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+retired
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-15
+</FONT></TD>
+</TR>
+</TABLE>>,
+		shape=box,
+		style="rounded,filled,dashed",
+		tooltip="Knowledge can be made explicit by its holder, e.g. by reflection or discussion.
+
+
+This explicit knowledge can be transmitted \
+as information either verbally, physically (notes) or in digital form (so called _data entry_).
+
+
+In the context of this pattern, \
+this is one of the initial (or input-) knowledge for the remaining flow.
+
+
+Once recorded there is a good chance to reproduce \
+the initial knowledge, through the following flow, even if the initial knowledge would be lost later."];
+	<CEP-16>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-16",
+		height=0,
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Information%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10526.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Information</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Information%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Information
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+operational
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-16
+</FONT></TD>
+</TR>
+</TABLE>>,
+		shape=box,
+		style="rounded,filled",
+		tooltip="Information is always the (implicit) basis for data in any form (documents, records...). That is because documents and records encode \
+information, ultimately in some physical way (e.g. dots of ink on paper, or magnetic state on disks or tape).
+
+Therefore, data _*\
+implements*_ the information which is contained in that data.
+
+Information may be gathered from humans' knowledge. In that case, \
+the *information* state is typically transient on its way from *knowledge* to *data* (while it gets _documented_ or _recorded_).
+
+\
+In more trivial cases, information is received from information systems via documents or records. Also in these cases the information \
+state does not appear explicitly or technically. Often it can be recognized only in the schema (of records), the layout (of documents) \
+or in a machine's algorithm."];
+	<CEP-15> -> <CEP-16>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-16,CEP-15)",
+		labeltooltip="Knowledge → unterstützt  → Information → benötigt  ↩",
+		tooltip="Knowledge → unterstützt  → Information → benötigt  ↩"];
+	<CEP-20>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-20",
+		height=0,
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Wissen%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10322.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Knowledge</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Wissen%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Wissen
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+planned
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-20
+</FONT></TD>
+</TR>
+</TABLE>>,
+		shape=box,
+		style="rounded,filled,dotted",
+		tooltip="acquired knowledge, hopefully represents the initial knowledge well enough
+
+Knowledge can be defined as
+bq. the capability to \
+solve a task with the help of information"];
+	<CEP-15> -> <CEP-20>	 [arrowhead=odot,
+		arrowtail=odot,
+		color=grey,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-20,CEP-15)",
+		label=≡,
+		labeltooltip="Knowledge → =  → Knowledge → =  ↩",
+		tooltip="Knowledge → =  → Knowledge → =  ↩"];
+	<CEP-17>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-17",
+		height=0,
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Dokument%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10306.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Document</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Dokument%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Dokument
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+operational
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-17
+</FONT></TD>
+</TR>
+</TABLE>>,
+		shape=box,
+		style="rounded,filled",
+		tooltip="Data in document form - either physical (e.g. printed paper) or digital (e.g. PDF file), typically meant for use by a human.
+
+
+\
+Records are machine-readable equivalents of documents.  
+
+
+Some machines can read some types of documents. In those cases it \
+is typically a specialized machine (so called _reader_) for a particular type of document (e.g. _Adobe Reader_).
+
+
+In the case \
+of a digital document it is always a _machine_ (more precisely a *_system_* of hardware, software and an output device) through \
+which a human can read the document. _Details of this case are left out from the diagram for clarity. These details can be represented \
+as an expansion of the *edge* leading from *document* to *human*._"];
+	<CEP-16> -> <CEP-17>	 [arrowhead=onormal,
+		color=blue,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-17,CEP-16)",
+		labeltooltip="Information → ist Vorlage für △ → Document → realisiert Vorlage ▼ (UML △) ↩",
+		penwidth=1,
+		tooltip="Information → ist Vorlage für △ → Document → realisiert Vorlage ▼ (UML △) ↩"];
+	<CEP-18>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-18",
+		height=0,
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Datensatz%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10300.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Data (records)</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Datensatz%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Datensatz
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+operational
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-18
+</FONT></TD>
+</TR>
+</TABLE>>,
+		shape=box,
+		style="rounded,filled",
+		tooltip="Records are technical structures for storing information.
+
+
+Records are machine-readable equivalents of documents.
+
+
+Records \
+are typically read and processed by machines.
+
+
+_Depending on the level of encoding, some higher-level records might by readable \
+for humans if they can be serialized to text. Strictly that would be the case of a (text-)document with a structure that is very \
+close to the record - but not the record itself._"];
+	<CEP-16> -> <CEP-18>	 [arrowhead=onormal,
+		color=blue,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-18,CEP-16)",
+		labeltooltip="Information → ist Vorlage für △ → Data (records) → realisiert Vorlage ▼ (UML △) ↩",
+		penwidth=1,
+		tooltip="Information → ist Vorlage für △ → Data (records) → realisiert Vorlage ▼ (UML △) ↩"];
+	<CEP-22>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-22",
+		height=0,
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Person%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10309.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Human (agent)</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Person%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Person
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+existent
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-22
+</FONT></TD>
+</TR>
+</TABLE>>,
+		shape=box,
+		style="rounded,filled",
+		tooltip="humans can learn in at least two different ways:
+# by reading a document and decoding it into information (on the fly) *_if_* that \
+human is capable of reading that document (in terms of language, education and other factors of context)
+# by performing an action 
+## \
+autodidactic = discovering knowledge through experiments (not shown in this model)
+## guided by an instructor = along a proven \
+path based on instructor's knowledge about the topic (as presented here in this model)"];
+	<CEP-17> -> <CEP-22>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-22,CEP-17)",
+		labeltooltip="Document → unterstützt  → Human (agent) → benötigt  ↩",
+		tooltip="Document → unterstützt  → Human (agent) → benötigt  ↩"];
+	<CEP-18> -> <CEP-17>	 [constraint=false,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-17,CEP-18)",
+		labeltooltip="Data (records) → unterstützt alternativ  → Document → benötigt alternativ ▼  ↩",
+		style=dashed,
+		tooltip="Data (records) → unterstützt alternativ  → Document → benötigt alternativ ▼  ↩"];
+	<CEP-21>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-21",
+		height=0,
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Software-Installation%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10321.png"/>
+</TD>
+  <TD COLSPAN='3'><B>artificial Agent</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Software-Installation%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Software-Installation
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+planned
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-21
+</FONT></TD>
+</TR>
+</TABLE>>,
+		shape=box,
+		style="rounded,filled,dotted",
+		tooltip="An artificial agent, also known as a machine. The machine reads records and *_may_* decode them into information *_if_* that machine \
+is designed for decoding these records (some machines are just designed to copy records with no higher level of decoding.
+
+A machine *_\
+might_* even acquire _knowledge_ from this information (depending on the capability of that machine and on our definition of knowledge)\
+.
+
+Due to these eventualities, a machine that is capable of decoding information and acquiring knowledge is presented as a future \
+thing here.
+
+More typically a machine copies records or transforms them into records with different structure and/or content, \
+or creates documents (images, text...) from records."];
+	<CEP-18> -> <CEP-21>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-21,CEP-18)",
+		labeltooltip="Data (records) → unterstützt  → artificial Agent → benötigt  ↩",
+		tooltip="Data (records) → unterstützt  → artificial Agent → benötigt  ↩"];
+	<CEP-21> -> <CEP-20>	 [arrowhead=none,
+		arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-20,CEP-21)",
+		labeltooltip="artificial Agent → aggregiert ◇  → Knowledge → ist gebündelt in ◇  ↩",
+		tooltip="artificial Agent → aggregiert ◇  → Knowledge → ist gebündelt in ◇  ↩"];
+	<CEP-22> -> <CEP-20>	 [arrowhead=none,
+		arrowtail=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-20,CEP-22)",
+		labeltooltip="Human (agent) → aggregiert ◇  → Knowledge → ist gebündelt in ◇  ↩",
+		tooltip="Human (agent) → aggregiert ◇  → Knowledge → ist gebündelt in ◇  ↩"];
+	<CEP-23>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-23",
+		height=0,
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Service%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10310.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Doing</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Service%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Service
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+operational
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-23
+</FONT></TD>
+</TR>
+</TABLE>>,
+		shape=box,
+		style="rounded,filled"];
+	<CEP-23> -> <CEP-22>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-22,CEP-23)",
+		labeltooltip="Doing → unterstützt  → Human (agent) → benötigt  ↩",
+		tooltip="Doing → unterstützt  → Human (agent) → benötigt  ↩"];
+	<CEP-24>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-24",
+		height=0,
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Person%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10309.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Instructor</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Person%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Person
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+existent
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-24
+</FONT></TD>
+</TR>
+</TABLE>>,
+		shape=box,
+		style="rounded,filled"];
+	<CEP-24> -> <CEP-23>	 [href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-23,CEP-24)",
+		labeltooltip="Instructor → unterstützt  → Doing → benötigt  ↩",
+		tooltip="Instructor → unterstützt  → Doing → benötigt  ↩"];
+	<CEP-25>	 [URL="https://wissenswandler.atlassian.net/browse/CEP-25",
+		height=0,
+		label=<
+<TABLE BORDER="0" CELLSPACING="0">
+ <TR>
+  <TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Wissen%22+ORDER+BY+summary">
+<IMG SRC="../img/avatar--10322.png"/>
+</TD>
+  <TD COLSPAN='3'><B>Knowledge</B></TD></TR>
+ <TR>
+<TD HREF="https://wissenswandler.atlassian.net/issues/?jql=type=%22Wissen%22+ORDER+BY+summary" COLSPAN="2" SIDES="LBR" ALIGN="LEFT">
+<I><FONT POINT-SIZE='8'>
+Wissen
+</FONT></I></TD>
+<TD><FONT POINT-SIZE='8'>
+operational
+</FONT></TD>
+<TD ALIGN='RIGHT'>
+<FONT POINT-SIZE='8'>
+CEP-25
+</FONT></TD>
+</TR>
+</TABLE>>,
+		shape=box,
+		style="rounded,filled",
+		tooltip="Knowledge can be demonstrated by its holder, e.g. through action, even if it is implicit:
+
+
+\"I can show you how I do it, but \
+I can't explain\""];
+	<CEP-25> -> <CEP-20>	 [arrowhead=odot,
+		arrowtail=odot,
+		color=grey,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-20,CEP-25)",
+		label=≡,
+		labeltooltip="Knowledge → =  → Knowledge → =  ↩",
+		tooltip="Knowledge → =  → Knowledge → =  ↩"];
+	<CEP-25> -> <CEP-24>	 [arrowhead=odiamond,
+		href="https://wissenswandler.atlassian.net/issues/?jql=key+in+(CEP-24,CEP-25)",
+		labeltooltip="Knowledge → ist gebündelt in ◇  → Instructor → aggregiert ◇  ↩",
+		tooltip="Knowledge → ist gebündelt in ◇  → Instructor → aggregiert ◇  ↩"];
+	K2	 [label=K];
+	K -> I	 [minlen=1,
+		penwidth=1];
+	I -> D	 [penwidth=1];
+	D -> A	 [penwidth=1];
+	A -> K2	 [minlen=1,
+		penwidth=1];
+}
