@@ -1,14 +1,20 @@
 <!doctype html>
 <html>
   <head>
-    <title>{{ page.title }}</title>
     <link rel="icon" type="image/svg+xml" href="W.svg" sizes="any" /> <!--ignored by Firefox on Android -->
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+
+    <meta property="og:title"       content="{{ page.title     }}" />
+    <meta property="og:image"       content="{{ page.ogimage   }}" />
+    <meta property="og:description" content="{{ page.abstract  }}" />
+    <meta property="og:site_name"   content="Wissenswandler" />
+
     <style type="text/css">
      .left  { float: left  }
      .right, object { float: right }
      hr { clear: both }
     </style>
-    <meta charset="utf-8">
   </head>
   <body>
     {{ content }}

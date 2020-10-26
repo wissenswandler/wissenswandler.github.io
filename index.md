@@ -1,6 +1,8 @@
 ---
 title: K - I - D - A - K
 layout: kts-paper
+ogimage: CEPDI/graph-overview.png
+abstract: Three alternative (yet complementary) learning paths: via Data, Documents or Doing. All three paths share the same layers of Knowledge Management, which I summarize as KIDAK, an extension of the DIK models.
 ---
 <script src="lib/graph.js" type="text/ecmascript" ></script>
 <script>
@@ -289,5 +291,3 @@ Sharing can be one step in a learning path. It takes place at the document level
 [^Gutenberg]: Johannes Gutenberg (1400 – 1468), inventor of the printing press; [see also here](https://en.wikipedia.org/wiki/Johannes_Gutenberg)
 
 [^why]: Judea Pearl, Dana Mackenzie; [The Book of Why: The New Science of Cause and Effect](http://bayes.cs.ucla.edu/WHY/); New York: Basic Books, Published May 15, 2018
-
-
