@@ -288,6 +288,6 @@ Sharing can be one step in a learning path. It takes place at the document level
 
 [^Gutenberg]: Johannes Gutenberg (1400 – 1468), inventor of the printing press; [see also here](https://en.wikipedia.org/wiki/Johannes_Gutenberg)
 
-[^why] Judea Pearl, Dana Mackenzie; [The Book of Why: The New Science of Cause and Effect](http://bayes.cs.ucla.edu/WHY/); New York: Basic Books, Published May 15, 2018
+[^why]: Judea Pearl, Dana Mackenzie; [The Book of Why: The New Science of Cause and Effect](http://bayes.cs.ucla.edu/WHY/); New York: Basic Books, Published May 15, 2018
 
 
