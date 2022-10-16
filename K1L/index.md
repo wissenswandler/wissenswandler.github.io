@@ -2,9 +2,9 @@
 title: KTS Jira Oneliner
 layout: kts-paper
 ogimage: graph-local.png
-abstract: KTS: Jira Diagram Generator with 1 line of source code
+abstract: "KTS: Jira Diagram Generator with 1 line of source code"
 ---
-<script src="../lib/graph.js" type="text/ecmascript"></script>
+<script src="/lib/graph.js" type="text/ecmascript"></script>
 <script>
       var sdoc
       window.addEventListener("load", function()
