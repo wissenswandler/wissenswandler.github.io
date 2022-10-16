@@ -44,7 +44,7 @@ g.edge:hover { animation: blinker 1s linear infinite alternate } @keyframes blin
 
 g.node:hover path, /* applies to edge outline (arrowheads ) _not filled_ geometry (not tested with arrow tail yet) */
 g.edge:hover path,
-g.edge:hover polygon	{ stroke: #0000ff; stroke-width: 3 }
+g.edge:hover polygon	{ stroke: #0000ff; stroke-width: 3; stroke-dasharray:none }
 
 
 /* ... end hover */
@@ -56,7 +56,8 @@ g.edge:hover polygon	{ stroke: #0000ff; stroke-width: 3 }
 .dim { animation: dim 1s forwards } @keyframes dim { to { opacity: 0.1 } }
 
 /* tagged elements are drawn with thicker lines... */
-[tag1] { animation: asw2 .4s forwards; animation-delay: 0.2s } @keyframes asw2 { to { stroke-width: 2 } }
+[tag1] :not(text):not(a):not(g) { animation: asw2 .4s forwards; animation-delay: 0.2s } @keyframes asw2 { to { stroke-width: 2; stroke:blue } }
+
 
 /* dotted outlines in light colors (when tagged) are so hard to read that we want the outline to be solid */
 [tag1]      path[stroke-dasharray="1,5"] { stroke-dasharray:none }
@@ -80,26 +81,26 @@ g.edge:hover polygon	{ stroke: #0000ff; stroke-width: 3 }
 
 * { animation-duration: .4s; animation-fill-mode: forwards }
 
-[distance]      * { animation-delay:2.0s }
-[distance="19"] * { animation-delay:1.9s }
-[distance="18"] * { animation-delay:1.8s }
-[distance="17"] * { animation-delay:1.7s }
-[distance="16"] * { animation-delay:1.6s }
-[distance="15"] * { animation-delay:1.5s }
-[distance="14"] * { animation-delay:1.4s }
-[distance="13"] * { animation-delay:1.3s }
-[distance="12"] * { animation-delay:1.2s }
-[distance="11"] * { animation-delay:1.1s }
-[distance="10"] * { animation-delay:1.0s }
-[distance="9"]  * { animation-delay:0.9s }
-[distance="8"]  * { animation-delay:0.8s }
-[distance="7"]  * { animation-delay:0.7s }
-[distance="6"]  * { animation-delay:0.6s }
-[distance="5"]  * { animation-delay:0.5s }
-[distance="4"]  * { animation-delay:0.4s }
-[distance="3"]  * { animation-delay:0.3s }
-[distance="2"]  * { animation-delay:0.2s }
-[distance="1"]  * { animation-delay:0.1s }
+[distance]      * { animation-delay:0.50s }
+[distance="19"] * { animation-delay:0.95s }
+[distance="18"] * { animation-delay:0.90s }
+[distance="17"] * { animation-delay:0.85s }
+[distance="16"] * { animation-delay:0.80s }
+[distance="15"] * { animation-delay:0.75s }
+[distance="14"] * { animation-delay:0.70s }
+[distance="13"] * { animation-delay:0.65s }
+[distance="12"] * { animation-delay:0.60s }
+[distance="11"] * { animation-delay:0.55s }
+[distance="10"] * { animation-delay:0.50s }
+[distance="9"]  * { animation-delay:0.45s }
+[distance="8"]  * { animation-delay:0.40s }
+[distance="7"]  * { animation-delay:0.35s }
+[distance="6"]  * { animation-delay:0.30s }
+[distance="5"]  * { animation-delay:0.25s }
+[distance="4"]  * { animation-delay:0.20s }
+[distance="3"]  * { animation-delay:0.15s }
+[distance="2"]  * { animation-delay:0.10s }
+[distance="1"]  * { animation-delay:0.05s }
 
 /* travelling North, using the Yellow-Orange-Brown colorscheme by Brewer */
 
@@ -268,7 +269,45 @@ g.edge:hover polygon	{ stroke: #0000ff; stroke-width: 3 }
  * ... end coloring
  */
 
+/*
+ * modal help screen
+ */
 
+   #modal {
+  display: none;        /* Hidden by default */
+  position: fixed;      /* Stay in place */
+  z-index: 1;           /* Sit on top */
+  left: 0;
+  top:  0;
+  width:  100%;
+  height: 100%;
+  overflow: auto;                       /* Enable scroll if needed */
+  background-color: rgb(0,0,0);         /* Fallback color */
+  background-color: rgba(0,0,0,0.4);    /* Black w/ opacity */
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  background-color: #fefefe;
+  left: 25%;
+  width: 50%;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+.close { float: right; font-size: 28px; font-weight: bold; }
+.close:hover,
+.close:focus { cursor: pointer; }
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+    to {bottom:      0; opacity: 1}
+}
+@keyframes fadeIn {
+  from {opacity: 0}
+    to {opacity: 1}
+}
 
 /*
  *

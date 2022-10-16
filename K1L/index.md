@@ -31,9 +31,9 @@ abstract: "KTS: Jira Diagram Generator with 1 line of source code"
 
 <h1><center>KTS: Jira Diagram Generator with 1 line of source code</center></h1>
 
-<pre>
-curl -s https://knowhere.atlassian.net/rest/api/2/search?jql=project=K1L|jq -r '"digraph{rankdir=BT",(.issues[]|("&lt;"+.key+"&gt;[label=\""+.fields.summary+"\"]"),(.key as $k|.fields.issuelinks[]|select(.inwardIssue)|"&lt;"+$k+"&gt;-&gt;&lt;"+.inwardIssue.key+"&gt;")),"}"'|dot -Tpng&gt;P&amp;&amp;eog P
-</pre>
+~~~~ bash
+curl -s https://knowhere.atlassian.net/rest/api/2/search?jql=project=K1L|jq -r '"digraph{rankdir=BT",(.issues[]|("&lt;"+.key+"&gt;[label=\""+.fields.summary+"\"]"),(.key as $k|.fields.issuelinks[]|select(.inwardIssue)|"&lt;"+$k+"&gt;-&gt;&lt;"+.inwardIssue.key+"&gt;")),"}"'|dot -Tpng&gt;P;eog P
+~~~~
 
 <object class="clear" id="graph_1" width="100%" data="graph-local.svg" type="image/svg+xml"></object>
 
