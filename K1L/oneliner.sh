@@ -1,0 +1,1 @@
+curl -s https://knowhere.atlassian.net/rest/api/2/search?jql=project=K1L|jq -r '"digraph{rankdir=BT",(.issues[]|("<"+.key+">[label=\""+.fields.summary+"\"]"),(.key as $k|.fields.issuelinks[]|select(.inwardIssue)|"<"+$k+">-><"+.inwardIssue.key+">")),"}"'|dot -Tpng>P;eog P

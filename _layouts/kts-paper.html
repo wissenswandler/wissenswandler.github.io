@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <link rel="icon" type="image/svg+xml" href="W.svg" sizes="any" /> <!--ignored by Firefox on Android -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any" /> <!--ignored by Firefox on Android -->
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
 
@@ -19,6 +19,13 @@
   <body>
     {{ content }}
     <hr/>
-    <p>Copyright © 2020 Boran Gögetap <a href="mailto:boran@goegetap.name">boran@goegetap.name</a>; HTML created by Jekyll; Diagrams created by GraphViz and KTS; Diagram elements maintained in Jira; Text and KTS licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.html">GNU Affero General Public License</a></p>
+    <p><small>
+	Copyright © 2020, 2021, 2022 Boran Gögetap <a href="mailto:boran@goegetap.name?subject={{ page.title }}&body=commenting on {{ site.url}}{{ page.url }} ...">boran@goegetap.name</a> (click to send feedback);
+	Knowledgegraph (boxes and lines) maintained in public Jira project;
+	Diagrams created by KTS <a href="https://bitbucket.org/wissenswandler/kts-jira-extract-transform/src/master/">(Knowledge Transformation System)</a> and <a href="https://graphviz.org/">GraphViz</a>;
+	HTML created by Jekyll;
+	This paper licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.html">GNU Affero General Public License</a>
+       </small>
+    </p>
   </body>
 </html>
