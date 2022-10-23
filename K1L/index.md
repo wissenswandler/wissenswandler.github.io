@@ -1,8 +1,8 @@
 ---
-title: KTS Jira Oneliner
+title: "KTS: Jira Diagram Generator with 1 line of source code"
 layout: kts-paper
 ogimage: graph-local.png
-abstract: "KTS: Jira Diagram Generator with 1 line of source code"
+abstract: "How to generate a diagram from Jira content (linked issues) with one line of sourcecode"
 ---
 <script src="/lib/graph.js" type="text/ecmascript"></script>
 <script>
@@ -29,7 +29,7 @@ abstract: "KTS: Jira Diagram Generator with 1 line of source code"
       }
 </script>
 
-<h1><center>KTS: Jira Diagram Generator with 1 line of source code</center></h1>
+# <center>{{ page.title }}</center>
 
 ~~~~ bash
 curl -s https://knowhere.atlassian.net/rest/api/2/search?jql=project=K1L|jq -r '"digraph{rankdir=BT",(.issues[]|("<"+.key+">[label=\""+.fields.summary+"\"]"),(.key as $k|.fields.issuelinks[]|select(.inwardIssue)|"<"+$k+">-><"+.inwardIssue.key+">")),"}"'|dot -Tpng>P;eog P
@@ -42,4 +42,3 @@ curl -s https://knowhere.atlassian.net/rest/api/2/search?jql=project=K1L|jq -r '
 <p>This diagram explains the execution flow and data flow of a program with less than 300 characters of source code which extracts linked issue information from Jira and turns that into a diagram.</p>
 <button onclick="highlightExecution()">highlight execution path</button>
 <button onclick="focusDependencies() ">focus package dependencies</button>
-
