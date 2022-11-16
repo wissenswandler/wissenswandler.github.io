@@ -1,7 +1,7 @@
 ---
 title: "KTS: Jira Diagram Generator with 1 line of source code"
 layout: kts-paper
-ogimage: graph-local.png
+ogimage: graph.png
 abstract: "How to generate a diagram from Jira content (linked issues) with one line of sourcecode"
 ---
 <script src="/lib/graph.js" type="text/ecmascript"></script>
