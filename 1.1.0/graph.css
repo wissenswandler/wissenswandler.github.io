@@ -46,6 +46,11 @@ g.node:hover path, /* applies to edge outline (arrowheads ) _not filled_ geometr
 g.edge:hover path,
 g.edge:hover polygon	{ stroke: #0000ff; stroke-width: 3; stroke-dasharray:none }
 
+// focussed nodes with hyperlink other than Javascript
+g.node:hover a[*|href]:not([*|href^='javascript']) text { stroke:blue }
+
+// focussed nodes with tooltip
+g.node:hover a[*|title]:not([*|title=' ']) text { text-decoration: underline }
 
 /* ... end hover */
 
