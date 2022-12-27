@@ -58,8 +58,9 @@ g.edge:hover polygon	{ stroke: #0000ff }
  * emphasis on additional information (tooltip, hyperlink)
  */
 
-/* text in node with tooltip (other than empty ) */
+/* text in node or edge with tooltip (other than empty ) */
 g.node a[*|title]:not([*|title=' ']) text,
+g.edge a[*|title]:not([*|title=' ']) text,
 
 /* text in node with hyperlink (other than Javascript) */
 g.node       a[*|href]:not([*|href^='javascript']) text { text-decoration: underline } /*both shown with underline to attract mouse focus*/ 
