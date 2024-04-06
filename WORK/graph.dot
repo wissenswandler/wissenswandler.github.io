@@ -1,0 +1,171 @@
+digraph Map {
+graph [
+    class="dot_by_kts"
+]
+node [
+   margin=0.1
+]
+
+# self: https://kxfm-dev.atlassian.net/rest/api/2/issue/10062
+<WORK-34> [ label=
+<<TABLE BORDER="0" CELLSPACING="0"> <TR>
+  <TD CELLPADDING="0"><IMG SRC="https://kxfm-dev.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium" /></TD>
+  <TD COLSPAN='3'>Demo Story 3</TD>
+ </TR> <TR>
+  <TD COLSPAN="2" SIDES="LBR" ALIGN="LEFT"><FONT POINT-SIZE='8'>Story</FONT></TD>
+  <TD><FONT POINT-SIZE='8'>Backlog</FONT></TD>
+  <TD ALIGN='RIGHT'><FONT POINT-SIZE='8'>WORK-34</FONT></TD>
+</TR> </TABLE>> URL="https://kxfm-dev.atlassian.net/browse/WORK-34" style="filled,rounded,dotted" class="type_10001 querydistance_0" ]
+
+# self: https://kxfm-dev.atlassian.net/rest/api/2/issue/10067
+<WORK-39> [ label=
+<<TABLE BORDER="0" CELLSPACING="0"> <TR>
+  <TD CELLPADDING="0"><IMG SRC="https://kxfm-dev.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium" /></TD>
+  <TD COLSPAN='3'>Demo Task 2</TD>
+ </TR> <TR>
+  <TD COLSPAN="2" SIDES="LBR" ALIGN="LEFT"><FONT POINT-SIZE='8'>Task</FONT></TD>
+  <TD><FONT POINT-SIZE='8'>Done</FONT></TD>
+  <TD ALIGN='RIGHT'><FONT POINT-SIZE='8'>WORK-39</FONT></TD>
+</TR> </TABLE>> URL="https://kxfm-dev.atlassian.net/browse/WORK-39" style="filled,rounded,dashed" class="type_10002 querydistance_0" ]
+
+# self: https://kxfm-dev.atlassian.net/rest/api/2/issue/10063
+<WORK-35> [ label=
+<<TABLE BORDER="0" CELLSPACING="0"> <TR>
+  <TD CELLPADDING="0"><IMG SRC="https://kxfm-dev.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium" /></TD>
+  <TD COLSPAN='3'>Demo Story 4</TD>
+ </TR> <TR>
+  <TD COLSPAN="2" SIDES="LBR" ALIGN="LEFT"><FONT POINT-SIZE='8'>Story</FONT></TD>
+  <TD><FONT POINT-SIZE='8'>In Progress</FONT></TD>
+  <TD ALIGN='RIGHT'><FONT POINT-SIZE='8'>WORK-35</FONT></TD>
+</TR> </TABLE>> URL="https://kxfm-dev.atlassian.net/browse/WORK-35" style="filled,rounded" class="type_10001 querydistance_0" ]
+
+# self: https://kxfm-dev.atlassian.net/rest/api/2/issue/10061
+<WORK-33> [ label=
+<<TABLE BORDER="0" CELLSPACING="0"> <TR>
+  <TD CELLPADDING="0"><IMG SRC="https://kxfm-dev.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium" /></TD>
+  <TD COLSPAN='3'>Future Story 2</TD>
+ </TR> <TR>
+  <TD COLSPAN="2" SIDES="LBR" ALIGN="LEFT"><FONT POINT-SIZE='8'>Story</FONT></TD>
+  <TD><FONT POINT-SIZE='8'>Backlog</FONT></TD>
+  <TD ALIGN='RIGHT'><FONT POINT-SIZE='8'>WORK-33</FONT></TD>
+</TR> </TABLE>> URL="https://kxfm-dev.atlassian.net/browse/WORK-33" style="filled,rounded,dotted" class="type_10001 querydistance_0" ]
+
+# self: https://kxfm-dev.atlassian.net/rest/api/2/issue/10056
+<WORK-28> [ label=
+<<TABLE BORDER="0" CELLSPACING="0"> <TR>
+  <TD CELLPADDING="0"><IMG SRC="https://kxfm-dev.atlassian.net/images/icons/issuetypes/epic.svg" /></TD>
+  <TD COLSPAN='3'>Demo Epic 2 (present)</TD>
+ </TR> <TR>
+  <TD COLSPAN="2" SIDES="LBR" ALIGN="LEFT"><FONT POINT-SIZE='8'>Epic</FONT></TD>
+  <TD><FONT POINT-SIZE='8'>In Progress</FONT></TD>
+  <TD ALIGN='RIGHT'><FONT POINT-SIZE='8'>WORK-28</FONT></TD>
+</TR> </TABLE>> URL="https://kxfm-dev.atlassian.net/browse/WORK-28" style="filled,rounded" class="type_10000 querydistance_0" ]
+
+# self: https://kxfm-dev.atlassian.net/rest/api/2/issue/10055
+<WORK-27> [ label=
+<<TABLE BORDER="0" CELLSPACING="0"> <TR>
+  <TD CELLPADDING="0"><IMG SRC="https://kxfm-dev.atlassian.net/images/icons/issuetypes/epic.svg" /></TD>
+  <TD COLSPAN='3'>Demo Epic 1 (future)</TD>
+ </TR> <TR>
+  <TD COLSPAN="2" SIDES="LBR" ALIGN="LEFT"><FONT POINT-SIZE='8'>Epic</FONT></TD>
+  <TD><FONT POINT-SIZE='8'>Backlog</FONT></TD>
+  <TD ALIGN='RIGHT'><FONT POINT-SIZE='8'>WORK-27</FONT></TD>
+</TR> </TABLE>> URL="https://kxfm-dev.atlassian.net/browse/WORK-27" style="filled,rounded,dotted" class="type_10000 querydistance_0" ]
+
+# self: https://kxfm-dev.atlassian.net/rest/api/2/issue/10057
+<WORK-29> [ label=
+<<TABLE BORDER="0" CELLSPACING="0"> <TR>
+  <TD CELLPADDING="0"><IMG SRC="https://kxfm-dev.atlassian.net/images/icons/issuetypes/epic.svg" /></TD>
+  <TD COLSPAN='3'>Demo Epic 3 (past)</TD>
+ </TR> <TR>
+  <TD COLSPAN="2" SIDES="LBR" ALIGN="LEFT"><FONT POINT-SIZE='8'>Epic</FONT></TD>
+  <TD><FONT POINT-SIZE='8'>Done</FONT></TD>
+  <TD ALIGN='RIGHT'><FONT POINT-SIZE='8'>WORK-29</FONT></TD>
+</TR> </TABLE>> URL="https://kxfm-dev.atlassian.net/browse/WORK-29" style="filled,rounded,dashed" class="type_10000 querydistance_0" ]
+
+# self: https://kxfm-dev.atlassian.net/rest/api/2/issue/10066
+<WORK-38> [ label=
+<<TABLE BORDER="0" CELLSPACING="0"> <TR>
+  <TD CELLPADDING="0"><IMG SRC="https://kxfm-dev.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium" /></TD>
+  <TD COLSPAN='3'>Demo Story 7</TD>
+ </TR> <TR>
+  <TD COLSPAN="2" SIDES="LBR" ALIGN="LEFT"><FONT POINT-SIZE='8'>Story</FONT></TD>
+  <TD><FONT POINT-SIZE='8'>Done</FONT></TD>
+  <TD ALIGN='RIGHT'><FONT POINT-SIZE='8'>WORK-38</FONT></TD>
+</TR> </TABLE>> URL="https://kxfm-dev.atlassian.net/browse/WORK-38" style="filled,rounded,dashed" class="type_10001 querydistance_0" ]
+
+# self: https://kxfm-dev.atlassian.net/rest/api/2/issue/10065
+<WORK-37> [ label=
+<<TABLE BORDER="0" CELLSPACING="0"> <TR>
+  <TD CELLPADDING="0"><IMG SRC="https://kxfm-dev.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium" /></TD>
+  <TD COLSPAN='3'>Demo Story 6</TD>
+ </TR> <TR>
+  <TD COLSPAN="2" SIDES="LBR" ALIGN="LEFT"><FONT POINT-SIZE='8'>Story</FONT></TD>
+  <TD><FONT POINT-SIZE='8'>Done</FONT></TD>
+  <TD ALIGN='RIGHT'><FONT POINT-SIZE='8'>WORK-37</FONT></TD>
+</TR> </TABLE>> URL="https://kxfm-dev.atlassian.net/browse/WORK-37" style="filled,rounded,dashed" class="type_10001 querydistance_0" ]
+
+# self: https://kxfm-dev.atlassian.net/rest/api/2/issue/10058
+<WORK-30> [ label=
+<<TABLE BORDER="0" CELLSPACING="0"> <TR>
+  <TD CELLPADDING="0"><IMG SRC="https://kxfm-dev.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10303?size=medium" /></TD>
+  <TD COLSPAN='3'>Demo Bug (new)</TD>
+ </TR> <TR>
+  <TD COLSPAN="2" SIDES="LBR" ALIGN="LEFT"><FONT POINT-SIZE='8'>Bug</FONT></TD>
+  <TD><FONT POINT-SIZE='8'>Selected for Development</FONT></TD>
+  <TD ALIGN='RIGHT'><FONT POINT-SIZE='8'>WORK-30</FONT></TD>
+</TR> </TABLE>> URL="https://kxfm-dev.atlassian.net/browse/WORK-30" style="filled,rounded,dotted" class="type_10004 querydistance_0" ]
+
+# self: https://kxfm-dev.atlassian.net/rest/api/2/issue/10064
+<WORK-36> [ label=
+<<TABLE BORDER="0" CELLSPACING="0"> <TR>
+  <TD CELLPADDING="0"><IMG SRC="https://kxfm-dev.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium" /></TD>
+  <TD COLSPAN='3'>Demo Story 5</TD>
+ </TR> <TR>
+  <TD COLSPAN="2" SIDES="LBR" ALIGN="LEFT"><FONT POINT-SIZE='8'>Story</FONT></TD>
+  <TD><FONT POINT-SIZE='8'>In Progress</FONT></TD>
+  <TD ALIGN='RIGHT'><FONT POINT-SIZE='8'>WORK-36</FONT></TD>
+</TR> </TABLE>> URL="https://kxfm-dev.atlassian.net/browse/WORK-36" style="filled,rounded" class="type_10001 querydistance_0" ]
+
+# self: https://kxfm-dev.atlassian.net/rest/api/2/issue/10060
+<WORK-32> [ label=
+<<TABLE BORDER="0" CELLSPACING="0"> <TR>
+  <TD CELLPADDING="0"><IMG SRC="https://kxfm-dev.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium" /></TD>
+  <TD COLSPAN='3'>Future Story 1</TD>
+ </TR> <TR>
+  <TD COLSPAN="2" SIDES="LBR" ALIGN="LEFT"><FONT POINT-SIZE='8'>Story</FONT></TD>
+  <TD><FONT POINT-SIZE='8'>Backlog</FONT></TD>
+  <TD ALIGN='RIGHT'><FONT POINT-SIZE='8'>WORK-32</FONT></TD>
+</TR> </TABLE>> URL="https://kxfm-dev.atlassian.net/browse/WORK-32" style="filled,rounded,dotted" class="type_10001 querydistance_0" ]
+
+# self: https://kxfm-dev.atlassian.net/rest/api/2/issue/10059
+<WORK-31> [ label=
+<<TABLE BORDER="0" CELLSPACING="0"> <TR>
+  <TD CELLPADDING="0"><IMG SRC="https://kxfm-dev.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium" /></TD>
+  <TD COLSPAN='3'>Demo Task 1 (isolated)</TD>
+ </TR> <TR>
+  <TD COLSPAN="2" SIDES="LBR" ALIGN="LEFT"><FONT POINT-SIZE='8'>Task</FONT></TD>
+  <TD><FONT POINT-SIZE='8'>In Progress</FONT></TD>
+  <TD ALIGN='RIGHT'><FONT POINT-SIZE='8'>WORK-31</FONT></TD>
+</TR> </TABLE>> URL="https://kxfm-dev.atlassian.net/browse/WORK-31" style="filled,rounded" class="type_10002 querydistance_0" ]
+
+{ edge [ label="blocks"] # link type: "Blocks"
+<WORK-30> -> <WORK-34>[labeltooltip="Demo Story 3 –is blocked by→ Demo Bug (new) –blocks→ Demo Story 3" tooltip="Demo Story 3 –is blocked by→ Demo Bug (new) –blocks→ Demo Story 3" class="type_10000 impact_negative querydistance_0"]
+<WORK-38> -> <WORK-39>[labeltooltip="Demo Task 2 –is blocked by→ Demo Story 7 –blocks→ Demo Task 2" tooltip="Demo Task 2 –is blocked by→ Demo Story 7 –blocks→ Demo Task 2" class="type_10000 impact_negative querydistance_0"]
+<WORK-28> -> <WORK-27>[labeltooltip="Demo Epic 1 (future) –is blocked by→ Demo Epic 2 (present) –blocks→ Demo Epic 1 (future)" tooltip="Demo Epic 1 (future) –is blocked by→ Demo Epic 2 (present) –blocks→ Demo Epic 1 (future)" class="type_10000 impact_negative querydistance_0"]
+<WORK-29> -> <WORK-28>[labeltooltip="Demo Epic 2 (present) –is blocked by→ Demo Epic 3 (past) –blocks→ Demo Epic 2 (present)" tooltip="Demo Epic 2 (present) –is blocked by→ Demo Epic 3 (past) –blocks→ Demo Epic 2 (present)" class="type_10000 impact_negative querydistance_0"]
+}
+{ edge [label=""] # link type: "1 Generic Value Creation"
+<WORK-34> -> <WORK-33>[labeltooltip="Demo Story 3 –supports→ Future Story 2 –depends on→ Demo Story 3" tooltip="Demo Story 3 –supports→ Future Story 2 –depends on→ Demo Story 3" class="type_10008 querydistance_0"]
+}
+{ edge [arrowhead=diamond] # link type: "parent"
+<WORK-34> -> <WORK-28>[ tooltip="Demo Story 3 –has parent(field)→ Demo Epic 2 (present) –has child (= inverse of 'parent')→ Demo Story 3" class="type_jira__field__parent querydistance_0"]
+<WORK-39> -> <WORK-29>[ tooltip="Demo Task 2 –has parent(field)→ Demo Epic 3 (past) –has child (= inverse of 'parent')→ Demo Task 2" class="type_jira__field__parent querydistance_0"]
+<WORK-35> -> <WORK-28>[ tooltip="Demo Story 4 –has parent(field)→ Demo Epic 2 (present) –has child (= inverse of 'parent')→ Demo Story 4" class="type_jira__field__parent querydistance_0"]
+<WORK-33> -> <WORK-27>[ tooltip="Future Story 2 –has parent(field)→ Demo Epic 1 (future) –has child (= inverse of 'parent')→ Future Story 2" class="type_jira__field__parent querydistance_0"]
+<WORK-38> -> <WORK-29>[ tooltip="Demo Story 7 –has parent(field)→ Demo Epic 3 (past) –has child (= inverse of 'parent')→ Demo Story 7" class="type_jira__field__parent querydistance_0"]
+<WORK-37> -> <WORK-28>[ tooltip="Demo Story 6 –has parent(field)→ Demo Epic 2 (present) –has child (= inverse of 'parent')→ Demo Story 6" class="type_jira__field__parent querydistance_0"]
+<WORK-36> -> <WORK-28>[ tooltip="Demo Story 5 –has parent(field)→ Demo Epic 2 (present) –has child (= inverse of 'parent')→ Demo Story 5" class="type_jira__field__parent querydistance_0"]
+<WORK-32> -> <WORK-27>[ tooltip="Future Story 1 –has parent(field)→ Demo Epic 1 (future) –has child (= inverse of 'parent')→ Future Story 1" class="type_jira__field__parent querydistance_0"]
+}
+}
