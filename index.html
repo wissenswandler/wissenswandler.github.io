@@ -1,0 +1,333 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any" /> <!--ignored by Firefox on Android -->
+    <meta charset="utf-8">
+    <title>K - I - D - A - K</title>
+
+    <meta property="og:title"       content="K - I - D - A - K" />
+    <meta property="og:image"       content="CEPDI/graph-overview.png" />
+    <meta property="og:description" content="Three alternative (yet complementary) learning paths: via Data, Documents or Doing. All three paths share the same layers of Knowledge Management, which I summarize as KIDAK, an extension of the DIK models." />
+    <meta property="og:site_name"   content="Wissenswandler" />
+
+    <style type="text/css">
+     .left  { float: left  }
+     .right, object { float: right }
+     hr { clear: both }
+    </style>
+  </head>
+  <body>
+    <script src="lib/graph.js" type="text/ecmascript"></script>
+
+<script>
+  window.addEventListener("load", function()
+  {
+    let
+    sdoc = document.getElementById("KIDAK").getSVGDocument()
+    onclick(  sdoc, sdoc.getElementById( "K" )  )
+
+    sdoc = document.getElementById("KIDAKS").getSVGDocument()
+    onclick(  sdoc, sdoc.getElementById( "CEP-17" )  )
+    NEXT_CLICK_MEMORY = 'r'
+    onclick(  sdoc, sdoc.getElementById( "CEP-18" )  )
+    execute_keyboard_function( sdoc, "F" )
+    onclick(  sdoc, sdoc.getElementById( "K" )  )
+  
+    sdoc = document.getElementById("KIDAKP").getSVGDocument()
+    onclick(  sdoc, sdoc.getElementById( "CEP-25" )  )
+    execute_keyboard_function( sdoc, "F" )
+    onclick(  sdoc, sdoc.getElementById( "K" )  )
+
+    sdoc = document.getElementById("KIDAKM").getSVGDocument()
+    onclick(  sdoc, sdoc.getElementById( "CEP-21" )  )
+    onclick(  sdoc, sdoc.getElementById( "CEP-21" )  )
+    execute_keyboard_function( sdoc, "F" )
+    onclick(  sdoc, sdoc.getElementById( "K" )  )
+
+    sdoc = document.getElementById("KIDAKAI").getSVGDocument()
+    onclick(  sdoc, sdoc.getElementById( "CEP-15" )  )
+    execute_keyboard_function( sdoc, "F" )
+    onclick(  sdoc, sdoc.getElementById( "K" )  )
+
+    sdoc = document.getElementById("KIDAKHL").getSVGDocument()
+    onclick(  sdoc, sdoc.getElementById( "CEP-22" )  )
+    onclick(  sdoc, sdoc.getElementById( "CEP-22" )  )
+    NEXT_CLICK_MEMORY = 'r'
+    onclick(  sdoc, sdoc.getElementById( "CEP-18" )  )
+    execute_keyboard_function( sdoc, "F" )
+    onclick(  sdoc, sdoc.getElementById( "K" )  )
+  });
+</script>
+
+<h1 id="data-documents-and-doing"><center>Data, Documents and Doing:</center></h1>
+<h1 id="3-paths-of-learning-for-humans-and-machines"><center>3 Paths of Learning for Humans and Machines</center></h1>
+
+<object class="clear" id="KIDAK" width="100%" data="CEPDI/graph-local.svg" type="image/svg+xml"></object>
+
+<p>Knowledge Management has one goal: <strong>providing knowledge to those who need it</strong>.</p>
+
+<p>Here I present three alternative (yet complementary) paths for achieving that: via <strong>Data</strong>, <strong>Documents</strong> or <strong>Doing</strong>.</p>
+
+<p>All three paths share the same layers of Knowledge Management, which I summarize as <abbr title="KIDAK = Knowledge - Information - Data - Agent - Knowledge">KIDAK</abbr> (right-hand side of diagram), an extension of the <abbr title="DIK = Data - Information - Knowledge">DIK</abbr><sup id="fnref:DIK" role="doc-noteref"><a href="#fn:DIK" class="footnote" rel="footnote">1</a></sup> models.</p>
+
+<p><small>draft version 2020-10-25</small></p>
+<hr />
+
+<h1 id="1-the-document-path-study">1. The Document path (study)</h1>
+
+<object id="KIDAKS" width="50%" data="CEPDI/graph-local.svg" type="image/svg+xml"></object>
+
+<p>This is the predominant learning path since Gutenberg<sup id="fnref:Gutenberg" role="doc-noteref"><a href="#fn:Gutenberg" class="footnote" rel="footnote">2</a></sup>, 15th century, and only accellerated in the information age.</p>
+
+<h2 id="main-flow-explanation">main flow explanation</h2>
+
+<ol>
+  <li>An initial owner had <strong>knowledge</strong><sup id="fnref:knowledge" role="doc-noteref"><a href="#fn:knowledge" class="footnote" rel="footnote">3</a></sup> about a topic</li>
+  <li>This owner serialized the knowledge into <strong>information</strong>, e.g. in the process of writing or dictating</li>
+  <li>The information is captured in a <strong>document</strong>.</li>
+  <li>Another <strong>human</strong> reads (studies) the document</li>
+  <li>That human now possesses <strong>equivalent knowledge</strong>, compared to the initial knowledge</li>
+</ol>
+
+<h2 id="alternative-flow-information---records---document">alternative flow: Information - Records - Document</h2>
+
+<p>Records play a similar role like documents in the <abbr title="KIDAK = Knowledge - Information - Data - Agent - Knowledge">KIDAK</abbr> model. For the purpose of this <em>study path</em> let us assume that reading records, through a human-readable document like a report (KI<strong>D</strong>DAK with 2 Ds), is an alternative flow to the typical document-flow <abbr title="KIDAK = Knowledge - Information - Data - Agent - Knowledge">KIDAK</abbr>. <em>There are more subtle difference between records and documents which I may detail out in a different paper or a future version of this paper.</em></p>
+
+<h2 id="where-to-apply">Where to apply</h2>
+
+<p>Individuals apply pull on this learning path (from the top) for one or more of the following reasons:</p>
+<ol>
+  <li>to learn desired knowledge when no teacher is available</li>
+  <li>to learn quickly and inexpensivly</li>
+  <li>to learn various subjects in parallel</li>
+</ol>
+
+<p>Organizations push this learning path (from the bottom) for following reasons:</p>
+<ol>
+  <li>to scale (knowledge is needed by an increasing set of people)</li>
+  <li>to conserve (availability of critical knowledge shall not depend on a few people)</li>
+  <li>to master complexity (topics that are too large for short-term memory must be written down)</li>
+  <li>to prove (written documents are easier evidence for covering required management topics)</li>
+  <li>… and more</li>
+</ol>
+
+<p>That is why formal standards and certifications like documents.</p>
+
+<p>ISO 9.000<sup id="fnref:ISO9000" role="doc-noteref"><a href="#fn:ISO9000" class="footnote" rel="footnote">4</a></sup> and every other formal standard requires the existence of documents. Looking at the <abbr title="KIDAK = Knowledge - Information - Data - Agent - Knowledge">KIDAK</abbr> model we can confirm that such a requirement is necessary but not sufficient:</p>
+
+<p>Smarter auditors will also check for <em>communication</em> or <em>training</em> of such documents, i.e. how they are delivered to people.</p>
+
+<p>Only a few (excellent) HR / talent organizations attempt the ultimate check: several months after delivering a training they ask training participants: <em>“was this information relevant for your job?”</em></p>
+
+<p>Translated to the <abbr title="KIDAK = Knowledge - Information - Data - Agent - Knowledge">KIDAK</abbr> (or <abbr title="DIK = Data - Information - Knowledge">DIK</abbr>) model this question can be rephrased as: <em>“was it actual <strong>knowledge</strong> which you received, or merely <strong>information</strong>?”</em></p>
+
+<p>So-called <em>knowledge bases</em> routinely ask their readers <em>“was this page useful?”</em>, which is a perfect type of micro-census, an immediate and specific way of managing chunks of knowledge. More relevant articles rank higher in search results. Less relevant articles might be removed from display alltogether.</p>
+
+<h2 id="notes-about-the-study-path">Notes about the <em>study</em> path</h2>
+
+<h3 id="information-within-document">Information within Document</h3>
+
+<p>A <em>Document</em> and its enclosed <em>Information</em> can not be separated but they are still two different <em>things</em>. It becomes more obvious when we consider that the same information can be encoded in two different documents (one handwritten letter, one electronic mail, both with the same content). The information is kind of abstract and hard to imagine <em>without</em> a carrier (document). It may be easier to image it <em>within</em> its carrier.</p>
+
+<p>Let’s compare Information and Document from a causal perspective. I hold the opinion that Information came first. You need to have some information before you can write it down. The document manifests or resembles informationi. Information existed <em>before</em> the document.</p>
+
+<p>That is why I put Information before Document in the causal flow (from bottom to top).</p>
+
+<h3 id="information-versus-knowledge">Information versus Knowledge</h3>
+
+<p>If knowledge is <em>the capability to solve a task</em>, then some information is more relevant for that purpose, or any purpose, than other information.</p>
+
+<p>Information without a purpose can be seen as noise. We all know these anti-patterns from unsolicited emails, unnecessary information during some times in some meetings, or interruptions by chat/messenger applications before we mute a distracting channel.</p>
+
+<h3 id="akquired-knowledge-versus-initial-knowledge">Akquired knowledge versus initial knowledge</h3>
+
+<p>The akquired knowledge (top of diagram) is ideally <em>equivalent</em> to the initial knowledge (bottom of diagram). Equivalent meaning here: similar (or even the same) tasks can be solved by applying either akquired or initial knowledge.</p>
+
+<p>Yet these two pieces of knowledge are different. We can easily tell it be their lifecycles: The akquired knowledge begins later and perists, even when the initial knowledge gets lost eventually. Different lifecycles may be a main reason to manage knowledge: making it available beyond the initial holder’s availability.</p>
+
+<p>Akquired knowledge and initial knowledge each live in different peoples’ brains. Two instances of knowledge in two different brains may resemble each other but they cannot be the <em>same thing</em>.</p>
+
+<hr />
+
+<h1 id="2-the-interpersonal-path-guided-practice-learning-by-doing">2. The interpersonal path (guided practice, learning-by-doing)</h1>
+
+<object id="KIDAKP" width="50%" data="CEPDI/graph-local.svg" type="image/svg+xml"></object>
+
+<h2 id="flow-explanation">Flow explanation</h2>
+
+<ol>
+  <li>A <em>master</em> (teacher / coach / trainer / instructor) of an art or a science has practical (working) knowledge which may be implicit<sup id="fnref:implicit" role="doc-noteref"><a href="#fn:implicit" class="footnote" rel="footnote">5</a></sup> or explicit. It is great if the teacher can also explain his or her knowledge (explicit), but for practical reasons it is good enough if the master knows how to perform her art.</li>
+  <li>The coach (instructor) helps another person <em>doing</em> some activity of interest. In her role as Instructor, this person <em>informs</em> another person.</li>
+  <li><em>Doing</em> is the medium which encodes and conveys information</li>
+  <li>Another person (student) is actively involved in <em>doing</em> the activity.</li>
+  <li>Performing the activiy creates new practical knowledge. Positive results from the activity confirm that akquired knowledge.</li>
+</ol>
+
+<h2 id="where-to-apply-1">Where to apply</h2>
+
+<p>Any sports and athletic activities can be trained by <em>doing</em> them, and necessarily by practicing. This is well known in private life.</p>
+
+<p>Many soft skills, like communication, leadership or other interaction between people, are taught most effectively also by example.</p>
+
+<p>What seems to be common sense in private life is not widely established in corporate life. “Preaching water and drinking wine” would be an anti-pattern for <em>leading-by-example</em>.</p>
+
+<p><em>Learning-on-the-job</em> is another pattern for this learning path.</p>
+
+<p><em>Job rotation</em> and <em>Pair Programming</em> are other examples for practical teaching that does not require producing documents, because the art for a particular topic might be so subtle that it is difficult to express it in words.</p>
+
+<p>Co-locating teams has the main effect of learning informally, exaclty because of frequent interactions between team members, and copying efficient patterns from each other.</p>
+
+<p>Even if so-called <em>knowledge transfer</em> is organized formally, there is no need for a syllabus or to know the structure of the topic in advance (explicitly). Humans are well capable of learning by doing, so <strong>chosing</strong> an activity to learn is the only formal definition that is needed.</p>
+
+<h2 id="notes-about-the-guided-practice-path">Notes about the <em>guided practice</em> path</h2>
+
+<h3 id="evolution">Evolution</h3>
+
+<p><em>Learning by doing</em> is the historical form of knowledge akquisition, not only for humans but across many species (in particular those who raise children).</p>
+
+<p>We have many mechanisms hardwired in our brains which facilitate this learning path, and we can apply some of them even without effort (observing, remembering, imitating, playing).</p>
+
+<p>Chances are higher to make this practicing path even fun, compared to the <em>study path</em>.</p>
+
+<h3 id="practice-versus-teaching">Practice versus Teaching</h3>
+
+<p>I choose to call this path <strong>guided practice</strong> to emphasize the practical aspect. You could call the same path <em>teaching</em>, but teaching is often associated with a mix of media, including documents. Thus it would blur the line between the <em>study</em> path and the <em>guided practice</em> path.</p>
+
+<p>Of course a combination of different media and learning paths makes perfect sense in the real world. Even for such a multi-media approach you need to understand the available options. This is why the conceptual <abbr title="KIDAK = Knowledge - Information - Data - Agent - Knowledge">KIDAK</abbr> model portraits the pure-document <em>study</em> path and the pure-practice <em>guided</em> path separately.</p>
+
+<h3 id="instructor-term"><em>Instructor</em> term</h3>
+
+<p>I have chosen this term mainly so that it fits nicely on the <strong>I</strong> layer of <abbr title="KIDAK = Knowledge - Information - Data - Agent - Knowledge">KIDAK</abbr>. Better names would be a <strong><em>coach</em></strong> or <strong><em>facilitator</em></strong>: someone who performs or guides practical activity.</p>
+
+<hr />
+
+<h1 id="comparison-human-learning">comparison: Human Learning</h1>
+
+<object id="KIDAKHL" width="50%" data="CEPDI/graph-local.svg" type="image/svg+xml"></object>
+
+<p>This diagram shows both flows that lead to natural (human) knowledge: via <strong>Document</strong> or <strong>Doing</strong>. The flows complement each other. Learning complex topics ideally involves both flows. Alternating elements of <strong>presentation</strong> (document-based) and <strong>assignments</strong>, quizzes or other tasks (activity-based) would be an example of a combined teaching style.</p>
+
+<p>For complex topics like aviation (learning to be a pilot) there are separate, dedicated lessons both for theory (mostly document-based) and practice.</p>
+
+<hr />
+
+<h1 id="3-the-sci-fi-path-machine-learning">3. The sci-fi path (machine learning)</h1>
+
+<object id="KIDAKM" width="50%" data="CEPDI/graph-local.svg" type="image/svg+xml"></object>
+
+<h2 id="flow-explanation-1">Flow explanation</h2>
+<ol>
+  <li>Knowledge <strong><em>may</em></strong> be serialized into Information</li>
+  <li>Knowledge (or other sources, e.g. operational facts) are serialized into Information…</li>
+  <li>… and captured as records or datasets.</li>
+  <li>An artificial agent (software / machine) reads data…</li>
+  <li>… and has thus akquired knowledge about a particular subject, as defined by the data.</li>
+</ol>
+
+<h2 id="notes-to-this-path">Notes to this path</h2>
+
+<p>Suitable data for machine learning does not only consist of numbers or other facts, but must contain a causal model in addition. See theory of causation<sup id="fnref:why" role="doc-noteref"><a href="#fn:why" class="footnote" rel="footnote">6</a></sup> for detailed explanations.</p>
+
+<hr />
+
+<h1 id="comparison-artificial-intelligence">comparison: Artificial Intelligence</h1>
+
+<object id="KIDAKAI" width="50%" data="CEPDI/graph-local.svg" type="image/svg+xml"></object>
+
+<p>The <abbr title="KIDAK = Knowledge - Information - Data - Agent - Knowledge">KIDAK</abbr> model presents similar learning paths for human and artificial agents.</p>
+
+<p>If artificial intelligence shall be derived from human patterns of knowledge akquisition then we need a common model to explain both: current paths for human knowledge akquisition and planned paths for AI.</p>
+
+<p>The <abbr title="KIDAK = Knowledge - Information - Data - Agent - Knowledge">KIDAK</abbr> model attempts that consolidation on a high level.</p>
+
+<p>Learning organizations can apply <abbr title="KIDAK = Knowledge - Information - Data - Agent - Knowledge">KIDAK</abbr> or similar models in order to steer development towards AI, in parallel to development of human capital, human talent and natural knowledge.</p>
+
+<hr />
+
+<h2 id="notes-about-the-kidak-model-as-a-whole">Notes about the <abbr title="KIDAK = Knowledge - Information - Data - Agent - Knowledge">KIDAK</abbr> model as a whole</h2>
+
+<h3 id="data-records-and-document">Data (records) and Document</h3>
+
+<p>In the <abbr title="KIDAK = Knowledge - Information - Data - Agent - Knowledge">KIDAK</abbr> model, both Data and Document play a similar role in different flows. Ultimately they are both physical representations of Information. Even in case of electronic data, that data is stored on the lowest level in magnetic or other pyhsical states.</p>
+
+<p>With respect to their encoded information, data and documents are equivalent.</p>
+
+<p>You can think of <em>data</em>, <em>data sets</em> (as in a database) or <em>records</em> as synonyms.</p>
+
+<h3 id="dik-model"><abbr title="DIK = Data - Information - Knowledge">DIK</abbr> model</h3>
+
+<p>Some details are different in <abbr title="KIDAK = Knowledge - Information - Data - Agent - Knowledge">KIDAK</abbr>, compared to the classic <abbr title="DIK = Data - Information - Knowledge">DIK</abbr> model.</p>
+
+<p>The flow of <abbr title="DIK = Data - Information - Knowledge">DIK</abbr> reads roughly: <strong>data</strong> <em>conveys</em> <strong>information</strong> which <em>turns into</em> <strong>knowledge</strong>.</p>
+
+<p>First of all I hold the opinion that the causal sequence betwenn data and information is confused. I am convinced that you need information first before you can encode it in records (data, data sets) or documents. Therefore, data and documents always contain information. Once an agent has access to data (or documents), that agent also has -indirect- access to information. The agent needs to read (possibly translate) a document, or interpret records, in order to access the contained information.</p>
+
+<p>That is why I change the sequence from Data-to-Information (steps D and I in <abbr title="DIK = Data - Information - Knowledge">DIK</abbr>) into Information-to-Data (steps I and D in <abbr title="KIDAK = Knowledge - Information - Data - Agent - Knowledge">KIDAK</abbr>).</p>
+
+<h3 id="introducing-the-agent">Introducing the Agent</h3>
+
+<p>If knowledge<sup id="fnref:knowledge:1" role="doc-noteref"><a href="#fn:knowledge" class="footnote" rel="footnote">3</a></sup> is a <em>capability</em> then there must be some <em>body</em> who has that capability. The agent is a holder of knowledge, thus being capable of solving tasks.</p>
+
+<p>I use the term <em>agent</em> to generalize human and artificial resources for the purpose of knowledge management. This generalization helps to understand human aspects of interaction with knowledge, and to create artificial systems with similar capabilities in the long run.</p>
+
+<p>In the <abbr title="KIDAK = Knowledge - Information - Data - Agent - Knowledge">KIDAK</abbr> model I place the agent between data/document/doing and (akquired) knowledge, because that is the flow sequence. An agent akquires new knowledge by studying data/documents, or by doing. The D layer (data/document/doing) serves as input for the agent. Akquired knowledge is a result of agent’s work.</p>
+
+<h3 id="repeating-knowledge-on-the-top-and-bottom">Repeating Knowledge on the top and bottom</h3>
+
+<p>For the purpose of knowledge management it is important to look at both ends: targets <em>and</em> sources of knowledge. Where is knowledge needed and where does it come from?</p>
+
+<p>The <abbr title="DIK = Data - Information - Knowledge">DIK</abbr> model emphasizes the generation of (new, akquired) knowledge. This is a useful yet incomplete view in the context of knowledge management. If you want to <em>manage</em> knowledge you need to identify sources and targets of knowledge. Only with explicit sources and target you can plan paths for knowledge akquisition.</p>
+
+<h2 id="misconceptions">Misconceptions</h2>
+
+<p>Here I list some common misconceptions or misleading terms in the field of knowledge management.</p>
+
+<h3 id="knowledge-transfer">Knowledge Transfer</h3>
+
+<p>I like the idea behind it but not that literal terms. Transferring a resource means that the resource is only available at the target after the transfer. Think of soccer stars or money in a bank account. You can transfer them but they can only be in one place.</p>
+
+<p>With knowledge I see the process rather as a path of duplication and akquisition - not a simple transfer.</p>
+
+<h3 id="knowledge-sharing">Knowledge Sharing</h3>
+
+<p>Again I like the idea behind it but not that literal terms. Yes we should share as much we can - but knowledge can’t be shared directly. We can share information via documents. But access to a document does not automatically cause knowledge on the receiver’s end.</p>
+
+<p>Sharing can be one step in a learning path. It takes place at the document level.</p>
+
+<hr />
+<h2 id="footnotes">Footnotes</h2>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:DIK" role="doc-endnote">
+      <p><abbr title="DIK = Data - Information - Knowledge">DIK</abbr> = Data - Information - Knowledge; see also: [https://en.wikipedia.org/wiki/DIKW_pyramid#Data,_Information,_Knowledge] <a href="#fnref:DIK" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:Gutenberg" role="doc-endnote">
+      <p>Johannes Gutenberg (1400 – 1468), inventor of the printing press; <a href="https://en.wikipedia.org/wiki/Johannes_Gutenberg">see also here</a> <a href="#fnref:Gutenberg" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:knowledge" role="doc-endnote">
+      <p>Knowledge is an agent’s capability to solve a task based on information - to “know how to do it” <a href="#fnref:knowledge" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:knowledge:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:ISO9000" role="doc-endnote">
+      <p>ISO 9000:2015, Quality management systems — Fundamentals and vocabulary; <a href="https://www.iso.org/standard/45481.html">at this source</a> <a href="#fnref:ISO9000" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:implicit" role="doc-endnote">
+      <p><em>implicit</em> knowledge is <strong>not accessible</strong> in such a way that its owner could explain it or write it down, but can apply (perform) the knowledge when needed; every intuitive action is based on implicit knowledge; such knowledge can be inherited or trained <a href="#fnref:implicit" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:why" role="doc-endnote">
+      <p>Judea Pearl, Dana Mackenzie; <a href="http://bayes.cs.ucla.edu/WHY/">The Book of Why: The New Science of Cause and Effect</a>; New York: Basic Books, Published May 15, 2018 <a href="#fnref:why" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+    <hr/>
+    <p><small>
+	Copyright © 2020, 2021, 2022 Boran Gögetap <a href="mailto:boran@goegetap.name?subject=K - I - D - A - K&body=commenting on https://wissenswandler.github.io/ ...">boran@goegetap.name</a> (click to send feedback);
+	Knowledgegraph (boxes and lines) maintained in public Jira project;
+	Diagrams created by KTS <a href="https://bitbucket.org/wissenswandler/kts-jira-extract-transform/src/master/">(Knowledge Transformation System)</a> and <a href="https://graphviz.org/">GraphViz</a>;
+	HTML created by Jekyll;
+	This paper licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.html">GNU Affero General Public License</a>
+       </small>
+    </p>
+  </body>
+</html>
