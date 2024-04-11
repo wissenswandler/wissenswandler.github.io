@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>20 Dimensionen für Gesundheit | 20 Dimensionen</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.css">
+<link rel="modulepreload" href="./_observablehq/client.js">
+<link rel="modulepreload" href="./_observablehq/runtime.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.js">
+<link rel="modulepreload" href="./_import/components/kxfm.dddce674.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/_esm.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/_esm.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/_esm.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.2/_esm.js">
+<script type="module">
+
+import {define} from "./_observablehq/client.js";
+import {registerFile} from "./_observablehq/stdlib.js";
+
+registerFile("./Aufgabe-Personen-Gruppe.svg", {"name":"./Aufgabe-Personen-Gruppe.svg","mimeType":"image/svg+xml","path":"./_file/Aufgabe-Personen-Gruppe.4ff579e6.svg","lastModified":1704886284336});
+registerFile("./data/causal_model.json", {"name":"./data/causal_model.json","mimeType":"application/json","path":"./_file/data/causal_model.c536180f.json","lastModified":1712838420908});
+
+define({id: "c2c52391", inline: true, inputs: ["urlValues","display"], body: async (urlValues,display) => {
+display(await(
+urlValues.length ? "meine " : ""
+))
+}});
+
+define({id: "ec640ce9", inline: true, inputs: ["create_diagram","display"], body: async (create_diagram,display) => {
+display(await(
+ create_diagram() 
+))
+}});
+
+define({id: "b5d0bfa7", inline: true, inputs: ["create_buttons","display"], body: async (create_buttons,display) => {
+display(await(
+ create_buttons() 
+))
+}});
+
+define({id: "e433cc9a", inline: true, inputs: ["view","slidersInputs"], body: (view,slidersInputs) => {
+ view( slidersInputs ) 
+}});
+
+define({id: "673d371e", inputs: ["set_input_value","sliders","sampleData","n_dimensions","urlValues","Inputs"], outputs: ["create_buttons"], body: (set_input_value,sliders,sampleData,n_dimensions,urlValues,Inputs) => {
+function create_buttons()
+{
+  let button_definitions =
+  [
+    [
+      "Beispieldaten", 
+      () =>
+      set_input_value( sliders, sampleData )
+    ]
+    ,
+    [
+      'alle auf "optimal"', 
+      () =>
+      set_input_value( sliders, Array.from({length: n_dimensions}, () => 0) )
+    ]
+    ,
+    [
+      '"keine Angabe"',
+      () =>
+      {
+      document.querySelectorAll( "div #sliders input[type=checkbox]" ).forEach( i => i.removeAttribute("checked") )
+      set_input_value( sliders, sliders )
+      }
+    ]
+    ,
+    [
+      "alle beantwortet",
+      () =>
+      {
+      document.querySelectorAll( "div #sliders input" ).forEach( i => i.setAttribute("checked",true ) )
+      set_input_value( sliders, sliders )
+      }
+    ]
+  ]
+
+  if( urlValues.length )
+  button_definitions.push( ['gesicherte Werte', () => set_input_value( sliders, urlValues ) ] )
+  
+  return Inputs.button( button_definitions, {label:"Werte ändern"} )
+}
+return {create_buttons};
+}});
+
+define({id: "120f52a8", inputs: ["create_sliders","Generators"], outputs: ["get_params","set_input_value","params","urlValues","domainBands","sampleData","slidersInputs","sliders"], body: async (create_sliders,Generators) => {
+const {get_params, set_input_value} = await import("./_import/components/kxfm.dddce674.js");
+const params = get_params()
+
+const urlValues = (params.werte?.split( ',' ).map( v => parseInt( v ) )) ?? []
+
+const domainBands = [{ name:"mangelhaft"}, {name:"optimal"}, {name:"überdosiert"}]
+
+const sampleData = [ 1, 2, 0, 1, 4, 0, -4, -3, -2, -1, 0, -1, 0, 1, 2, 3, 4, 3, 2, 1]
+const slidersInputs = create_sliders( urlValues, sampleData )
+const sliders = Generators.input( slidersInputs )
+return {get_params,set_input_value,params,urlValues,domainBands,sampleData,slidersInputs,sliders};
+}});
+
+define({id: "844bf435", inputs: ["FileAttachment"], outputs: ["peopleText","causal_model","quadrantNames","dimensionNames","subdimensionNames"], body: async (FileAttachment) => {
+const peopleText = await FileAttachment("./Aufgabe-Personen-Gruppe.svg").text()
+
+const causal_model = await FileAttachment("./data/causal_model.json").json()
+const quadrantNames     = causal_model.map( q => Object.keys(   q )[0] )
+const dimensionNames    = causal_model.map( q => Object.values( q )[0] ).flat().map( d => Object.  keys(d)[0] );
+const subdimensionNames = causal_model.map( q => Object.values( q )[0] ).flat().map( d => Object.values(d)[0] );
+return {peopleText,causal_model,quadrantNames,dimensionNames,subdimensionNames};
+}});
+
+define({id: "05c33546", inputs: ["width"], outputs: ["diameter","innerRadius","outerRadius"], body: (width) => {
+const diameter = Math.min( width * 3 / 4, 480 )
+const innerRadius = 0.2 * diameter/2
+const outerRadius = 0.9 * diameter/2
+return {diameter,innerRadius,outerRadius};
+}});
+
+define({id: "9262f7ec", inputs: ["sliders"], outputs: ["shift"], body: (sliders) => {
+const shift = d => (2 * sliders.length - d - 5) % sliders.length
+return {shift};
+}});
+
+define({id: "2be40917", inputs: ["d3","yScale","sign_or_plus","xScale","n_dimensions","innerRadius"], outputs: ["arc"], body: (d3,yScale,sign_or_plus,xScale,n_dimensions,innerRadius) => {
+const arc = d3.arc()
+    .innerRadius(  d => yScale( (Math.abs(d) - 0.5) * sign_or_plus(d) )  )
+    .outerRadius(  d => yScale( (Math.abs(d) + 0.5) * sign_or_plus(d) )  )
+    .cornerRadius( 3 )
+    .startAngle(  (d,i) => xScale( (i+15)%n_dimensions )                           )
+      .endAngle(  (d,i) => xScale( (i+15)%n_dimensions ) + 2 * xScale.bandwidth()  ) // steps in between are for tick labels
+    .padAngle(0.01)
+    .padRadius( innerRadius )
+return {arc};
+}});
+
+define({id: "839564d0", outputs: ["sign_or_plus"], body: () => {
+const sign_or_plus = value => value == 0 ? +1 : Math.sign( value )
+return {sign_or_plus};
+}});
+
+define({id: "e07d31d0", inputs: ["d3","n_dimensions","innerRadius","outerRadius"], outputs: ["xScale","yScale"], body: (d3,n_dimensions,innerRadius,outerRadius) => {
+const xScale = d3.scaleBand
+(
+  [...Array(n_dimensions*2).keys()].map( i => i / 2 ) // steps in between are for tick labels
+  ,
+  [ 0, 2*Math.PI ]
+)
+
+const yScale = d3.scaleRadial()
+    .domain( [-4.5,4.5] )
+    .range([ innerRadius, outerRadius ])
+return {xScale,yScale};
+}});
+
+define({id: "8f48c37c", inputs: ["d3","diameter","sliders","color","arc","quadrantNames","yScale","xScale","domainBands","shift","DOMParser","peopleText","innerRadius"], outputs: ["create_diagram"], body: (d3,diameter,sliders,color,arc,quadrantNames,yScale,xScale,domainBands,shift,DOMParser,peopleText,innerRadius) => {
+const create_diagram = () => {
+
+  const svg = d3.create('svg')
+    .attr('width' , diameter*4/3)
+    .attr('height', diameter)
+    
+  const container = svg.append('g')
+
+  container
+    .attr('class', 'container')
+    .attr('transform', `translate( ${ diameter/2 },${ diameter/2 } )`)
+    .style('font-family', 'sans-serif')
+    .append( 'g' )
+    .selectAll('path')
+    .data( sliders )
+    .join('path')
+    .style('fill'  , (d,i) => document.querySelector( `div #sliders form:nth-child(${i+1}) input[type=checkbox]` ).getAttribute("checked") ? color(d) : 'transparent' )
+    .style('stroke',  d    => d3.color( color(d) ).darker() )
+    .attr('d', arc)
+
+    container.append( 'g' )
+      .attr("opacity", 0.4)
+      .style('font-size', "smaller")
+      .call( g => g.append( "text" ).text( quadrantNames[0] )
+        .attr( "x", -yScale( 6 )    )
+        .attr( "y", -yScale( 6 ) +3 ) )
+      .call( g => g.append( "text" ).text( quadrantNames[3] )
+        .attr( "x", -yScale( 6 )    )
+        .attr( "y",  yScale( 6 ) +3 ) )
+      .call( g => g.append( "text" ).text( quadrantNames[1] )
+        .attr("text-anchor", "end")
+        .attr( "x",  yScale( 6 )    )
+        .attr( "y", -yScale( 6 ) +3 ) )
+      .call( g => g.append( "text" ).text( quadrantNames[2] )
+        .attr("text-anchor", "end")
+        .attr( "x",  yScale( 6 )    )
+        .attr( "y",  yScale( 6 ) +3 )
+      )
+     .call  // dimension quadrant divider lines
+      ( g => g.append( "g" )
+            .attr("stroke", "#000")
+            .attr("stroke-opacity", 0.5)
+            .selectAll( "line" )
+            .data( [0,5,10,15] ).join( "line" )
+            .attr(   "x1", d => yScale(-4.5) * Math.sin(  xScale( d )  )   )
+            .attr(   "y1", d => yScale(-4.5) * Math.cos(  xScale( d )  )   )
+            .attr(   "x2", d => yScale( 7  ) * Math.sin(  xScale( d )  )   )
+            .attr(   "y2", d => yScale( 7  ) * Math.cos(  xScale( d )  )   )
+      ) 
+
+    .call // domain bands
+    ( g => g.append( 'g' )
+      .attr("stroke", "#000")
+      .attr("stroke-opacity", 0.5)
+      .attr("fill",   "#fff")
+      .attr("fill-opacity",   0)
+      .selectAll( "g" )
+        .data( [-4.5, -1.5, 1.5, 4.5] ).join( "g" )
+        .call( g => g.append( "line" )  // domain band legend, solid lines
+         .attr( "y1", d => -yScale(d) )
+         .attr( "y2", d => -yScale(d) )
+         .attr( "x1", diameter*4/3*7/16 )
+         .attr( "x2", diameter*4/3*9/16 )
+        )
+        .call( g => g.append( 'line')   // domain band legend, dotted lines
+         .attr( "stroke-dasharray", "2,5" )
+         .attr( "y1", d => -yScale(d) )
+         .attr( "y2", d => -yScale(d) )
+         .attr( "x1", 0 )
+         .attr( "x2", diameter*4/3*7/16 ) 
+        )
+        .call( g => g.append( 'circle' )
+          .attr("r", d => yScale(d) )
+        )
+    )
+    .call
+    ( g => g.append( 'g' )  // domain band legend text
+      //.attr("opacity", 0.2)
+      .attr("text-anchor", "middle")
+      .call( g => g.selectAll("text")
+        .data( domainBands ).join( "text" )
+        .attr( "dy", 5 )
+        .attr( "x", diameter*4/3/2 )
+        .attr( "y", (d,i) => -yScale( -3 + i*3 ) )
+        .text( d => d.name )   
+        )
+    )
+
+    container.append( 'g' ) // dimension number labels
+      //.attr("opacity", 0.2)
+      .attr("text-anchor", "middle")
+      .call( g => g.selectAll("text")
+        .data( sliders ).join( "text" )
+        .attr( "dy", 5 )    
+        .attr( "x", (d,i) => yScale( 6 ) * Math.sin( xScale( shift(i + 0.5) ) )  )
+        .attr( "y", (d,i) => yScale( 6 ) * Math.cos( xScale( shift(i + 0.5) ) )  )
+        .text( (d,i) => 1+i )   )
+
+  const peopleDocument = (new DOMParser).parseFromString( peopleText, "image/svg+xml");
+  const peopleSvg = d3.select( peopleDocument.documentElement ).remove();
+  container
+    .append( 'g' )
+    .attr( 'transform', `translate( ${ (- innerRadius)/2-14 }, ${ (- innerRadius)/2 } ) scale(0.1)` )
+    .node()
+    .appendChild( peopleSvg.node() )
+
+  return svg.node();
+}
+return {create_diagram};
+}});
+
+define({id: "47a143b8", inputs: ["Inputs","htl","subdimensionNames","dimensionNames"], outputs: ["create_sliders"], body: (Inputs,htl,subdimensionNames,dimensionNames) => {
+function create_sliders( _urlValues, default_values ) {
+  let result = []
+  default_values.forEach
+  ( (element, index) => 
+  {
+    let slider = Inputs.range
+    (
+      [-4,4],
+      {
+        step: 1
+        , 
+        label: htl.html`<a title="${subdimensionNames[index].join(', ')}">${ index+1 }. ${ dimensionNames[index]}</a><div class="color"><input id="check_${index}" type="checkbox" checked="true" disabled="true" /></div>`
+        , 
+        value: _urlValues[index] ?? element
+      }
+    )
+    slider.onchange = (e) => e.currentTarget.querySelector( "input[type=checkbox]" ).setAttribute("checked", true)
+    result.push( slider )
+  } )
+  return  Inputs.form(
+            result
+          )
+}
+return {create_sliders};
+}});
+
+define({id: "b2c350a5", inputs: ["d3"], outputs: ["color","saturate"], body: (d3) => {
+const color = v =>
+{
+  const colors =
+  [
+  '#1a9641' ,
+  '#a6d96a' ,
+  '#ffffbf' ,
+  '#fdae61' ,
+  '#d7191c'
+  ]
+  return colors[ Math.abs(v) ];
+}
+
+const saturate = (color, k = 1) => {
+  const {l, c, h} = d3.lch(color);
+  return d3.lch(l, c + 18 * k, h);
+}
+return {color,saturate};
+}});
+
+define({id: "77361793", inputs: ["sliders"], outputs: ["n_dimensions"], body: (sliders) => {
+const n_dimensions = sliders.length;
+return {n_dimensions};
+}});
+
+define({id: "8cc2b452", inputs: ["sliders","n_dimensions","saturate","d3","color"], body: (sliders,n_dimensions,saturate,d3,color) => {
+{
+sliders;
+
+for (let index = 1; index < n_dimensions+1; ++index)
+{
+  const wert = sliders[index-1]
+  if( Math.abs( wert ) > 1 )
+    document.querySelector(`#sliders form:nth-child(${index}) div.color`).style.backgroundColor = 
+    saturate( d3.color( color(wert) ), 0 )//.brighter()
+  else
+    document.querySelector(`#sliders form:nth-child(${index}) div.color`).style.backgroundColor = "white"
+}
+
+//return "dim colors adjusted"
+}
+}});
+
+define({id: "01d30fc6", body: () => {
+////////
+// kxfm
+
+}});
+
+</script>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<h1>20 Dimensionen für <span id="cell-c2c52391" class="observablehq--loading"></span>Gesundheit</h1>
+<div id="diagram_and_buttons">
+<span id="cell-ec640ce9" class="observablehq--loading"></span>
+<span id="cell-b5d0bfa7" class="observablehq--loading"></span>
+</div>
+<div id="sliders">
+<span id="cell-e433cc9a" class="observablehq--loading"></span>
+</div>
+<div id="cell-673d371e" class="observablehq observablehq--block"></div>
+<div id="cell-120f52a8" class="observablehq observablehq--block"></div>
+<div id="cell-844bf435" class="observablehq observablehq--block"></div>
+<div id="cell-05c33546" class="observablehq observablehq--block"></div>
+<div id="cell-9262f7ec" class="observablehq observablehq--block"></div>
+<div id="cell-2be40917" class="observablehq observablehq--block"></div>
+<div id="cell-839564d0" class="observablehq observablehq--block"></div>
+<div id="cell-e07d31d0" class="observablehq observablehq--block"></div>
+<div id="cell-8f48c37c" class="observablehq observablehq--block"></div>
+<div id="cell-47a143b8" class="observablehq observablehq--block"></div>
+<div id="cell-b2c350a5" class="observablehq observablehq--block"></div>
+<div id="cell-77361793" class="observablehq observablehq--block"></div>
+<div id="cell-8cc2b452" class="observablehq observablehq--block"></div>
+<div id="cell-01d30fc6" class="observablehq observablehq--block"></div>
+<style>
+
+  body > div > main > div#diagram_and_buttons { float: left }
+  body > div > main > div#sliders        { float: left }
+  body > div > main > div:has( #permalink          ) { clear: both }
+
+  form:has( > button              ) { padding-top: 40px }
+
+  details                 {
+    margin-top   : 0.5lh  }
+  details:last-of-type    {
+    margin-bottom:   1lh  }
+
+  details br {
+    display   : block ; /* makes it have a width */
+    content   : ""    ; /* clears default height */
+    margin-top: 0.5lh ; /* change this to whatever height you want it */
+  }
+
+  div.color { width: 20px; float:right }
+
+  div#sliders form
+  {width : 100%; max-width : 640 }
+
+  div#sliders form label
+  {width :  60%; max-width : unset }
+  
+  div#sliders input[type=number] {display: none}
+
+  path.drag { stroke-width: 4px }
+
+</style>
+</main>
+<footer id="observablehq-footer">
+<div>Gesundheitswissenschaft</div>
+</footer>
+</div>
